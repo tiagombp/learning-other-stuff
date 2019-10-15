@@ -96,3 +96,11 @@ We recommend that you complete each of the following before the end of each week
 * Readings and handouts/exercises
 * Participation in the discussion forums
 * Quizzes covering concepts from video lectures and/or readings
+
+### Recommended Readings
+
+* [Diving into data journalism: Strategies for getting started or going deeper (American Press Institute)](https://www.americanpressinstitute.org/publications/reports/strategy-studies/data-journalism/single-page/)
+
+* [PDF - How charts lie: Introduction (Alberto Cairo)](https://journalismcourses.org/courses/DATA0819/HowChartsLie_INTRODUCTION.pdf)
+
+* OPTIONAL READING - The Data Journalism Handbook, 2nd edition (Alberto Cairo)
