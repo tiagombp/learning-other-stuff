@@ -103,4 +103,4 @@ We recommend that you complete each of the following before the end of each week
 
 * [PDF - How charts lie: Introduction (Alberto Cairo)](https://journalismcourses.org/courses/DATA0819/HowChartsLie_INTRODUCTION.pdf)
 
-* OPTIONAL READING - The Data Journalism Handbook, 2nd edition (Alberto Cairo)
+* OPTIONAL READING - [The Data Journalism Handbook, 2nd edition](https://datajournalism.com/read/handbook/two)
