@@ -1,3 +1,6 @@
+
+## Week 1
+
 Okay, the main goal of this specialization is to teach you how to design, evaluate, and develop interactive visualizations to help people generate insights and then communicate these insights to other people as effectively as possible.
 
 So, what all these areas have in common when we talk about the use of visualization is the basic idea of transforming data into something that enhances the comprehension of what is described by the data.
@@ -90,3 +93,29 @@ Whereas, exploratory and confirmatory analysis, most of the time, are about anal
 Examples: "How Americans think About Global Warming in 6 charts".
 
 Exploratory: Very often, the output of exploratory analysis, is the generation of new questions. This is typical of exploratory analysis. We start with some answers, and, sorry, we start with some questions, and what we produce is not only answers to these questions, but also new questions or new hypotheses. 
+
+#### Why graphical representation?
+
+Another important question is why use graphical representations? Well, there are a number of ways to answer this question. _And the first way is that humans are actually visual animals_. It is estimated that up to 30 percent of the cortex of the brain is devoted to vision, and we have two big pairs of eyes and we are incredibly good at extracting and processing formation that comes from our environment. So, humans are inherently visual animals, and we are very, very good at processing visual information. 
+
+The second way to answer that, requires asking another question. And the question is, if not graphically what are other ways to communicate information? So here, I'm listing three main ways to communicate information: 
+
+* verbally 
+* numerically 
+* graphically
+
+Well, one thing that stands out when I'm trying to communicate information verbally is that _we are forced to process this information sequentially_. That's a big, big difference. 
+
+Whereas, when we are observing a chart, we are actually _consuming and processing this information in a parallel fashion, all at once_. We don't need to go through it sequentially, necessarily. The same in principle is true also for the table, but the problem with the table is that there is not much to see, there is not much to perceive , we have to process numbers that don't match directly, visually to some quantities.
+
+#### Problems with Summary Statistics
+
+Statistics are summaries of information that is contained in the data so that we can communicate the most important information. So, that's a very useful communication tool because, by providing some few numbers some pure statistics, we can communicate important information that is contained in the data. The problem though with statistics is that they aggregate information and remove a lot of details.
+
+#### Why use interaction?
+
+What is the advantage of interacting with visual representations? Well, there are a number of advantages, but the most important one, probably, is that when people analyze data visually, they have a number of different questions. And not all questions can be answered by looking at one single visual representation. So, having a system that can change as we interact with it and helps us answer different questions that we may have is extremely useful. 
+
+So, in general, interaction is very useful because it helps the user answer a multitude of questions that will be almost impossible to answer in one single chart. 
+
+an interesting area of research in visualization is how to do visualization with other devices and other interaction modes. 
