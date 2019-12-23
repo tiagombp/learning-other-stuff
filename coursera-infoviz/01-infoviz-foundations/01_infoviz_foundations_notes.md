@@ -63,3 +63,30 @@ So we have data. **Data** is **encoded visually** using a computer to create a *
 Now, I want to add a couple of elements to this diagram that help us explain and understand why we visualize data, why is it desirable. The first element is the idea that _data is a description of some phenomenon of interest_, right? Why do we use data? Why do we visualize data? Not because we are interested in the data itself, we do it because it's an abstract representation of some reality or some phenomena we are interested in. That's very important. 
 
 So the ultimate interest is using data as a way to understand some phenomena. That's very important. Connected to that, is _the idea that the user who is using the visualization and interacting with the visualization has some goals that refer to these phenomena. And also has some mental models of what this phenomenon is about and how it works_. So in general, people who are using visualization, come with some pre-existing knowledge and some goal related to better understanding some phenomena. _And visualization systems use data, visual representations, and interaction to help people understand some phenomena better_.
+
+#### Purposes of Visualization &mdash; visualization classes
+
+Now, let's talk about purpose. What are the main purposes of visualization? Why do people use it or may want to use it? Okay, so there's one common characterization of information visualization purposes, and we have three main classes. 
+
+* explanatory visualization
+* exploratory visualization
+* confirmatory visualization. 
+
+Explanatory visualization means that the main purpose of the visualization is to explain something to somebody else. So the idea is that their is someone who has some message or some idea that needs to be **communicated visually through data visualization**. And this person needs to design a visualization that is appropriate for explanation.
+
+The second one is exploratory. What does it mean? Well, it means that in this case, there is a person who needs to extract information out of data and doesn't really know what the content of this data is. _So the idea is that the main purpose of visualization, in this case, is to help the person answer questions and generate new hypotheses_. 
+
+The last one, which is somewhat similar, is confirmatory. What does it mean? Well, _the difference, here, between confirmatory and exploratory is that the person who is using visualization here has some hypothesis or question in mind that needs to be checked out_. So I all ready have a hypothesis, but I want to check whether my hypothesis actually holds in the data. And I use visualization, for instance, some charts, to verify whether my hypothesis is correct or not.
+
+One important thing to say is that the main purpose of explanatory visualization is to communicate something to somebody else. So there is always an audience of some sort. So this why we group this into a communication category.
+
+Whereas, exploratory and confirmatory analysis, most of the time, are about analyzing data. So there is a person who wants to reach some objectives by analyzing data.
+
+* explanatory visualization  ---- **COMMUNICATION**
+* exploratory visualization  \
+                              +-- **ANALYSIS**
+* confirmatory visualization / 
+
+Examples: "How Americans think About Global Warming in 6 charts".
+
+Exploratory: Very often, the output of exploratory analysis, is the generation of new questions. This is typical of exploratory analysis. We start with some answers, and, sorry, we start with some questions, and what we produce is not only answers to these questions, but also new questions or new hypotheses. 
