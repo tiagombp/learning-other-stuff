@@ -1,4 +1,3 @@
-
 ## Week 1
 
 Okay, the main goal of this specialization is to teach you how to design, evaluate, and develop interactive visualizations to help people generate insights and then communicate these insights to other people as effectively as possible.
@@ -119,3 +118,23 @@ What is the advantage of interacting with visual representations? Well, there ar
 So, in general, interaction is very useful because it helps the user answer a multitude of questions that will be almost impossible to answer in one single chart. 
 
 an interesting area of research in visualization is how to do visualization with other devices and other interaction modes. 
+
+#### Assesssing the quality of a visualization
+
+How do you assess the quality of a visualization? How do you know that one visualization is better than another? That's a very important question. So, isn't that subjective? I show visualization to some people and some people like A, whereas some other people like B. Isn't that just about what people like? People have different tastes. Well, not necessarily. So, the thing is that some visual representations are actually much better than others at communicating some information. So, if your goal is to communicate information to somebody else effectively, some visual representations are clearly better because they are easier to interpret, and easier and faster, and more accurate to read.
+
+Designing effective visualizations requires two main steps. 
+
+* The first one is knowing the design space. 
+
+That's a problem I see all the time. When you are asked to design a visual representation to communicate some data, you typically come up with a first idea, a first design. But if you don't know enough of the design space, it's very hard for you to create alternatives. But _being able to create a certain number of alternatives is a crucial skills for visualization design_, because if you don't do that, if you don't know how to do that, it won't be possible for you to actually see different solutions and start assessing them. So, skill number one is being able to explore the design space effectively. 
+
+* The second skill linked to this one is being able to actually compare the solutions in an effective way. _You have to be able to predict whether a given visual representation is actually going to be more effective than another. And how do you do that? There are many ways, but the most important skill is to understand how human perception works_. And in particular, how human perception of graphical representation works. 
+
+So, the rest of the course is going to provide you with exactly these two main tools: knowing the design space, knowing what visual representations are available for a certain type of data and problems, and learning enough about human perception that you can start reasoning about whether and why a given visual representation may be more effective than another.
+
+### READING
+
+https://queue.acm.org/detail.cfm?id=1805128
+
+## Week 2
