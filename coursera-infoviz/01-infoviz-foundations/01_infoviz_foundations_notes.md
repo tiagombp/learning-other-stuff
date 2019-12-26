@@ -188,6 +188,41 @@ Figure 2B shows the same Mechanical Turk participation data compared with three 
 
 ![](Heer_fig2b.webp)
 
+##### SPLOM (Scatter Plot Matrix)
+
+Other visualization techniques attempt to represent the relationships among multiple variables. Multivariate data occurs frequently and is notoriously hard to represent, in part because of the difficulty of mentally picturing data in more than three dimensions. One technique to overcome this problem is to use small multiples of scatter plots showing a set of pairwise relations among variables, thus creating the SPLOM (scatter plot matrix). A SPLOM enables visual inspection of correlations between any pair of variables.
+
+![](Heer_fig2c.webp)
+
+##### Parallel Coordinates
+
+Parallel coordinates (||-coord), shown in figure 2D, take a different approach to visualizing multivariate data. Instead of graphing every pair of variables in two dimensions, we repeatedly plot the data on parallel axes and then connect the corresponding points with lines. Each poly-line represents a single row in the database, and line crossings between dimensions often indicate inverse correlation. Reordering dimensions can aid pattern finding, as can interactive querying to filter along one or more dimensions. Another advantage of parallel coordinates is that they are relatively compact, so many variables can be shown simultaneously.
+
+![](Heer_fig2d.webp)
+
+#### Maps
+
+Although a map may seem a natural way to visualize geographical data, it has a long and rich history of design. <mark>Many maps are based upon a cartographic projection: a mathematical function that maps the three-dimensional geometry of the Earth to a two-dimensional image.</mark> Other maps knowingly distort or abstract geographic features to tell a richer story or highlight specific data.
+
+##### Flow Maps
+
+By placing stroked lines on top of a geographic map, a flow map can depict the movement of a quantity in space and (implicitly) in time. Flow lines typically encode a large amount of multivariate information: path points, direction, line thickness, and color can all be used to present dimensions of information to the viewer.
+
+##### Choropleth Maps
+
+Data is often collected and aggregated by geographical areas such as states. A standard approach to communicating this data is to use a color encoding of the geographic area, resulting in a choropleth map. <mark>One common error is to encode raw data values (such as population) rather than using normalized values to produce a density map. Another issue is that one's perception of the shaded value can also be affected by the underlying area of the geographic region.</mark>
+
+##### Graduated Symbol Maps
+
+An alternative to the choropleth map is the graduated symbol map, which places symbols over an underlying map. This approach avoids confounding geographic area with data values and allows for more dimensions to be visualized (e.g., symbol size, shape, and color). In addition to simple shapes such as circles, graduated symbol maps may use more complicated glyphs such as pie charts.
+
+![](Heer_fig3c.webp)
+
+##### Cartograms
+
+A cartogram distorts the shape of geographic regions so that the area directly encodes a data variable. A common example is to redraw every country in the world sizing it proportionally to population or gross domestic product. 
+
+![](Heer_fig3d.webp)
 
 #### Hierarchies
 
