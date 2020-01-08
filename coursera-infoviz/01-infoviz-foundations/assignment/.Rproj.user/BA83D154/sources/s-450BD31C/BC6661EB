@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578474043009.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1470513083",
+    "id" : "BC6661EB",
+    "lastKnownWriteTime" : 1578474567,
+    "last_content_update" : 1578474567968,
+    "path" : "~/GitHub/learning-other-stuff/coursera-infoviz/01-infoviz-foundations/assignment/analise.R",
+    "project_path" : "analise.R",
+    "properties" : {
+        "cursorPosition" : "8,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
