@@ -53,7 +53,9 @@ ggplot(q1_1, aes(x = month(data_agregada), y = n, color = year(data_agregada))) 
 
 ggplot(q1_1, aes(x = month(data_agregada), y = n, group = year(data_agregada), color = year(data_agregada))) +
   geom_line() +
-  coord_polar() + tema()
+  scale_x_continuous(labels = month.abb, breaks = 1:12) +
+  coord_polar() + 
+  tema()
 
 q1_2 <- q1 %>%
   count(mes) %>%
