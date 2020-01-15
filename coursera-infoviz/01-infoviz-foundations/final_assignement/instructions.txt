@@ -1,0 +1,31 @@
+Assignment
+
+You will be shown a graph and asked to perform three main tasks:
+
+Graph decoding: describing the graph in terms of marks, channels and mapping between data and its graphical components.
+Graph critique: criticizing the task in terms of how well the graphical encoding used supports effective communication of the data and the message.
+Graph redesign: designing and developing a new version of the graph that addresses the problems identified in the graph critique step.
+Review criterialess 
+The assignment will be graded according to how well the three tasks are performed:
+
+Graph decoding. Did the student describe all the elements used in the graph? Is the description of the marks, channels and mapping correct and complete?
+Graph critique. Did the student identify all the issue that exist with this graph?
+Graph redesign. Does the proposed redesign address the issues raised in the graph critique step? Is the proposed solution effective?
+
+
+Guidelines for the assignment:
+
+1 - Observe the graph carefully and try to think first about what is the main intent behind it. What should the readers be able to see? What answers should they be able to answer? What information should be readily apparent?
+
+2 - Think about how the data has been encoded with markers and channels and reflect on whether there are any issues with the choices the author made.
+
+3 - Think about how the graph could be redesigned to be more effective in its communicative intent.
+
+Instructions:
+
+For this assignment you have submit three main pieces of information:
+
+Graph decoding. A description of data items and attributes, marks and channels and encoding rules (see details in the template below).
+Graph critique. A description of issues you found with the graph.
+Graph redesign. An image of the sketch you created with an explanation on why you think it is an improvement over the original graph.
+To submit your assignment use this template. This is going to ensure consistency among students and it will guide you in the organization of your submission.
