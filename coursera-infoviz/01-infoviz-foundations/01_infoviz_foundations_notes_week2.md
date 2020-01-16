@@ -46,7 +46,7 @@ we define three main types of attributes:
 
 * categorical, 
 * ordinal, and 
-* quantitative. L
+* quantitative.
 
 So, a categorical attribute is an attribute that contains values that describe categories. And these categories don't have any particular order. 
 
