@@ -114,3 +114,76 @@ This is a very small number of objects, the estimate is that we can't really sto
 ![](week1_24.PNG)
 
 But, this information is processed through many stages and reduced enormously and simplified enormously. So, even if we perceive, even if we have a lot of in incoming information from our eyes and our sensors at any given time, the visual processing system does its best to reduce this disinformation as much as possible and retain only what is important for the given task. In the next video, we're going to discuss this aspect in much more detail.
+
+### Saccadic Eye Movement
+
+![](week1_25.PNG)
+
+In the previous videos, we introduce two important concepts. The first one, is the idea that our eyes see in a high resolution only on a very small section of the field of view. This is because the high resolution is only in the part of the area that we call fovea and the rest is much much lower resolution. The second thing, is that very, very little information of the proportion of the information that is entering our eyes is actually stored in our memories. As we said before, this is a very lossy process, most of the information is lost and we capture only what is important. 
+
+![](week1_26.PNG)
+
+So, finally, we can say that we only actually see a very small portion of the world that is in front of us, and yet we always have the feeling that we have full awareness of it. Why is that? I think it's very important to stop and reflect a little moment about this little disconnection between the fact that we actually see and store so little but we perceive that we have everything in our mind and in our brain. So, let's analyze this problem for a moment. So, there are two important reasons. Of course, this doesn't cover all the possible reasons, but two important reasons I want to mention, why we have this perception, despite the fact that a lot of information is lost. 
+
+![](week1_27.PNG)
+
+The first one, is that <mark>we move our eyes extremely fast, to sample the area around the focus of attention, so that we can get more information in high resolution around it. This is what is called saccadic eye movement</mark>, which we are going to analyze in a moment. The second aspect is that visual perception is highly driven by human attention. In turn, this means that, at any given time, the information that we're gathering from the world is actually the information that we need in order to carry out the tasks that we are carrying out. Because of that, we perceive that we do have the information that is needed when it is needed. But that's the only information we retain. <mark>The only formation we retain is the information that is needed to carry out the tasks that we are performing</mark>. This has a lot of consequences. 
+
+But let's first cover the part about saccadic eye movement. Okay. So, even though we don't perceive it, the way our eyes actually sample the world is through a series of jerky movements that are called saccadic eye movements. 
+
+![](week1_28.PNG)
+
+<mark>So, what happens is that when we fixate a given area, our eyes are actually quickly moving around this area to gather more information about it. The brain is actually stitching all these pieces of information together.</mark> 
+
+<div style="background-color: lightgray; color: black; padding: 1em;">
+From Wikipedia
+
+Humans and many animals do not look at a scene in fixed steadiness; instead, the eyes move around, locating interesting parts of the scene and building up a mental, three-dimensional 'map' corresponding to the scene (as opposed to the graphical map of avians, that often relies upon detection of angular movement on the retina).[citation needed] When scanning immediate surroundings or reading, human eyes make saccadic movements and stop several times, moving very quickly between each stop. The speed of movement during each saccade cannot be controlled; the eyes move as fast as they are able.[4] One reason for the saccadic movement of the human eye is that the central part of the retina—known as the fovea—which provides the high-resolution portion of vision is very small in humans, only about 1–2 degrees of vision, but it plays a critical role in resolving objects.[5] By moving the eye so that small parts of a scene can be sensed with greater resolution, body resources can be used more efficiently.
+</div>
+
+Let me show you a video that gives you a sense of this movement. Because, we are actually, we don't consciously control or even sense that we have this movement but our eyes are actually moving really, really fast and twitching between small deviation and another around the focus of attention, to sample the world around the focus of attention. So, let's watch this video for a moment and then I'll comment a little longer on it. Okay. So, here we have the video.
+
+![](week1_29.PNG)
+
+So, as you can see, the eye is moving really, really fast around the area of interest. So, what happens during a saccadic eye movement is a number of things. The first one is, as I said, that the eyes are very quickly twitching around the area of interests. The second thing is that, during this movement, the image is temporarily suppressed. So, while the eye is moving during a saccadic movement, we are temporarily blind but we just don't perceive that. Finally, all these images are assembled together in the brain. Again, we're just not conscious about it, what we perceive is reality around us. Which is pretty remarkable. Pretty amazing. So, I want to conclude this video with a quote.
+
+![](week1_30.PNG)
+
+This comes from Steven Few Book Show Me the Numbers. I think it really well characterizes what is happening here. What Steven says is, "We don't see images with our eyes, we see them with our brains." I think that's a very, very useful quote to remember what happens when we are gathering information visually from the world.
+
+### Role of Attention In Visual Perception
+
+The second important fact that we need to keep in mind, and I mentioned before, is that attention plays a really big role on visual perception. So, there are a number of facts. 
+
+![](week1_31.PNG)
+
+First, we only retain a very small portion of the information that is entering our eye, but what is retained in our memory and what is processed by our visual processing system is very highly dependent on what we are attending to. What we are attending to in turn, depends on the task, on what we are trying to accomplish, which of course, is very relevant for visualization design. Because when we are designing a visualization, we are typically designing a visualization to help people accomplish some communication task. So, that's very important. 
+
+Here, I want to introduce a new concept. The concept of **inattentional blindness**. What is an inattentional blindness? Well, it's a concept introduced by vision scientists when they started noticing the idea that related to how powerful attention is in visual perception. The idea is the following: it's very easy to be blind to very big changes if we do not attend ["atentar"? "pay attention"?] to the visual information that changes. So, maybe this is still a little bit vague. In order to make it more concrete, I want to show you an example in a video. This is a video reproducing a classic experiment in vision science. What is the experiment about? Well, it's one among many different experiments that have being developed or examples that have been developed to show the problem or the effect of inattentional blindness. In this video, you're going to see a person asking some information to another person and then these two persons are temporarily interrupted by two guys coming over with a painting or something else. So, they are temporarily blocking the view, and without this person noticing it, the person who is asking for information is changing. Sometimes the new person showing up is very different and despite that, most people don't recognize the difference. They don't notice it. So, let's watch the video first, and then I have a few more comments on inattentional blindness. 
+
+(video starts)
+Excuse me. I'm looking for the Skyline. Then, we break the two up, walking through them holding a large sheet of wood. Now watch as I replace Vin. You might think people would notice the switch, but almost half the time they didn't. Of course, that means more than half the time they did. We only tried the experiment nine times, and by no means was it good science. But we were surprised four people didn't notice the switch. In Simon's original experiment, seven out of 15 people didn't either. So, what determines whether or not you can figure out the switch? 
+
+<mark>When you look at another person, you encode what's relevant for what you're doing right then</mark>, in that case, giving directions, and you don't pay attention to the details that are irrelevant, say what color their shirt is or exactly how tall they are. As long as you are able to make sense of the meaning of the scene and roughly the main categories of that person, say their height, their age, what race they are, what sex they are, as long as those important things don't change, the meaning of the scene really hasn't changed and you're not going to notice that anything is different. Scientists have documented inattentional change blindness since the 1970s. While they allow you to focus your attention, this failure to see every detail can prove costly. Drivers often cause accidents because they overlook quick changes to their environments, such as pedestrians or cyclists. Faulty memories can wreck havoc during eyewitness testimony. <mark>The goal of vision isn't to build a photograph or a complete model of the world in your mind, the goal of vision is to make sense of the meaning of the world around you.</mark> Being aware of our limitations can help us adapt and compensate for them, allowing us to do things that prevent the really negative consequences that can happen due to failures of awareness. For example, Simon thinks that people might be willing to put away their cell phone when driving if they just understood the limits to their attention. Juries might realize that eyewitness testimony is far from ideal, and the next time you and a friend are fighting about the details at a past event, it's likely you're both wrong. Now, that's something to remember.
+
+(video ends) 
+
+Okay. So, I hope the concept of inattentional blindness is now a little clearer. Before we move on, I want to ask you a question. Did you notice any difference between this video and the previous video? I guess you didn't. You want to try? Is there anything different in the new video? Well, in this video, I'm wearing a watch, but in the previous video, I'm not wearing a watch. Maybe you should go back and check. I'm pretty sure that most of you didn't actually notice, until I ask. So, this is another example of inattentional blindness. <mark>You won't notice the difference until you have a reason to attend to the information that is needed in order to perceive the difference.</mark> I want to conclude with a couple of quotes again. So, the first one that I really like is the idea that the world is its own memory. 
+
+![](week1_32.PNG)
+
+What does it mean? Well, it means that most of the information that we need to carry out a task or solve a given problem is not in our head, is in the world. But the way cognition and visual perception work is that we can look for this information when is needed. So, there is another quote that I want to give you. This is from Collin Ware's book, and the book is called "Visual Thinking for Design", a fantastic book. 
+
+![](week1_33.PNG)
+
+The quote is, "It's more accurate to say that we are conscious of the field of information to which we have rapid access rather than we are immediately conscious of the world." Once again, I think this is a really important concept to keep in mind. 
+
+So, why is this important for visualization design? I think there are a couple of important ideas here. The first one is that when we design a visual representation, we have to guide the attention of the viewer in a way that is useful to achieving the goal that we want people to be able to achieve. 
+
+![](week1_34.PNG)
+
+So, the more explicit you are in how you are directing attention through your design, the better your design is going to be. If you just don't care and don't even think about it, it's likely that you're going to have problems with your design. In turn, as a visualization designer, you have to be aware of how your choices as a designer are going to affect attention. 
+
+![](week1_35.PNG)
+
+<mark>So, if you inadvertently attract attention of the viewer to pieces of information that are not important for achieving the goal that you want your viewers to achieve, then you are in trouble. </mark> So, in summary, it's very important in visualization design to be mindful of the effect of attention and how your design actually affects attention.
