@@ -114,3 +114,4 @@ This is a very small number of objects, the estimate is that we can't really sto
 ![](week1_24.PNG)
 
 But, this information is processed through many stages and reduced enormously and simplified enormously. So, even if we perceive, even if we have a lot of in incoming information from our eyes and our sensors at any given time, the visual processing system does its best to reduce this disinformation as much as possible and retain only what is important for the given task. In the next video, we're going to discuss this aspect in much more detail.
+
