@@ -222,3 +222,103 @@ So, these visual properties are actually the visual channels, what we call visua
 I've taken this table from the PhD thesis of Eamonn Maguire, who actually created a lot of really interesting and nice visuals to show how visualization works, and this is a summary table, as I said, that represents all the main visual properties that one can use. So, I want to walk you through some of them. For instance, we have size. One can use size to represent quantity. The bigger something is the more quantity it represents. One can use color intensity. So, the brighter something is and the higher the value it represents, or say, the slope of a line can represent a quantity, or different color, what we call color hues, which is basically the name of the colors, can represent different categories, and so on. So, there are many different visual channels and the main idea is that visual channels can be used to represent information that is contained in the data. Before I conclude, I want to give you another practical example. So, here is another graph taken from the famous Gapminder tool created by Hans Rosling to basically represent the temporal evolution of human conditions around the world. This specific graph is a scatter plot and it basically represents the relationship between income in different countries and life expectancy. Every single bubble here represents one country and the color represents different regions in the world and size of the bubble represents the population size. So, here, if you think about it, we have many different channels used at once. So, the symbols are the bubbles and each bubble, as I said, represents one country. But, now we have associated these bubbles a number of different visual properties. So, what are these properties? There is the X position of the bubble, there is the Y position of the bubble. These are already two visual channels, X position and Y position, then we have the size of the bubble. This is yet another channel that represents population size, and then we have color that represents different regions in the world. So, once again, these are examples of visual channels.
 
 Visual channels are graphical properties one can use to represent information visually.
+
+
+### Expressiveness of Visual Channel
+
+A very important concept related to visual channels is the idea that not all channels are equally effective at representing information. 
+
+![](week1_40.PNG)
+
+In particular, in visualization we like to talk about two broad classes of properties. 
+
+![](week1_41.PNG)
+![](week1_42.PNG)
+
+One is expressiveness and the other is effectiveness. So, expressiveness is about what can be expressed with a channel, and effectiveness is about how well the channel can express this information. 
+
+![](week1_43.PNG)
+
+So, let's focus first on expressiveness. So, expressiveness is the type of information that a given channel can or cannot express. So, before I give you examples and explain these aspect in more details, I need to clarify what I mean when I say type of information. What do we mean by type of information? So, let's do that first. 
+
+Well, in **statistics**, there are different ways of describing informational data. And typically, there are four classes that are used.
+
+![](week1_44.PNG)
+
+So, the idea is that information or a measurement can be either nominal, ordinal, interval, or ratio. So, what does it mean? 
+
+![](week1_45.PNG)
+
+So, a nominal measurement means that basically, these information is about a number of categories. The only operation that we can do with categories is comparing them to see whether a category is the same as another category. Then we have ordinal information. What is ordinal information? Well, ordinal is very similar to categorical, to nominal, but the difference is that we can identify an order in the elements, but we can't really tell anything about how much bigger or how much lower a given element is compared to another. So, any ranking is an example of ordinal measurement or data, or for instance you see when measurements are extracted from surveys, when we ask people to answer a question about something and they have to specify say, medium, high, low something, well, that would be an example of a of an ordinal scale. Because why is it an ordinal scale? Well, because we can't really tell what's the quantitative difference between these elements but we know that there is an order. Then we have interval and ratio scales. So, interval and ratio scales are about measuring quantities, both about measuring quantities. **But the main difference is that interval scales don't have a zero value**, and because of that there are certain operations don't make sense, like for instance, division doesn't make sense. What are examples of interval measurements? Well, for instance percent or temperature are examples of interval measurements. Then we have ratio. So, for instance measurements like weight or height of a person is an example of a ratio scale. 
+
+So, in **visualization**, we like to categorize these elements, these type of measurements in a smaller set. Let me tell you what the set is first and then why it is useful in visualization.
+
+![](week1_46.PNG)
+
+Well, the set is **quantitative information, sequential information, and categorical information**. So, why do we do that? 
+
+Well, because <mark>when someone has to decide what is the appropriate visual representation or the appropriate visual channel to represent a given piece of information, it's very important to know the properties of this information. And in particular, whether this information is about a quantity, it's about a sequence, or about categories, and that's the reason why we talk about quantitative data, sequential data, and categorical data.</mark>
+
+So, let's go back to the concept of expressiveness. So, let me say again what expressiveness is. So, expressiveness is about the type of information that can or can't be expressed by a channel. 
+
+![](week1_47.PNG)
+
+And more precisely now after explaining what are different types of measurements or different types of data, we can say that expressivenes is about whether a channel can express information about quantities, sequences or categories. 
+
+![](week1_48.PNG)
+![](week1_49.PNG)
+
+At the same time whether a given channel while expressing some of this information is also not expressing something that is unintended. Something that I'm going to explain later on in more details. 
+
+Before I conclude, I want to give you a couple of examples. So, here you see that I have four different colors. Imagine that I want to encode information with the channel color. More precisely, color hue, which is the name of the color. So, now, what kind of information can I express with color? Can I express quantity? Not really. Because these colors don't really have an order. You can't really say that green is bigger than red for instance. You don't perceive visually this information as order or quantitative. **So, you can't really express sequences or order and you can't really express magnitude or quantities with this colors or with color in general, with color hue. So, that's one example of the fact that what is the expressiveness of color hue? Color hue can't really express quantity and sequence but it can express the idea of categories. It can express nominal data, nominal information**. 
+
+Here is another example. The length of bars. This is something that we used in the previous examples. Okay, so length of bar communicates the idea of quantity. So, the bigger the bar, the bigger the value. It can also represent the order. So, in this case, I put these bars in order on purpose so that they convey the idea of order. So, they can be instrumental in representing the idea that something is ordered. Can the length of a bar represents categories? Not really. One may try to do it would not really represent this information in a way that is perceived, that is naturally perceived by a human observer. So, these are two small examples that explain the idea of expressiveness. Once again, the expressiveness concept is about whether a channel can express certain types of information or not.
+
+### Example 1 of How to Express Quantity With Different Channels
+
+Position, size.
+
+Okay. Now, let me give you a few examples of how to express quantity with different channels. We will start with the first one, which is **position**. So, imagine that we have one axis, like this, and the position of an object on this axis can express a quantity. A very similar situation you might be more familiar with is when I have a pair of axis, like this one orthogonal axis, and the position of one dot would actually represent the two quantities at the same time. This is exactly the technique that is used when one creates a scatter plot. Okay. 
+
+One can express quantity also using **size**. So, for instance, the size of bubbles, like in this case, the area can be used as a channel to convey information about a quantity. The same can be done, for instance, with the length of bars. This is what you find in bar charts. The length of a bar expresses information about a quantity. 
+
+Another channel that we can use is **angle**. So, one way to show that is, for instance, the angle of pizza slices, like this one. So, this one has a bigger angle than this one. So, B is bigger than A, for instance. 
+
+But that's not all, we can also use a **slope** for direction. So, if I draw two lines, one like this and one like this, so these two lines can express the direction and slope of these lines can express quantity, and you can very readily see that this one here is steeper than this one here. 
+
+Last one that I want to show you is **color intensity**. So, if I have patches of color, like this ones. So, this is clearer, this is darker, and this is even darker, so the intensity of colors can also be used as a way to express a quantity. 
+
+So, in summary, we have position, size, note that size can be expressed in many different ways. So, here, for instance, we used area size but also length of bars, then we have angle. So, for instance, in pie charts, angle is used together with other channels to express, together with area to express a quantity, then we have slope. For instance, this is used in line charts to express information about how quickly something changes over time. Finally, we have color intensity. Color intensity.
+
+![](week1_50.PNG)
+
+### Example 2 of How to Express the Idea of Order With Different Channels
+
+Now, I want to show you a few examples on how to express the idea of order with different channels. So, when you have ordinal data, what are the best channels or the channels that are available to express the idea of order?
+
+So, the first channel that you can use is the same that I have described in the previous set of examples, which is **position**. <mark>Position is always the best channel, and the channel that is available for all kinds of information that you want to express.</mark> So, how do you express order with position? Well, a good example is anything that resembles a list or a table. We naturally perceive our list as an ordered set of elements, of course this could be vertical like this or something horizontal like this, but the idea is that anything that is expressed as a list or a table is actually perceived as an ordered set of elements. So, position is a very powerful, is actually the most powerful channel you can use to express the idea of order. 
+
+Now, if we want to use other channels, there is a little problem. So, the fact is that, in principle, every channel that I described as a way to express quantity can be used to express the idea of order, because when you want to express the idea of order, the information that you need is that something comes before or after something else. <mark>But the problem is that, if we use the channels that I described when I presented out the information about how to express quantity, it's very hard to distinguish or it's very hard to perceive this information without also proceeding at the same time the idea that there is a quantity attached to these values.</mark> Let me give you a practical example to make this clearer. So, <mark>if I want to express order as the size of bubbles similar to what I have shown before, you can't help but perceive the area of this bubbles as communicating to you a quantity. So, in a way there is a mismatch, there is a breakdown of the expressiveness principle. What do I mean here? What I mean is that, if you are encoding ordinal information with a channel like area size, you will also be conveying the idea that these elements have a quantity attached, even if this is not the case.</mark> So, this is a little bit of a problem. 
+
+**So, what are good channels to express the idea of order without at the same time giving too much of an impression that these elements also have a quantity attached to them? Well, the best way to do that is to use channels that can in principle express the idea of quantity, but they are not particularly good at doing that**. Let me give you an example of two channels that can do that pretty well. 
+
+The first one is **texture or density**. So, see that I have three graphic called elements or patches like this one. So, I can use a textured like this one, or one that is higher density like this one, or another one that is even higher density like this one. So, now you naturally perceive these three elements as ordered. _In principle you could also attach a quantity or express a quantity with them, but they are not particularly good at doing that. Because of that, they are good at expressing order without necessarily conveying the idea of quantity_. 
+
+We find a similar feature with **color intensity** which is exactly what we saw before. So, if I have patches of color like these ones. Once again, you perceive them as ordered and they are not particularly good at expressing the idea of quantity even if they can. So, order is a little tricky, but one thing to keep in mind is the idea that <mark>position is by far once again the most powerful channel or technique that you can use to express the idea of order</mark>.
+
+![](week1_51.PNG)
+
+### Example 3 of How to Express Categories With Different Channels
+
+The last set of channels that I want to show you are those that are available to represent categorical information, categories or categorical data. So, what channels are available for that? 
+
+Well, once again, you won't be surprised at this point, **position** is one of the channels that we have available, and once again, is the best channel. So, let me show you examples about how position can be used to express the idea of different categories. Well, for instance when you use a bar chart like this one, the position of the bars on the x-axis represent different categories. So, say A, B, and C. So, that's an example of using position as a way to express information about categorical data. But these are not the only channels available. 
+
+Another popular and pretty good one is **color hue**. So, for instance if I have patches of color like this one, so red, yellow, and green, right? So, you would naturally perceive these colors as labels for different categories. So, there could be category A, category B, and category C. There is a lot to say about how to use color properly, and what are the mechanisms of human perception of color which we're going to cover later on in the course. I'm not going to talk much more about color here, just one little note, you may have noticed that I have used color also in the other two cases as a way to express quantity, and as a way to express order. The main difference here you may have noticed is that in the first two cases, for quantity, and order, I said color intensity which as we will see is one of the channels that you can use to express colors, to generate colors. Whereas here, I am using **color hue** which is actually the tint or the name of the color. Once again, there is a lot more to say about how to use colors, and how humans perceive colors as we will see, this is going to be covered later on in the next few modules, okay? 
+
+So, now I want to cover one last channel that you can use to express the idea of categories, which is also pretty good and pretty popular, which is **shape**. So, I can use elements of different shapes like a circle or a square or a star. So, this will be naturally perceived as objects of different categories, of different types. So, A, B, and C. As an example, this is sometime used in scatter plots to identify objects of different types. So, we say I have a few bubbles, circles, and stars here, whereas here I have mostly squares, and one couple of bubbles, okay? So, that's how one can use shape to express ideas about categories or labels. So, in summary, for categorical data, we have three main channels. Once again, the best one is position. Then, we have color hue, and shape. So, these are the channels that are available for categorical information.
+
+
+
+
+
