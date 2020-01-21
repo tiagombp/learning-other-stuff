@@ -340,3 +340,31 @@ Once again, I have a number of bubbles and two bubbles are bigger than others. S
 ![](week2_62.PNG)
 
 But now, if I switch to the other condition where the two bubbles are the only ones that are smaller in a sea of larger bubbles, they don't really stand out as much as in this situation. So, this is an example of a pre-attentive feature that is asymmetric.
+
+### Implications for Design (Salience)
+
+Now, what are the main implications for design for the salience part that we just saw in the previous video? There are a couple of really important implications. The first one is that _it's very important for you as a visualization designer to always be mindful about how you are directing the viewer's attention_. Whenever you show a visualization to a viewer, there is always something that grabs the person's attention.
+
+![](week2_63.PNG)
+
+You have to be really careful about how you're designing is encouraging specific kind of visual tuning to certain kinds of graphical elements. In other words, _if you don't think about it, it may be harder for the reader to understand exactly what to extract out of a visual representation_. Similar to that, or as a consequence of that, if you are using too many visual channels at once into many values within each visual channel, the more you have, the harder it is to tune on specific things. 
+
+![](week2_64.PNG)
+
+As we will see in a moment in the later videos, we will also see that channels interact one to another in very specific ways. So, the more channels you have, the more values you try to depict, the harder it is to tune on specific patterns. 
+
+Let me give you an example. Here I have a series of line charts. 
+
+![](week2_65.PNG)
+
+This is data coming from conference publications. Every single group of lines represents one conference, and each line represents one type of paper. Now, the idea here is that we want to see, over the years, our different paper types distribute across different conferences. In this specific solution, I've colored every single line with the color that represents the type of paper. Now, if you notice, look carefully, there are lines at the bottom that all behave the same, whereas there are two lines that tend to behave differently not only over time, but also across conferences. So, in a way, what is really interesting and important here in these graphics is what these two lines are doing, because the rest is not really important. So, differentiating between them is not really going to help out much. So, what can you do here? You can switch from this visual representation to this one, where all the lines that are on the bottom have been grayed out. 
+
+![](week2_66.PNG)
+
+So, they're all painted with gray. Now, as you can see, the attention, the tuning is on the two lines of interests. So, this is an example of <mark>how to use graphical properties in a way that directs the viewer's attention to what is really important, and at the same time is offloading the cognitive effort to understand what to attend to. So, this is very useful</mark>. 
+
+So, as a general remark here, I would say you have to remember a couple of things. One is to use color sparingly. This is something that we are going to talk again about in the later section when we talk exclusively about color. Similarly, learn how to use gray shades because they tend to attract attention much, much less than all the other colors and the colors that remains standout compared to the rest. 
+
+![](week2_67.PNG)
+
+So, this is a very useful trick as a way to tell the viewer implicitly what elements he or she should attend to.
