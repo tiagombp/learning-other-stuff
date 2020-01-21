@@ -289,3 +289,54 @@ The interesting thing is that vision scientists have been testing many other vis
 
 <mark>Some of them are very commonly used in visualization design, and all of them are features that can be detected very fast. Because of that, they are very good candidates of features to use in visualization design to encode information.</mark>
 
+### Non Preattentive Features
+
+Now you may wonder: if there are visual features that are pre-attentive, what is not pre-attentive? That's a reasonable question. Well, first of all, there are actually visual features that are not pre-attentive. 
+
+![](week2_53.PNG)
+
+An example is these two features. 
+
+![](week2_54.PNG)
+
+So, if you look at the image on the left and you assign the task of looking for objects that have a junction or don't have a junction, well, this task is not pre-attentive. Similarly, if you have pairs of lines and some of them are parallel and some others are not, this is not pre-attentive. So, these are results that come from several studies that vision scientists generated over the years. 
+
+There is another important element here to consider, **that not only some visual features are not pre-attentive but also the combination of some visual features is not pre-attentive and this is much, much more important from the visualization design standpoint**. 
+
+![](week2_55.PNG)
+
+In particular, if I ask you to look for something and this something requires you to consider two features at once, then this task and this combination of features it's no longer pre-attentive. So, let's go back to a similar example to those that we had before but a little variation. Once again, we have dots in squares and these dots and squares some of them are blue and some of them are red. 
+
+![](week2_56.PNG)
+
+Now, in a configuration like this one, if I ask you to look for the red dot, now this search requires you to search using two visual features at the same time. Is not sufficient to look for something that is a circle, and is not sufficient to look for something that is red. You need to find a circle that is red. So, this is a _conjunction_ of two features at the same time. As you will see in a moment, this is not pre-attentive. Let's go to exactly the same exercise as we have done before. We are going to show you a sequence of images and you have to look for the red dot, and tell whether these red dot is present in the image or not. As you will see, this is much, much harder than the conditions that you tried before.
+
+![](week2_57.PNG)
+
+Technically speaking, this is called a **conjunctive search**. What is a conjunctive search? It's looking for a target that requires looking for something that combines two or even more features at the same time? Once again, this is not pre-attentive. Why it is not pre-attentive? Well, because it requires the viewer to scan the whole view in order to search for the target. Because of that, the visual processing that is performed, it's no longer parallel but it's sequential. 
+
+![](week2_58.PNG)
+
+What do I mean by sequential? I mean that the viewer needs to scan the view and look for the target rather than perceiving the target right away suddenly. Here is an image that explains a little bit of what it means to have a serial search in an image. 
+
+![](week2_59.PNG)
+
+Here is an eye tracking scan, that has been performed by a group of scientists from MIT when they are looking for Waldo, in an image of where is Waldo. The lines that you see are basically the traces of the movement of the eyes that the participants make when they're looking for Waldo. This is one example of one participant. As you can see, what happens is that people are scanning the entire image and little by little trying to converge towards the area that contains the final target. As you can imagine, these takes much, much more time than the situation where you have a pre-attentive feature that is immediately perceived all at once. So that's the main difference. 
+
+Now, there are another couple of important considerations to make on pre-attentive features. So, the first one is that **some features are stronger than others**. Let me give you an example. 
+
+![](week2_60.PNG)
+
+So, here, I have a number of bubbles, and some of these bubbles are bigger than others, and some of these bubbles are colored differently than the others, and some of these bubbles are. If you want to look for blue bubbles, it's easy for you to focus on the blue bubbles. *But if I ask you to focus to search for big bubbles, it's a little, little harder than looking for colored bubbles*. **Both are pre-attentive but color is stronger than size**. 
+
+Another factor is that some of these features are asymmetric. What do I mean? I mean that, when you look at the feature, when you use the feature, if the feature as a directionality, then one direction is easier to perceive than the other. 
+
+Here is another example. 
+
+![](week2_61.PNG)
+
+Once again, I have a number of bubbles and two bubbles are bigger than others. So, these two bubbles stand out, pop out, they are very, very salient. 
+
+![](week2_62.PNG)
+
+But now, if I switch to the other condition where the two bubbles are the only ones that are smaller in a sea of larger bubbles, they don't really stand out as much as in this situation. So, this is an example of a pre-attentive feature that is asymmetric.
