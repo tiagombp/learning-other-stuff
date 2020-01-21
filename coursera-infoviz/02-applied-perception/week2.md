@@ -368,3 +368,33 @@ So, as a general remark here, I would say you have to remember a couple of thing
 ![](week2_67.PNG)
 
 So, this is a very useful trick as a way to tell the viewer implicitly what elements he or she should attend to.
+
+### Separability
+
+In the previous videos, when we talked about pre-attentive processing, you notice that when we encode information with more than one feature, and when the viewer needs to search for something that requires looking for multiple features, then things get more complicated. Okay? 
+
+Now, another related project, sorry, another related concept is the concept of visual separability. What is separability? It's the idea that when we are encoding information with more than one channel, how easy is it to focus your attention on one channel versus the other? 
+
+![](week2_68.PNG)
+
+So, if you remember the previous examples, how easy is it to visually tune your attention to colored dots versus large objects? Okay? Now, let me give you a couple of additional examples. 
+
+![](week2_69.PNG)
+
+Here we have a few dots, and some of them are separated in two groups. Within these groups, we have dots of different colors. Some are black, some are yellow. Now, if you want to focus on grouping, it's easy. You very easily and readily distinguish between one group and the other. But if you also want to look for objects of one specific color, that's also easy to do. Try to do it. Focus on the black dots and the yellow dots. These two tasks are very easy to do. 
+
+Now, let's examine a different image. 
+
+![](week2_70.PNG)
+
+In this case, we have objects of different shape and different color. Now, if you want to tune your attention to color, it's easy. But if you want to turn your attention to shape, it's a little harder. So, these two are interacting in some way. 
+
+Now, let me give you another example. Here we have a number of rectangles. 
+
+![](week2_71.PNG)
+
+Some rectangles have the same height, and some rectangles have the same width. But if I ask you to look for rectangles that have the same height independently from the width or the same width independently from the height, it's very hard to do. Try to do it for a moment. It's very hard. So, if I ask you tell me which rectangles have the same width, it's very hard. If I ask you tell me which rectangles have the same height, this is also very hard. Why? Because these two visual elements interact a lot. 
+
+![](week2_72.PNG)
+
+So, they are not _visually separable_, and this is the main idea behind separable visual features. So, <mark>visual features are highly separable if it's easy to tune your attention to only one regardless the other, and they are, we say, integral if they are perceived as one single feature even if you have two, and that's the case of width and height of rectangles</mark>. If I ask you to focus on one of the two features, it's very hard. So, that's the basis of integral and separable visual features.
