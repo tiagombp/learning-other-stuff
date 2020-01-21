@@ -184,3 +184,66 @@ Lastly, there is also an effect of **cardinality**. What is cardinality? Cardina
 So the color palette and items that you have on the left side is much, much easier to perceive than the one that you have on the right-hand side. Why? Well, because on the right-hand side you have too many distinct values and there are higher chances that you mix one with the other. So cardinality also plays a major role. So in summary, the screening ability is about the property of a channel to create visual representations in which a certain number of values can be discriminated.
 
 And it depends on the accuracy of the channels, but also on a number of other contextual parameters. And this is very important to keep in mind. So discriminability depends on the spatial arrangement, size and cardinality.
+
+### Implications for Design (Discriminability)
+
+What are the main implications for design for discriminability? The most important one is that you should not overestimate the number of distinct values that one can perceive out of your visualization. 
+
+![](week2_35.PNG)
+
+So, in turn, you should never try to encode too much or too many values. Why? Because they create a lot of clutter, they hinder perception, and your viewers won't be able to read them anyway. That's a very, very important problem, and you have to keep it in mind because I see a lot of examples out there where the main source of the problem is exactly not keeping in mind the problem of discriminability. So, this is a very, very special one. It's important to keep it in mind. 
+
+Let me give you a few examples, a few practical examples to make this more concrete. Here is a visualization that is called a tree map, where every single rectangle represents a given category or item, and the size of the rectangle represents a quantity, and color represents a category. 
+
+![](week2_36.PNG)
+
+You see the categories on the right once again. Okay. Here we have a quite large number of categories, and it's already quite hard to compare the color of one rectangle to another, but it's okay. It's almost doable. But when we represent the same data in the scatter plot that I've presented to you in the previous video, you'll see that distinguishing all of these categories, it's incredibly hard. 
+
+![](week2_37.PNG)
+
+Look at the legend that you have on the right. So, in principle, you should be able to visually detect all of these different categories. But it's virtually impossible because many colors are too similar and also they are overlapping, and it's just too much. So, _the discriminability is too low because you're trying to encode too many values with one channel that is not able to encode all of these values_. 
+
+But don't think that this is only a problem with color. Here is another example. 
+
+![](week2_38.PNG)
+
+Here I'm encoding information about a number of categories with the same scatter plot using shape. Look at the legend on the right. Here I'm encoding five or six different categories, and each one is represented by a specific shape. So, each item in the scatter plot is represented by a specific shape. As you can see, look at this scatter plot for a moment, you'll see that in many cases, it's hard to discriminate between which category is which. This is just five or six categories. Can you imagine if you try to encode 10, or 12, or 20 categories with shape, it's very, very hard to discriminate among them. 
+
+So, in turn, this means that very often, where you're trying to design new visualizations, you find yourself into the situation where you have to solve the problem that there is an attribute, typically a categorical attribute or categorical variable that has lots of values, and you will like to visualize all of them, to encode all of them in your visualization, but you don't have a channel that is able to _express_ all of these values at once. 
+
+![](week2_39.PNG)
+
+So, take the example of color. There is no way to represent 50 different categories with color. The same is true for most of the other channels. 
+
+So, how do you fix it? How do you fix this problem? 
+
+![](week2_40.PNG)
+
+Well, there are three main categories of solutions: **grouping, filtering, and faceting**. Let me go through these three types of solutions. 
+
+![](week2_41.PNG)
+
+So, the first one is **grouping**. What do you do? You have too many categories. There is no way to represent all of them. So, one thing that you can do is to take these categories and group them together in groups of categories. 
+
+![](week2_42.PNG)
+
+Okay. You're effectively building a hierarchy. So, if there is a way to say, oh, all of these categories can be grouped together in one category, and all of these other ones in another category, and so on, and you can reduce it to, say, five, or four, or six, well, then you are solving the problem by processing the data, and now it's much, much easier to visualize the new data that you have created. So, that's one strategy. So, whenever possible, keep in mind that the good strategies to group categories together. 
+
+Another one is **filtering**. So, maybe out of all these categories, say, 50 categories, what you're really interested in is only a handful of them, say, four, five, again, four, five, six, right? 
+
+![](week2_43.PNG)
+
+Typically, I think one strategy that I see is often very useful is to look at which categories are those that have the highest frequency and then just keep the top five or top ten. So, that's another useful strategy. 
+
+Finally, there is a strategy that works more on the visual side of things, and it's called **faceting**. So, how does faceting work? So, effectively, what you're trying to do here is to change the channel that you are using to encode the categorical information from channels like color or shape into position, and position, as we have seen before, is a very, very powerful channel. So, how do you do that? So, you basically recreate the same plot multiple times, one next to another, but each plot represents only the data of the category it belongs to. 
+
+![](week2_44.PNG)
+
+So, in this example, I have taken exactly the same scatter plot, and I split the scatter plot into a number of repeated scatter plots, where each one represents only the fruits that belong to a given category. As you can see, this is way, way more scalable than other channels. Why once again? Because position is a very, very powerful channel. 
+
+If you want, once you do that, now you can redundantly encode the same information with other channels. 
+
+![](week2_45.PNG)
+
+In this case, I'm using color, but I could have used shape or other channels, and this makes it even more powerful. So, in summary, the <mark>main message behind this discriminability is, don't overestimate the power of visual channels to represent a large number of values</mark>. Most of the time, the number of distinct values that can be perceived out of a visualization is very small, in the order of between one, 10, or 15. Much more than that, and you are in trouble.
+
