@@ -247,3 +247,45 @@ If you want, once you do that, now you can redundantly encode the same informati
 
 In this case, I'm using color, but I could have used shape or other channels, and this makes it even more powerful. So, in summary, the <mark>main message behind this discriminability is, don't overestimate the power of visual channels to represent a large number of values</mark>. Most of the time, the number of distinct values that can be perceived out of a visualization is very small, in the order of between one, 10, or 15. Much more than that, and you are in trouble.
 
+### Salience (Pop-out)
+
+Another important concept we need to introduce is concept of an old pop-out. What is salience? It's the ability to stand out in a scene. 
+
+![](week2_46.PNG)
+
+In general, in visualization, there are situations where you want something to stand out from the rest. Let me show you an example. This is the famous Where's Waldo comic strip. 
+
+![](week2_47.PNG)
+
+The idea here is to look for the little figure that is called Waldo, and he has a t-shirt with stripes and a hat, and so on. So, why is it so hard to find Waldo? Well, it's hard because there are many things that look like him. So, this makes it visually hard to identify your target. 
+
+But if we put Waldo in a completely different context, where the context is very different, well, then finding Waldo is very easy, as in this image. 
+
+![](week2_48.PNG)
+
+So, this is also true in visualization. Whenever you want to highlight something, or make sure to direct the attention of your viewer, or do something, then you have to consider the problem of salience and pop-out. 
+
+So, this is very highly related to a concept that is called **pre-attentive processing**. So, what is pre-attentive processing? This is a term that has been developed by vision scientist, and it captures the idea that human vision works in a way that some visual features can be detected extremely fast. How fast? Well, typically, a feature, in order to be considered pre-attentive, has to be detected at least in less than 200 or 250 milliseconds. Why is that? Well, because this amount of time is the amount of time that is needed to our eyes to initiate their movement and look for something. In turn, this means that if our visual feature can be detected faster than this amount of time, then it must involve some elements of the parallel low-level vision system. What does it mean? It means that it doesn't depend on us looking at a specific location of the view field that we have in front of us. In turn, this means that these features can be detected very fast and effortlessly. 
+
+![](week2_49.PNG)
+
+Let me give you an example. This is a very classic example. 
+
+![](week2_50.PNG)
+
+If I have a series of a sea of blue dots, and in this image, some time I have a red dot or I don't have a red dot, and I ask you, I show you a number of images where sometimes there is a red dot, some other times there's no red dot, and I ask you to tell me whether the red dot is present or not, and I show you this image only for a very small amount of time, below the 200 milliseconds threshold, most of the time you will be able to answer correctly. Now let's test this. I want you to try it out. So, in the next animation, so we will be showing a number of images, very similar to what you see here. So, blue dots and sometimes in some images, a red dot is present, and some other times is not present. So, your goal, the exercise is for you to say whether the red dot is present or not. Once the image flickers, the next image is going to tell you absent or present. So, you can check whether your answer was correct or incorrect. You're ready? This is starting now.
+
+So, I hope you can see through your experience now that situations like the one that you have just experienced, looking for a red dot in a sea of blue dots, can be done extremely fast by our visual system. 
+
+So, this is not limited to finding a red dot in a sea of blue dots. The same is true in this other example. 
+
+![](week2_51.PNG)
+
+If I ask you to look for the squared mark in a sea of circles, once again, you will be able to do it pretty fast. It's not as fast as color, but it's fast. Because of that, this is also considered pre-attentive. So, let's try exactly the same exercise, where the target is a square versus in a sea of red dots.
+
+The interesting thing is that vision scientists have been testing many other visual features to see whether they are pre-attentive or not. It turns out that there are many visual features that are pre-attentive and typically, most of the channels that we described previously in the previous videos actually correspond to pre-attentive visual features. So, here is a non-exhaustive list of features that are pre-attentive. 
+
+![](week2_52.PNG)
+
+<mark>Some of them are very commonly used in visualization design, and all of them are features that can be detected very fast. Because of that, they are very good candidates of features to use in visualization design to encode information.</mark>
+
