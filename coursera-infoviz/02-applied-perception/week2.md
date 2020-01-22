@@ -475,7 +475,6 @@ And because of that, I perceive in one rows, so the objects that are closer in t
 
 Let me give you a practical example, once again, I'm using the same scatter plot that you've seen before. In a scatter plot, this is a perfect example of the law of proximity. When there is a group of dots that are closer together than the rest, you readily perceive these dots as a group. 
 
-
 ![](week2_86.PNG)
 
 Some time people call these clusters, so there are clusters of group, clusters of data points, so the data points are clustered together. It's a very, very common situation with visualizations like scatter plots, or any other visualization where there are dots that are positioned on the screen. And proximity may give the sense that there is a group of objects that are related one to another, this is very common.
@@ -505,3 +504,101 @@ Let me give you one last example without practical, with a real graph. Here is a
 ![](week2_91.PNG)
 
 Now since some bars have the same color, in this example they have two bars are colored as orange, you perceived them, you very readily perceived them as belonging to the same group. So this is the general principle of grouping by similarity.
+
+### Grouping: Connection and Enclosure
+
+The next law is the law of **connection**. 
+
+![](week2_92.PNG)
+
+This law says that if objects are connected by a line or some other elongated objects then they are perceived as belonging to the same group. Let me give you a few examples. 
+
+Here we have four squares and two squares of the same color and the other two squares on the right of the same color. 
+
+![](week2_93.PNG)
+
+Because of that, according to the guess law of similarity you perceive the object with the same color as belonging to the same group. But now, notice what happens when I draw a line that connects these objects. 
+
+![](week2_94.PNG)
+
+Now you perceive this grouping differently. You see the squares on top as belonging to the same group, in the squares on the bottom as belonging to the same group _despite the fact that these breaks the law of similarity_. So objects that are connected by a line or anything similar are perceived as being grouped together. Let me give you another example. 
+
+![](week2_95.PNG)
+
+Here once again we have four squares and some squares are smaller than the other and because of that, without the presence of a line that connects them, you perceive them as two groups. The groups of small ones and the groups of big ones. 
+
+![](week2_96.PNG)
+
+But when I draw a line that connects them, now you perceive the squares on top as belonging to the same group, and the squares on the bottom as belonging to the same group, same thing. Exactly the same thing with shape. 
+
+![](week2_97.PNG)
+
+So we have circles and squares and when I connect them with lines, they are perceived as belonging to a group of objects that are connected through a line. 
+
+![](week2_98.PNG)
+
+Let me give you a practical example of how these translates into real world visualizations. A very very common example is what happens in line charts. So if we draw a line chart without lines but only using the dots, we don't really perceive these elements as being connected and being part of one single object. 
+
+![](week2_99.PNG)
+
+Right. Look at these graphics. You actually perceive these as individual data points, individual dots. But when I connect them with the line, now I have the perception that this is one single object. 
+
+![](week2_100.PNG)
+
+Why is it one single object? Because all of these dots are connected through lines. 
+
+The next law is the law of **enclosure**. Somehow similar to the law of connection. These laws says that if a group of object is enclosed in an area then they are perceived as being part of the same group. 
+
+![](week2_101.PNG)
+
+Once again, let me give you a few examples. 
+
+![](week2_101a.PNG)
+
+First, here we have the same set of foursquare's as before, but if I create, if I circled them and I enclose them in this circle in this area, I perceive these objects belonging to the same group.
+
+![](week2_102.PNG)
+
+Now, a really nice practical example of existing visualizations that use these property is a technique called Bubble Sets. What is Bubble Sets? Bubble Sets is the idea of connecting dots that spread out in different locations of a visualization through areas that convey the idea that all of these objects belong to the same group to the same category. 
+
+![](week2_104.PNG)
+
+Notice in the specific example. So this is applied to a map visualization, but it can be applied to any other visualization that uses individual dots or individual graphical elements to depict something. What is interesting here? The main thing that you should notice, is that despite the fact that these elements are spread out in the map, those that are enclosed by the same object, they are all perceived as belonging to the same group despite the fact that they are in very different locations. 
+
+So that's the main idea here. So in summary the main laws that we have seen so far are: _the law of proximity, the law of similarity, the law of enclosure and the law of connection_. 
+
+![](week2_105.PNG)
+
+**All of them play a role in the perception of how objects are grouped together to form a unit to form a group**. And as we will see in the next video, there is a hierarchy of these graphical methods. What do I mean by a hierarchy? I mean that some are stronger than others and when they compete there are some that supersede the others. So we would see that in the next video.
+
+### Hierarchy Within Grouping Techniques
+
+In this video, I want to show you how the different methods, the different visual techniques you can use to group, to give a sense of object grouping together, relate one to another. As I said before, some are stronger than others. Let me start once again with the grid of squares. 
+
+![](week2_106.PNG)
+
+So, number of squares arranged in a grid. When you look at this, you can't really perceive any specific pattern. As soon as I color them, some of them, you perceive the squares that are colored the same as belonging to the same group as we have seen before. 
+
+![](week2_107.PNG)
+
+But now let's see what happens when I use more methods at the same time, multiple methods at the same time. So, now I'm taking the first row and I'm creating space between the first row of objects and the rest. 
+
+![](week2_108.PNG)
+
+What do you see here? I guess what you see is that there is one group of objects on top and one group of objects at the bottom despite the fact that they didn't change the coloring. So what do you see here? **You see that despite the fact that color, as we saw in the previous slide, is one of the methods that you can use to group things together when space or position is used, position is stronger**. 
+
+Now, if I add that contour and group together with a line, some of these objects, those objects on the left, what do you perceive? 
+
+![](week2_109.PNG)
+
+You perceive these objects as belonging to a group, despite the fact that some of them are more distant and some of them have different colors. So, what does this suggest to you? It should suggest that **contour, enclosing objects in a contour, in an area is stronger than the rest**. 
+
+Very similar to this last case is the case of connection. 
+
+![](week2_110.PNG)
+
+If I connect some elements together, the grouping that I perceive more strongly is the group of objects that are connected through lines despite the fact that some of them have different colors and some of them are more distant than others. So, that's the ranking of the grouping methods that we have seen so far. 
+
+![](week2_111.PNG)
+
+So in summary, what do we have? We have that you can group things together through similarity but that's the weakest method. After similarity, you have proximity proximity stronger than similarity. And then you have enclosure and connection that are stronger than the rest. These are very useful properties to keep in mind when you think about how to design a visualization and also what kind of effect certain design choices may have on what is perceived by the viewer.
