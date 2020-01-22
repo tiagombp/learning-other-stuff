@@ -398,3 +398,110 @@ Some rectangles have the same height, and some rectangles have the same width. B
 ![](week2_72.PNG)
 
 So, they are not _visually separable_, and this is the main idea behind separable visual features. So, <mark>visual features are highly separable if it's easy to tune your attention to only one regardless the other, and they are, we say, integral if they are perceived as one single feature even if you have two, and that's the case of width and height of rectangles</mark>. If I ask you to focus on one of the two features, it's very hard. So, that's the basis of integral and separable visual features.
+
+### Implications for Design (Separability)
+
+Let's move on to the implications for design related to separability. There are two main implications for design: The first one is that you should use integral dimensions when the effect that you want to obtain is holistic. What do we mean by holistic? Holistic means that you want your viewer to react to the graphics that you encode with two or more dimensions. Let's focus on two is easier. As one single unit, you don't want the viewer to think about one unit regardless without thinking about the other one. They are perceived as one single thing. I give you an example in a moment that is going to make this much clearer. 
+
+What as you want to use separable dimensions, when you want the viewer to be able to focus on one single dimension at a time and then to the other. So, you want to be able to differentiate between the different channels that encode the different pieces of information. 
+
+![](week2_73.PNG)
+
+Let me give you a couple of examples that make this concept probably much much clearer. Here we have once again the same kind of plug that we used in previous examples. 
+
+![](week2_74.PNG)
+
+On the X-axis, we have sugar. On the Y-axis, we have calories, every single dot represents one food, and the foods are colored according to food categories. Now, if you think about it, what you can do with these graphics is that you can focus on the property of color and visually group all those elements that belong to a particular category. But you can also focus on position in trying to extract information about which objects, which items are in which position, and how they relate to the values that they represent. As we have seen before, position and color is highly separable, so it's very easy for you to focus either on one or the other without having any interference from one channel to the other. 
+
+Now, let's move on to another example where we are using integral dimensions. Here we have a dataset that represents Body Mass. 
+
+![](week2_75.PNG)
+
+What is Body Mass? Body Mass is created as an equation of two parameters that are weight and height. Now, in these graphics, every single dot represents one person and it's represented through an ellipse, and the width and height of this ellipse are proportional to the weight and height of the person. Now, if I ask you to observe these graphics and tell me which individuals have a Body Mass that is proportioned between weight and height, which basically means which one is closer to circle, it's very easy for you to do it because you just have to look for objects of a specific shape. They are not elongated horizontally. They are not elongated vertically. You want to look for those that are as close as possible to the shape of a circle. But think about what you're doing here. **The shape is actually given by the combination of two attributes. As we said, height and weight, but you are never really attending to one of these two attributes individually. You are perceiving them as one unit and that's what you want the graphics to communicate. So, this is an example where we are encoding two attributes through two integral dimensions. And because of that, the way we are perceiving this information is exactly the way we want it to be perceived as a unit, as we said before, holistically**. So that's what it means to use integral dimensions in an appropriate way. 
+
+Let me give you another example that is very very similar. Look at this map. 
+
+![](week2_76.PNG)
+
+So this is a map of the United States. And once again, we have information represented through an ellipse, and we have the width and the eye of the ellipse representing the amount of votes that go to Republicans and amount of votes that goes to Democrats. Now, once again, if I ask you to tell me what are the states where the two parties are balanced, you basically have to _translate these into the visual query of looking for elements that are as close as possible to a circle_. And that's another good example of using _on purpose_ integral dimensions to perceive elements that are built through the combination of two attributes. This doesn't always work very well, so you have to be careful. 
+
+Here is another example of a map where three quantitative values have been encoded as three different channels of color. 
+
+![](week2_77.PNG)
+
+Now, the problem here is that, in these original graphics, you should be able to identify areas where the three individual attributes one should be able to detect them independently from one to another. But this is impossible in this graphic because trying to discern for every single element, how much of each color is present is really really hard. Look at the legend on the left. There are four main colors in trying to figure out how much of each color there is in one area is extremely extremely hard. And by the way, it's also hard if you want to obtain the effect of an holistic view, it's really really hard to understand which areas have exactly the same combinations of the three colors. 
+
+So, this doesn't always work and you have to be really really careful in the way you're using this technique. <mark>But the general idea is use separable channels when you want the viewer to be able to attend to one channel without the other, without the interference of the other, and use integral dimensions when you want the viewer to be able to **perceive the combination of the attributes as one single thing.**</mark>
+
+### Grouping: Similarity and Proximity
+
+We now introduce a new, very important concept, the concept of grouping and pattern formation through the Gestalt laws of grouping. What are the Gestalt laws of grouping? So this is a very, very important concept.
+
+![](week2_78.PNG)
+
+So you may have noticed that when you are looking at a visualization, there are patterns that emerge. This is basically the core feature of visualization. When you look at data represented through a visual representation, there are things that emerge that you just can't avoid not seeing.
+
+![](week2_79.PNG)
+
+Now the question is how do these patterns emerge, and why do they emerge?
+
+This is the main question behind the Gestalt laws of grouping. It's a number of laws that basically try to explain or describe under what conditions, individual visual objects are perceived as a group? And as you can imagine, this is very, very important for visualization. 
+
+![](week2_80.PNG)
+
+It's very important for you as a visualization designer to be aware of what methods you have in your toolbox to give a sense that a group of objects are related one to another. So you have lots of individual objects, but if they're arranged in a certain way, they're perceived as a single group. That's a very, very important feature.
+
+Okay, so let me first introduce the list of the main Gestalt laws, and then we will go individually through each of them. 
+
+![](week2_81.PNG)
+
+So the first one is proximity, then we have similarity, connection, enclosure, closure, and continuity. Let's start from proximity and similarity.
+
+The law of proximity says that if some visual objects are close, positioned close, one close to another, they are perceived as a group. 
+
+![](week2_82.PNG)
+
+This is pretty straightforward, let's take a look at this example. Here we have a number of individual objects organized in a square. 
+
+![](week2_83.PNG)
+
+But some in this square, there are cases where the objects are slightly closer in the direction, in the horizontal direction, and some are slightly closer in the vertical direction. 
+
+![](week2_84.PNG)
+
+![](week2_85.PNG)
+
+And because of that, I perceive in one rows, so the objects that are closer in this direction tend to be grouped together. And because of that, we see a row for each line of elements. And the same is happening in the other direction.
+
+Let me give you a practical example, once again, I'm using the same scatter plot that you've seen before. In a scatter plot, this is a perfect example of the law of proximity. When there is a group of dots that are closer together than the rest, you readily perceive these dots as a group. 
+
+
+![](week2_86.PNG)
+
+Some time people call these clusters, so there are clusters of group, clusters of data points, so the data points are clustered together. It's a very, very common situation with visualizations like scatter plots, or any other visualization where there are dots that are positioned on the screen. And proximity may give the sense that there is a group of objects that are related one to another, this is very common.
+
+The second one is similarity. So the law of similarity says that if a group of object shares a visual property, then these objects are perceived as being part of a group.
+
+![](week2_87.PNG)
+
+Let me give you another example similar to the one that we used for proximity. Once again, we have a group of objects placed in a grid.
+
+![](week2_88.PNG)
+
+So in the first example we have that some objects have the same color. And because of that, they are perceived as part of a group. That's why we see different rows in the graphic that you see on the left. Why do you see different rows? Because the objects that have the same color are perceived as a unit, that's the reason why you see it that way. It's exactly the same thing on the graphics on the right. Objects that have the same shape are perceived as belonging to the same group. And because of that, you see rows, okay? Even though, I forgot to say that, sorry, these objects are all equally spaced, so _there's no interference of space here_. **The only reason why you see rows is because the objects that are in the same row are either the same color or the same shape.** So this is an explanation of the law of similarity.
+
+Let's go back to our practical example, once again with our scatter plot. Now in this scatter plot I have colored dots, where color represents dots, foods of the same category. 
+
+![](week2_89.PNG)
+
+Once again, objects that have the same color are perceived as belonging to the same group. Notice the group of dots that I circled in this visualization. 
+
+![](week2_90.PNG)
+
+Despite the fact that some of them are somewhat far apart, they are perceived as one group because they have exactly the same color. And color is just one of the possible features, visual features that you can use to convey the idea of similarity. 
+
+Let me give you one last example without practical, with a real graph. Here is a bar chart, it's representing some relationship between categories and values, but the bars are also colored. 
+
+![](week2_91.PNG)
+
+Now since some bars have the same color, in this example they have two bars are colored as orange, you perceived them, you very readily perceived them as belonging to the same group. So this is the general principle of grouping by similarity.
