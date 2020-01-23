@@ -98,3 +98,60 @@ Here is another example that is somewhat similar but even more problematic. That
 
 Here, we have a more subtle situation. So here in this graphics, colors is used to represent a difference between two years. So in these graphics, what is represented is information about diseases and how the percentage of diseases has changed over time between two different dates, and the color intensity is used to see, to represent the change between two years. But the problem, if you look at the legend, try to look at the legend for a moment, you'd see that some of these values are positive and some of these values are negative. So some of the changes between the two years are positive, and some of the changes are negative. But now, when you focus on the graphics again, you'd see that it's very hard to distinguish between diseases that had a positive change and diseases that had a negative change. So, we will see later on why this happens and what would be an appropriate color and coding for this situation. But I guess, you understand that there is a problem here. We **can't really distinguish positive from negative** and this is a problem.
 
+### Color Perception
+
+![](week3_20.PNG)
+
+When we talk about color perception, it's necessary to start from understanding a little bit of what happens when lights enters our eyes and how it's processed by our eyes and then our brain. First of all, a little bit about how the eye works. Here is a little schematic of how the eye works. 
+
+![](week3_21.PNG)
+
+Lights enters the eye through the cornea and is reflected in the back of the eye, where all the sensors are present. In the back of our eyes, there are lots of _sensors_, and this region is called the _retina_. The retina is all the region that is in the back of our eyes that is full of sensors that are sensitive to light. In this region, the retina, it's important to know that in this region, there are different elements. First of all, there is one small region that is called the _fovea_ where the sensors are _much denser_. In turn, this means that when we are looking at something, there is one region of our field of view where we can see things in much higher detail than the rest. 
+
+Another thing to know is that all these sensors get connected to the _optic nerve_, and the optic nerve is basically that component of the eye that _transfer the signal from the sensors to the brain_. Now, since we have an optic nerve in our eye, in the back of our eye, it also means that the retina, all these layer of sensors in the back of the eye, is basically a hole that we actually don't perceive but exists. It exists because this is where the optic nerve starts and sends the signal to the back of our head, to our brain. Before I move on, I want to give you a little demonstration that shows you the fact that this blind spot exists. What is a blind spot? The blind spot is that region of the eye where the optic nerve attaches to the eye. This is where we don't have sensors because there's the nerve in place of the sensors, and that we normally don't see it but there is an exercise that can actually show you that this blind spot exists, and I'm going to show you how to do that. 
+
+![](week3_22.PNG)
+
+First of all, you'll have to use this image that is in front of you. There is a cross and a dot. Now, I'll show you the procedure necessary to verify that you actually do have a blind spot in your eye. I'm going to use my laptop to do that. If you have a laptop in front of you, you can use your laptop to do exactly the same procedure, or if you don't have a laptop, you can also just print this page and try on your own. How does this work? You have to do two important things. First of all, you have to cover your left eye with your hand and then stare at the cross, only at the cross with your open eye, and then slowly try to get the image closer and closer but always focusing on the cross. When it's close enough, you'll see the dot disappear. When the dot disappears, it means that this is the time when the dot is basically falling on that region of the retina where the optic nerve is, and this is where you can no longer perceive anything. It's very interesting. 
+
+Now, another very important thing to know is that we have two types of sensors in the retina. 
+
+![](week3_23.PNG)
+
+We have rods and cones. Rods are sensors that are sensitive when we are in low light conditions, so basically when it's dark. They are not very much used today because we almost always have some light around us. But if you find yourself at night outside and there's no lights, this is what you're using, you're using rods to see objects in front of you or around you. But when there is enough light, so in most of the time, you're using another type of sensor that is used that is called cone. You have lots of cones and there are different types of cones. There are three different types of cones and these three different types of cones are actually sensitive to different wavelengths, and this is the basis of what is called the trichromatic theory, a very important concept in color perception. 
+
+![](week3_24.PNG)
+
+These three types of cones are respectively sensitive to short wave length, medium wave length, and long wave length as you can see in this diagram. In turn, this means that some of them are more sensitive to lights that are around the spectrum of blue, some around the spectrum of green, and some around the spectrum of red. 
+
+![](week3_25.PNG)
+
+This means that physiologically, at the physiological level, the eye reacts to light using three main sensors, and as we will see, three main _channels_. This is the basis for a lot of other important concepts in color perception and use. In particular, it means that every color can be expressed, as we will see later on, as a combination of three main channels. This is repeated over and over in color perception and use. The trichromatic [acho!] theory says that we basically perceive color as a three-channel system, which is very important. 
+
+![](week3_26.PNG)
+
+However, it's also important to realize that when we talk about color, when we try to specify how we perceive color, we soon realize that we don't describe color naturally as the combination of red, blue, and green. It's very hard for us to think about color as combination of these three values or intensity of these three colors.
+
+![](week3_27.PNG)
+
+An important theory that has been developed in the past is what is called the **color opponent process theory** which basically says that the signal that is received from these three types of sensors is actually processed by our brain, by the visual cortex, in a way that creates three different types of channels, so not necessarily green, blue, and red, but three different channels. What are these three different channels that we actually create in the visual cortex?
+
+![](week3_28.PNG)
+
+The first channel is the red-green channel. This is measuring the amount of red, green or green in one channel. The other one is the blue-yellow axis. The last one is the black and white axis which basically gives what is normally called luminance or also brightness, which is the amount of light that is emitted by a given color. Basically, how dark or how much light is coming from the color. The theory says that the three different sensors, the blue, the green and red, the short wave, medium wave, and long wave are combined in the visual cortex in the following ways. The three sensors are combined altogether summed up to compute how much lightness is emitted by a given color, that's the first one. The second axis, the red-green axis, is calculated using the difference between the short waves and medium waves as you can see in the diagram. This is the calculation that is made by the brain to create the red-green axis. The last one takes the short and medium waves, sums them up, and then does a subtraction of this sum with the long wave, the red one that you see here, and this is used to calculate the blue-yellow axis. 
+
+![](week3_29.PNG)
+
+This theory has been studied in many different ways which I can't really summarize here but it's been found to be accurate in many different ways, both at the physiological and at the perceptual level. A couple of interesting facts about this theory. First of all, one interesting fact that seems to corroborate the theory is that _we never describe colors in terms of reddish-green or greenish-red. The same is true for blue and yellow_. We don't really do bluish-yellow or yellowish-blue, which seems to corroborate the fact that this is just one axis. Another very important fact that seems to verify the accuracy of this theory is that _color blind people tend to be color blind exactly on these two axis that we have here, red-green and blue-yellow_. Color blindness typically is about people who are not able to distinguish red from green or, more rarely, blue from yellow, which again is another important fact that seems to corroborate this theory. Now, I want to conclude with another little demonstration that actually shows you how the color opponent process theory works and gives you another example of why it seems to be true. 
+
+Let me explain how this works. 
+
+![](week3_30.PNG)
+
+In order to do that, you have to stare at this picture for at least 30 or even more, 60 seconds, and look at the little white dot that is in the middle and just focus on it for 30, between 30 and 60 seconds. Then I'll switch to a white slide like this one and you'll see that what you see on this white background is the flag of the United States. Why is that? Well, it's basically because when you are staring at these colors, you are exciting the same source of these colors, and when I switch to the white background, since these sensors have been excited for too long, they actually inhibit those colors and the only colors that you see are the opposite of those that you have here. In particular, what you see is that in place of green, you see red, in place of yellow, you see blue, and in place of the dark stripes, the black stripes, you'll see white, which is exactly the opposite colors that you have in the color opponent process theory. Stare at this one for 30 seconds and once the 30 seconds pass, I'll switch to a white background.
+
+In summary, in this lesson, I talked about three main concepts. 
+
+![](week3_31.PNG)
+
+The first one is a little bit about the physiology of the eye, the elements that are in the eye. This is by no means a complete account of what is in the eyes, much are complex than that, but what is important to remember is that in the eye, there is a retina that is full of sensors in the back of the eyes. These sensors tend to be much more dense in a specific area called fovea. There are two types of sensors: rods and cones. The rods are sensitive to low light conditions, cones are sensitive to high, lots of lights conditions, and then we have three types of sensors, and this is the basis of the trichromacy theory and they are sensitive to short waves, medium waves, and long waves. Finally, these three sensors are combined together by our visual cortex to create three main axes that are the three axes described by the opponent process theory and these three axes are black and white, which basically give the amount of light, luminance, that is created by a color, displayed by a color, and then we have what is called the two chromatic axis that are the red and green axis and the blue and yellow axis. These are the main concepts to remember from this lesson.
