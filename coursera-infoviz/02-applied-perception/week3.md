@@ -155,3 +155,29 @@ In summary, in this lesson, I talked about three main concepts.
 ![](week3_31.PNG)
 
 The first one is a little bit about the physiology of the eye, the elements that are in the eye. This is by no means a complete account of what is in the eyes, much are complex than that, but what is important to remember is that in the eye, there is a retina that is full of sensors in the back of the eyes. These sensors tend to be much more dense in a specific area called fovea. There are two types of sensors: rods and cones. The rods are sensitive to low light conditions, cones are sensitive to high, lots of lights conditions, and then we have three types of sensors, and this is the basis of the trichromacy theory and they are sensitive to short waves, medium waves, and long waves. Finally, these three sensors are combined together by our visual cortex to create three main axes that are the three axes described by the opponent process theory and these three axes are black and white, which basically give the amount of light, luminance, that is created by a color, displayed by a color, and then we have what is called the two chromatic axis that are the red and green axis and the blue and yellow axis. These are the main concepts to remember from this lesson.
+
+### Color Specification
+
+![](week3_32.PNG)
+
+Now, after learning a little bit about how color is perceived by human vision, the next step is to understand how to specify color. What do I mean, specify color? Well, I mean that when we want to practically use color, especially in visualization as we will see later on, we want to be able to say, I want this type of color. Or I want these colors to have certain properties. So how do we specify colors in a way that is helpful for visual representation? We need _color specification systems_.
+
+And we need color specification systems that are _reliable and uniform across different devices_. If you think about it, that's not a trivial problem at all. So if I want to reproduce a specific kind of color, I want to be able to use a specification that can be reproduced in different devices, which is a quite complex problem. So, one important thing to know, as I already mentioned earlier, is that every color can be expressed as the sum of three colors, or in general, as we will see, every color can be expressed in a three dimensional space. 
+
+![](week3_33.PNG)
+
+So let's start with a somewhat simple example. If you have three lights and one light is blue, one light is green, and one light is red, what we can do is to change the intensity of these lights to basically match an existing color. 
+
+![](week3_34.PNG)
+
+If we can do that, we actually have a way to specify numbers that describe a specific color. Think about having a way to create a standard set of three lamps, one is blue, one is green, and one is red. And let's assume that it's easy to reproduce a standard version of these lamps. Then if I want you to reproduce a given color that I've tested earlier, what I have to do is just to give you the number or the value of these three intensities, the intensity of blue, the uncertain intensity of green, and the intensity of red. So this is the basis of a very large set of _color spaces_. What is a color space? A **color space is a system typically of three variables, in a three-dimensional space, that describes uniquely a color**. By giving, I give you three values, I'll tell you which space I'm using, and you'll be able to reproduce exactly the color that I want to communicate to you. So that's a very important concept and a very useful one in practice.
+
+![](week3_35.PNG)
+
+One thing to know about color spaces, before we dive into specific color spaces, is that the three primary axis of each color space basically define what is the gamut of the color space. We choose the whole set of colors that can be reproduced by this specific color space.
+
+![](week3_36.PNG)
+
+One important thing to know is that _not all color spaces are equivalent_. What do I mean by that? I mean that _a given color space may reproduce a subset of the full set of colors that humans can naturally perceive_. For instance, the RGB space, which I'm going to introduce next, can cover a subset of all the possible colors that human can perceive. In the next lesson, I'm going to walk you through different color spaces. And as we will see, these color spaces have different properties that make them more or less useful for this organization design and color specification in general.
+
+![](week3_37.PNG)
