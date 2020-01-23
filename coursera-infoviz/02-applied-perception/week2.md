@@ -602,3 +602,80 @@ If I connect some elements together, the grouping that I perceive more strongly 
 ![](week2_111.PNG)
 
 So in summary, what do we have? We have that you can group things together through similarity but that's the weakest method. After similarity, you have proximity proximity stronger than similarity. And then you have enclosure and connection that are stronger than the rest. These are very useful properties to keep in mind when you think about how to design a visualization and also what kind of effect certain design choices may have on what is perceived by the viewer.
+
+### Grouping: Closure and Continuity
+
+The last two laws of grouping are the Law of **Closure** and the Law of Continuing.
+
+So what are these laws about? The Law of Closure says that if there are gaps in open structures, these structures are perceived as being closed, despite the presence of these gaps. 
+
+![](week2_112.PNG)
+
+Let me give you an example. Look at these two objects. 
+
+![](week2_113.PNG)
+
+These are two separate objects. But once they are arranged in the specific configuration, since they give the impression of creating a square. Despite the fact that there are lots of gaps, we perceive this as a square. 
+
+![](week2_114.PNG)
+
+So this is an example of the Law of Closure. 
+
+The Law of **Continuity**, somewhat related to that, says that if a set of objects are aligned along a specific direction or line, or curve, they are perceived as being connected, despite having gaps between them. 
+
+![](week2_115.PNG)
+
+Or even despite any intersections with other objects. So here is a practical example. We have two lines, right? And some of the objects that belong to these lines are colored with one color, or colored with another. 
+
+![](week2_116.PNG)
+
+So when we look at these little dots, we actually perceive two intersecting lines, despite the fact that individual objects have different colors. So in a way, having the objects aligned around a specific curve or direction, produces the effect of having these objects grouped together in one single line.
+
+How does this relate to visualization? Let me give you a couple of practical examples. The first one is the old idea that alignment is a very powerful tool in this utilization. 
+
+![](week2_117.PNG)
+
+Every time you align objects together, despite adding gaps between them and no lines or other objects connecting them, you will perceive them as being one unit. Classic example is bar charts. If you align bars together, even though you don't have a reference line or anything else, you only draw the bar. You still perceive them as being one single unit.
+
+Another example is when you have node link diagrams in networks like this one that you have in front of you. Despite the fact that the lines intersect many other lines, most of the time you can perceive the direction of every single line if you focus on them. Despite the fact that there may be a lot of intersection between them.
+
+![](week2_118.PNG)
+
+
+### Recapitulation
+
+Now, let me summarize what we have seen during this week. 
+
+![](week2_119.PNG)
+
+**The main idea behind this module is the idea of channel effectiveness**. What I described at the beginning of this module is the idea that every visualization can be described as the mapping between some data properties and some visual channel properties. And in general, the concept of **visual channel** is a very, very relevant one in visualization. 
+
+And we discussed throughout the week of **different properties of channels**, and properties that describe the **effectiveness of a channel**. We also saw that effectiveness is in a way multifaceted. It's a concept that is derived from many different properties. So we saw that channel effectiveness depends on _accuracy_, on _discriminability_, on _salience_, on _separability_, and lastly, on _grouping_. 
+
+![](week2_120.PNG)
+
+Let me very quickly give you a set of take home messages for each one of these channel properties that we saw during this week of work. 
+
+![](week2_121.PNG)
+
+**Accuracy**, the main thing to remember about accuracy is that you may want to _prioritize channels that are more accurate than others_. We saw that there is a ranking, whenever possible, it's better to use channels that are more highly ranked than the others. 
+
+![](week2_122.PNG)
+
+The second one was **discriminability**. What is the main take home message of this disciriminability? I think it's the idea that you have to remember that _you can't really perceive too many distinct values in every given channel that you use_. And typically, the number of values that you can distinguish is between five or seven. So, this is particularly important with color, but it's true with any other channel. _Don't expect your viewers to be able to distinguish more than a handful of different values for each channel that you use_. 
+
+![](week2_123.PNG)
+
+The next one is **salience**. The main concept to keep in mind about salience is that you have to _be mindful of how you are directing the viewers' attention in your visualization_. And also, the different channels are also competing one to another. And if you have too many channels and too many values, it's going to be really, really hard for your viewers to focus on anything that they are interested in. So _you should never overload your graphics with too many channels and too many values_. 
+
+![](week2_124.PNG)
+
+Next one is **separability**, and this is once again about the interaction of multiple channels. Channels interact in many different ways. But one important concept that we saw related to separability is that _some channels are perceived as integral, whereas some channels are separable_. And you want to use separable channels when you want your viewer to be able to attend to the information conveyed by one channel independently from the other. Whereas, you may want to use integral channels when you want the viewer to be able to perceive the combination of these two attributes in a holistic manner. 
+
+![](week2_125.PNG)
+
+And lastly, we saw the laws of **grouping**. And the main take home message here is that, you have to be mindful of how certain visual properties give a sense of grouping. So objects get grouped together when they are arranged in a certain way. And also related to that, some grouping methods are stronger than others.
+
+## Reading
+
+Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods. William S. Cleveland and Robert McGill. Journal of the American Statistical Association. Vol. 79, No. 387 (Sep., 1984), pp. 531-554
