@@ -255,3 +255,37 @@ There is the L channel which is the lightness. Very similar to what we have seen
 ![](week3_49.PNG)
 
 This is necessary to make sure that, as I said before, distances in this space are perceived uniformly and is designed to be perceptually linear. So, now let me move onto another demo. So, similarly to what I've done with the HSV and RGB color spaces, I want to show you how to play with the color space and show you the axes, specification of values in the axes changes the color.
+
+### Color Space: CIE Lab/ Luv Part 2
+
+So, this is color picker that is being created by David Johnston, that shows how the CA lab color space works. 
+
+![](week3_50.PNG)
+
+So, as you can see here, once again we have three main sliders. One for the L channel, one for the A channel and one for the B Channel. Let me show you how the color (the one that you see at the bottom here) changes as I change the values through the sliders. Okay. So, if I change the L value as you can see the color gets very dark or very bright. Okay. Now if I change the A value, I go from green to red and magenta, and If I change the B value, I go from blue to yellow and orange. So, this is exactly what I described before. So, with different combinations of the sliders, you can create different combinations of colors. Once again, we have one that is lightness and two chromatic axis, elements that can be combined to create different colors. 
+
+Let me show you another demo using a different color picker. This one has been created by Grego Reisch, and this is useful because here rather than seeing how the color changes when you change the three values through some sliders, here we can get a glimpse of how the color space looks like. 
+
+![](week3_51.PNG)
+
+So, the regional color space is made of three dimensions. So, here we are not showing three dimensions at once, but we have two dimensions map to the x and y axis, and we can vary the third dimension through the slider. So, this gives you more precise sense of how the color space looks like. So let me explain how this works. So, on the x-axis right now with the current setting we have the A channel, and on the y-axis we have the B channel, and what we can vary through the slider is the lightness, the L channel. So, let me show you what happens when I change the lightness.
+
+As you can see, a very interesting phenomenon is that as I change the lightness, the range of colors that are available changes, what is called the gamut. 
+
+![](week3_52.PNG)
+
+So, let me explain that. Every time you see part of the space that is not covered by a color that is covered by these small gray squares, it means that these color is not perceivable. Okay, so it exists mathematically in the space, but it's not a color we can perceive. Okay? So it doesn't correspond to any real color. Okay, as you can change, the space changes the range of available colors changes, as I change the L channel. Of course you can also see that the lightness of all the available colors changes accordingly. So, when I have high lightness, all the colors available in the AB space have a very high value of lightness, and the same is true when I reduce the lightness value. Okay? Another thing that you can notice is that, if we look at what colors are available on the A-axis, they correspond exactly to the green and red spectrum that I described before, and on the vertical axis we go from yellow to blue. Let me show you this. So, this little line that I'm moving right here, is an actual color picker. So, how does it work? As I move it around as you can see, the colors at the bottom are changing. So, the little squares represent the samples that are taken from the space. So, every single square here represents one of the colors that are positioned here at the bottom. So, as I move this line around, I'm creating different samples from the space. So, let me show you what happens. If I sample in a direction that is parallel to the B channel, as you can see we go from blue to yellow. 
+
+![](week3_53.PNG)
+
+Okay? If I do the opposite, so I pick the colors in the direction of the A channel, I go from red to green.
+
+![](week3_54.PNG)
+
+Whereas combinations of them create other combinations of colors. So for instance here we go from purple to green. An interesting aspect of these little color picker is that you can also change the axes. So, now for instance we have on the x-axis we have the lightness value, and on the y-axis we have the A channel. 
+
+![](week3_55.PNG)
+
+So as you can see, if I pick colors that go in this direction they go from dark to bright, and the same thing can be done with these other selections. 
+
+So having lightness on the x-axis, and the B channel on the y-axis With the lab color space, we solve the problem of non-uniformity. _Now we have a color space where distances in the space represents perceptual distances_. So, the way we perceive colors, but now we have another problem you may have noticed. _The problem is that specifying colors using the A and B channel, is not that easy_. In a way compared to the HSV color space that we saw before, _HSV is more usable than the lab one_, LAB. So, now we have a problem; we have that one space is non-uniform, but it's more usable and then another space (the lab space) is uniform, but it's not as usable as the other. So what can we do? Well, one can transform the lab space into a new space where both properties are retained. So, a space that is more usable, but also retains the fact that is perceptually uniform, and that's the main topic of the next video.
