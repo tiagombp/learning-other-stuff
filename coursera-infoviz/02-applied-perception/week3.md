@@ -181,3 +181,61 @@ One thing to know about color spaces, before we dive into specific color spaces,
 One important thing to know is that _not all color spaces are equivalent_. What do I mean by that? I mean that _a given color space may reproduce a subset of the full set of colors that humans can naturally perceive_. For instance, the RGB space, which I'm going to introduce next, can cover a subset of all the possible colors that human can perceive. In the next lesson, I'm going to walk you through different color spaces. And as we will see, these color spaces have different properties that make them more or less useful for this organization design and color specification in general.
 
 ![](week3_37.PNG)
+
+### Color Space: RGB
+
+The first color specification system we're going to talk about is the RGB. It's a very popular color specification system, and RGB stands for red, green, and blue. And it's very commonly used in digital devices to describe color in digital devices. Why that? Well, one important reason is that monitors are built in a way that these three colors are used. These three primary colors are used as the basis physically to represent colors. 
+
+![](week3_38.PNG)
+
+This image shows you very zoomed in image of how a pixel of an LCD screen looks like. So, if you look very, very, very closely, you'll see that every single pixel is made of three colors, three lamps, and by tuning the amount of blue, red, and green, we can create pixels of different colors and different intensities. This is how digital devices normally work. You can't see that, but if you look closely with a lens, you'll see that this is the structure, the actual structure of a monitor. There are many different technologies to realize that, but the basis is always the same, amount of green, amount of red, and amount of blue. 
+
+![](week3_39.PNG)
+
+Now, if we represent the RGB space as a three-dimensional space, and basically as a cube that shows all the possible colors that can be created by specifying different amounts of blue, green, and red, this is what you obtain. This is a representation of the color cube obtained with RGB. The image that you see on the right, shows you a little bit of some important colors that you can obtain by mixing these three values. So, starting from the origin that is completely dark is actually black. As you move in different axis, you obtain different colors. So, for instance, if you go up only in one direction, you'll get blue. If you go down in only one direction, you'll get red. And in the other one, you'll get green. But then, you can also mix two of these colors. For instance, if you mix blue and red, you'll get magenta. If you mix blue and green, you'll get cyan. If you mix red and green, you'll get yellow in different intensities. Another thing to notice is that, when you sum the three of them, all with the same value, so the diagonal that you see in the middle, you'll get different shades of gray, and the maximum value for the three axis, so one, one, one, you'll get pure white. One thing I forgot to say is that in order to create the cube, the RGB values have a domain that goes from zero to one. So, zero is the minimum and one is the maximum. _So, the point in the cube that corresponds to zero, zero, zero is black, and the point that corresponds to one, one, one, or sometimes is also specified as 100 percent, 100 percent, 100 percent, so, a scale between zero and 100, you'll get pure white_. And combinations of these values lead to different colors, okay? So now, let me give you live demonstration of how it looks like to use the three channels, RGB, to specify some colors. 
+
+![](week3_41.PNG)
+
+So, in this interactive demo, you can see that I can change the amount of red, the amount of green, and the amount of blue. And as I change the amount of each of these colors, the final color changes dramatically, okay? So for instance, if I do lots of red and lots of green, I get yellow, right? If I do lots of green and lots of blue, and I remove red, I get cyan. If I have all values close to zero, it gets very dark, and basically to black. If use the maximum intensity of all of them, I get closer and closer to white. 
+
+Okay, now, one interesting problem with the RGB color space is that, it's not particularly easy to generate colors in ways that are natural and useful for visualization. 
+
+![](week3_40.PNG)
+
+So, let me give you an example. For instance, let's say that I want to have yellow, but at different intensities of yellows. So, first of all, **I have to know that yellow is obtained by having roughly the same amount of red and green**. If I have too much green or too much red, I don't get yellow, I get different colors. So, I have to know that they have the same amount of red and green. And if I want to change the intensity, I have to change the intensity of these two values at the same time, which is not necessarily natural. _If I want to obtain another color, it's not necessarily intuitive how to obtain this color_. Let's say, I want to obtain brown, how do I get to brown? If I want to obtain, I don't know, a specific kind of blue, or orange, how do I get to orange? It's not necessarily intuitive. As we would see later on, especially in visualization, we want to be able to specify color mainly by describing the intensity of the color and the color type. I want a red, I want a green, I want a yellow, I want a blue, I want an orange, and so on. And specifying these colors is not natural in the RGB space. And as we will see in a moment, that's a problem with RGB and that's also the reason why it's not particularly useful as a color space to use in visualization design. 
+
+![](week3_42.PNG)
+
+In general, one thing to remember is that, we are interested in manipulating colors and using color spaces in a way that is closer to the way we perceive color, and we want to describe color. And even more specifically, the way we want to encode color in visualization by mapping properties of the data with properties of the color. If we want to do that in a natural way, we have to use a color specification system that is more natural.
+
+### Color Space: HSV / HSL
+
+In the previous video, we saw that specifying a color with the RGB color space is not easy. So what are the other options? Another useful option is a different color space that is called HSV or a very similar one that is called HSL, which stands for hue, saturation and value, or hue, saturation and lightness. 
+
+![](week3_43.PNG)
+
+And the interesting property of these color spaces is that it's _easier to specify colors_. Because they use channels or axes that are more closer to the way we want to specify colors. It's much more natural. It's much more natural to think about color in terms of hue, saturation and lightness. So what are these three channels? Hue is basically the name of the color. Green, red, blue, yellow and so on. Saturation is how vivid the color is, the colorfulness of the color. And lightness is the amount of light, the brightness of the color.
+
+![](week3_44.PNG)
+
+Here is a representation of the color space. And as you can see, HSV can be described as a _cylindrical color space_. And what happens here is that saturation corresponds to the radius of this piece. The value corresponds to the height and the hue corresponds to the angle. And as you change these parameters, you position yourself into a different position of this color space and every single position represents one color. Now to make this even clearer, let me show you a demo using a color picker.
+
+![](week3_45.PNG)
+
+Okay, so now let's take a look at an HSL Color Picker to get a sense of how this color space works.
+
+Okay, let me describe first what are these elements that you see on the screen. There are a few sliders, as you can see, similar to what we have seen before with the RBG color picker. But now each slider corresponds to one of the new channels that we have in this new color space. So the first one is the h channel, the hue. Then we have s, which stands for saturation. And the last one is lightness. So as I move the slider of the hue channel, as you can see, the color on the left is the color that is currently peaked, changes the hue, okay? So we go from red to purple, blue, green, yellow and red, okay? So now if we keep one of these colors, if we keep hue constant, now we can change the saturation value.
+
+So remember that saturation means how vivid the color is. So let me show you how vividness of this color changes as I move the slider here. So we go from very saturated blue to blue with very low saturation. As you can see, _as the saturation gets lower and lower, we create colors that are very similar to gray_.
+
+Okay, and another parameter is lightness, which can be thought of as the amount of light that is emitted by this color. So now we keep hue and saturation fixed, and we change the amount of lightness and see what happens. So we go from dark, very dark, to very bright. This is the lightness channel.
+
+Okay, so we have hue, saturation and lightness. As we saw in the demo, choosing colors with HSV or HSL color space is so much easier than with the RGB space. So now you may think, okay, the problem is solved. We can just use this color space all the time and in particular when we want to use color for visualization. Well, there is another problem. 
+
+![](week3_46.PNG)
+
+The problem is that these color spaces are not perceptually uniform. What does it mean to be **perceptually uniform**? Well, it means that distances that are calculated in the color space mathematically do not correspond to perceptual distances. So the difference between colors that we actually perceive with our eyes. Let me give you an example to show you how this works. 
+
+![](week3_47.PNG)
+
+So what you see here, the set of colors that you see in the top row, these are all colors that exactly the same V value selected using the HSV color space. And the colors that you see below them are exactly the same with the chromatic component removed. So all these grays represent the lightness value of the colors that you see on top. And as you can see, we have different levels of gray, which basically means that these colors have different color intensities. We perceive these colors with different intensities, so this is a problem. It's a problem because, ideally, we want to specify colors that have exactly the same lightness, exactly the same V here. But the color space is not perceptually uniform, so we perceive these colors differently.
