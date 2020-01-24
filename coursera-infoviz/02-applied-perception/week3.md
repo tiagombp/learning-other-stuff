@@ -289,3 +289,127 @@ Whereas combinations of them create other combinations of colors. So for instanc
 So as you can see, if I pick colors that go in this direction they go from dark to bright, and the same thing can be done with these other selections. 
 
 So having lightness on the x-axis, and the B channel on the y-axis With the lab color space, we solve the problem of non-uniformity. _Now we have a color space where distances in the space represents perceptual distances_. So, the way we perceive colors, but now we have another problem you may have noticed. _The problem is that specifying colors using the A and B channel, is not that easy_. In a way compared to the HSV color space that we saw before, _HSV is more usable than the lab one_, LAB. So, now we have a problem; we have that one space is non-uniform, but it's more usable and then another space (the lab space) is uniform, but it's not as usable as the other. So what can we do? Well, one can transform the lab space into a new space where both properties are retained. So, a space that is more usable, but also retains the fact that is perceptually uniform, and that's the main topic of the next video.
+
+### Color Space: CIE Lch/ HCL
+
+Now we are ready to introduce the last color space I want to talk about, and probably the best one. 
+
+![](week3_56.PNG)
+
+So this is the CIE LCh, sometimes also just called HCL space. And this is the color space that integrates all the good properties that we want to have. **So we want to have, as we said, uniformity, but also intuitiveness or usability.**
+
+Okay, so how is this color space created? Well, the details are a little complicated, but you have to think of this as a new transformation from the CIE lab color space into a new color space that is defined in cylindrical coordinates. 
+
+![](week3_57.PNG)
+
+Very similar to what we have seen before with the HSV space, but with the main difference that now this space is perceptually uniform.
+
+![](week3_58.PNG)
+
+Okay, so more precisely, the a and b components of the lab or of the CIE lab space are converted into new components. The first one is called **chroma**. And the chroma corresponds roughly to saturation, so how vivid or colorful the color is. 
+
+The next one is **hue**, and is expressed as an angle, the angle part of the cylindrical space, and it represents the hue, the name of the color. Red, green, blue, yellow and so on.
+
+And the last one is unchanged, which is the **lightness** component, which is always the same.
+
+So let me show you a few visual representation of this space. This is one possible representation of the 3D space that is defined by the HCL color space. 
+
+![](week3_59.PNG)
+
+So in this particular diagram, what you have is that the lightness is changing on the vertical direction. And then, you have the chroma component, which is the saturation that is changing on the radial direction. And then, you have the angle that is changing the hue. And you can see here, as the angle is changing, the color hue is changing. As you move radially, you have more or less saturated colors. And as you move from bottom to top, you have darker and brighter colors.
+
+Here is another diagram that shows the same idea. So you go from left to right. The lightness changes.
+
+![](week3_60.PNG)
+
+And for each of these slices, as you move from the center to the outer rims, you see that the color is changing in terms of saturation. And the angle is changing the hue. One thing you should notice here that is more clear from this diagram, is that once again, **in uniform color spaces like this one, when one parameter is changing, the range, the area of the colors that are that is available for that specific parameter, changes. So in this particular case, as we change the lightness, the all range is changing from being very small ones to very big ones. And also the shape is changing**. This is going to be even clearer in a moment when I show you a new demo.
+
+Here, I'm using, once again, one of the color pickers that I used before, with the main difference that now, rather than using the Lab space, I'm showing the Lch space, the new space that I've just described.
+
+![](week3_61.PNG)
+
+So as you can see here, once again, we have three sliders corresponding to the three axis of the space. But now, we have the L, which is luminance, c which is chroma, or the saturation, and h which is hue. So let's see how the color changes as I move the sliders and move through the space defined by the Lch axis. So luminance is always the same. So it's getting darker and lighter, okay?
+
+So but now, look at this. When I change the chroma component, the color is getting more saturated or less saturated. And when I'm changing the u component, I'm basically going through by keeping constant the lightness and the saturation, I get lots of different colors. So we have magenta, orange, red, green, blue, purple, red, and so on.
+
+Okay, so now, let me show you How the Lch color space looks like with the other color picker that we used before.
+
+![](week3_62.PNG)
+
+Okay, here, we have the other color picker that we used before. But once again, rather than showing the CIE lab color space, now we are showing the hue, chroma, and lightness. Which is basically the same as what we call CLCH, okay? So here, in this representation, we have once again two axis that are mapped to two of the axis of the color space. And another axis that can be changed by dragging the value here, changing the value of this slider. Okay, let me show you a few things. First of all, here now, by default, we have on the x-axis, we have the hue component, and on the y-axis, we have the lightness component. And as you can see, when we go from top to bottom, the colors are always getting from dark, very dark, to very light, as we may expect.
+
+And as we go from left to right, we have colors that have the same level of lightness, okay? So as you can see, with the color picker here, I'm picking colors that go through many values of the hue spectrum. 
+
+![](week3_63.PNG)
+
+So see the colors here? And they all have exactly the same lightness. So if I move the color picker here, you can see that they're all lighter, okay? Exactly the same amount of lightness. And they go through several values of hue, okay?
+
+Another thing to notice, as we have seen before, is that as we change one of these values, so here, I'm changing the chroma, not all possible values in the HL space are available. Look, there are some holes. And this is almost always true.
+
+![](week3_64.PNG)
+
+Let me see how this looks like when I change the axis. So, in this case, now I have the chroma component on the x-axis, and the lightness component on the y-axis. 
+
+![](week3_65.PNG)
+
+And now, I'm changing the u-axis here. As you can see, the are different hues, but also the area that is covered is different. It changes as I change the slider, okay? 
+
+![](week3_66.PNG)
+
+And exactly the same is true when I have the hue component on the x-axis, and the chroma component on the y-axis.
+
+### Quick Summary
+
+Let me now summarize the properties of all the color spaces that I've shown you. So, I've shown you the RGB color space, then the HSV/HSL color space, the CIE Lab and LUV, and the HCL. In this table, you see a summary of the main properties of interest of these color spaces. We started from RGB, and we saw that RGB is neither intuitive nor uniform. So it's problematic from the color specification point of view. Then we saw that HSV and HSL is very intuitive, but is not perceptually uniform, which is a problem when we are using it for visualization purposes, as we will see later on. Then we have the CIE Lab and LUV, that have the good property of being perceptually uniform, but are not as intuitive and easy to use as the HSV and HSL. Finally, the best one for our purposes is the HCL which is both intuitive, and perceptually uniform.
+
+![](week3_67.PNG)
+
+Now, let me conclude the module by very briefly summarizing the main ideas that we covered in this module. 
+
+![](week3_68.PNG)
+
+So, we started by saying that color is at the same time very powerful, but also very easy to misuse. I presented a few examples that show you that if you don't know how to use color properly, it's very easy to make a disaster. 
+
+Then we moved on to the perception part. I've shown you that the eye has three main photoreceptors. Well, there are actually a number of different photoreceptors, but those that we are interested in, and are mostly active in normal light conditions are three photoreceptors, and these are the basis for what is called the trichromacy theory. So the idea is that at the physiological, physical level of human vision, we have three receptors that are actually sensitive to three main kind of waves. These roughly corresponds to red, green, and blue. 
+
+But we also saw in the opponent process theory part, that the way these signals are processed by our brain, creates a perception of color that is actually doesn't necessarily correspond to these three values, but it corresponds more to three other components. These are the level of lightness, and then two chromatic axis; one that goes from red to green, and another one that goes from yellow to blue. 
+
+Then we moved on to this defining and describing color spaces. So color spaces are mathematical tools that allow us to describe colors by defining three values. I've shown you a number of different color spaces, and I've been discussing advantages and disadvantages of this color spaces. We concluded with one color space that is a combination of really important properties. Two main properties; one is the fact that it is intuitive and usable [user bowl], and the other one is that it is perceptually uniform. 
+
+Now, we are ready to move on to the new module, where we are going to talk about how to actually use color in visualization design.
+
+## Readings
+
+https://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/
+
+>In spatial datasets [datasets with at least two dimensions specifying position, and at least one additional dimension of quantity (a category that includes not only maps, but everything else ranging from individual atoms to cosmic background radiation)] color is probably the most effective means of accurately conveying quantity, and certainly the most widespread. Careful use of color enhances clarity, aids storytelling, and draws a viewer into your dataset. Poor use of color can obscure data, or even mislead.
+
+>Although the basics are straightforward, a number of issue complicate color choices in visualization. Among them:
+* The relationship between the light we see and the colors we perceive is extremely complicated.
+* There are multiple types of data, each suited to a different color scheme.
+* A significant number of people (mostly men), are color blind.
+* Arbitrary color choices can be confusing for viewers unfamiliar with a data set.
+* Light colors on a dark field are perceived differently than dark colors on a bright field, which can complicate some visualization tasks, such as target detection.
+
+> Although our eyes see color through retinal cells that detect red, green, and blue light, we don’t think in RGB. Rather, we think about color in terms of lightness (black to white), hue (red, orange, yellow, green, blue, indigo, violet), and saturation (dull to brilliant). These three variables (originally defined by Albert H. Munsell) are the foundation of any color system based on human perception. 
+
+> Computers (and computer programmers) on the other hand, do process colors in terms of red, green, and blue. Just not the same red, green, and blue that our eyes detect. Computer screens display colors that are a combination of very narrow frequency bands, while each type of cone in our eyes detect a relatively broad spectrum. Complicating things further, computers calculate light linearly, while humans perceive exponentially (we are more sensitive to changes at low light levels than high light levels), and we’re more sensitive to green light than red light, and even less sensitive to blue light.
+
+> The combined result of these nonlinearities in our vision is color perception that’s, well, lumpy. For example, the range of saturation we’re capable of seeing for a single hue is highly dependent on its lightness. In other words, there’s no such thing as a dark yellow. Near the center of the lightness range, blue and red shades can be very saturated, but green tones cannot. Very light and very dark colors are always dull.
+
+> The unevenness of color perception was mapped by the International Commission on Illumination (Commission Internationale de l´Eclairage in French, hence “CIE”) in the 1930s. The CIE specified (and continues to refine) a series of color spaces that allow scientists, artists, and printers—anyone who works with light—to describe colors consistently, and accurately translate color between mediums. CIE L*a*b, for example, is used internally by Adobe Photoshop to interpolate color gradients and convert images from RGB (screen) to CMYK (print).
+
+> Another of these specifications: CIE L*C*h [lightness, chroma (saturation), hue] is my preferred tool for crafting color palettes for use in visualization. Because the three components of CIE L*C*h are straightforward, it’s simple to use. Because it’s based on studies of perception, color scales developed with L*C*h help accurately represent the underlying data. I say “help” because perfect accuracy is impossible—there are too many variables in play between the data and our brains. [Another option (used in Color Brewer) is the Munsell Color System, which is accurate in lightness and hue, but not in saturation.]
+
+![](Lch_HSV_618.png)
+
+> In short, people aren’t computers. Computer colors are linear and symmetrical, human color perception is non-linear and uneven. Yet many of the tools commonly used to create color schemes are designed more for computers than people. These include tools that calculate or specify colors in the red, green, blue (RGB) or hue, saturation, value (HSV) color spaces. A constant increase in brightness is not perceived as linear, and this response is different for red, green, and blue. Look for tools and color palettes that describe colors in a perceptual color space, like CIE L* C*h or Munsell.
+
+https://eagereyes.org/basics/rainbow-color-map
+
+> As it turns out, the values change smoothly, but the colors do not. There are two problems here: abrupt changes in luminance (perceived brightness of a color) as well as switching between different hues.
+
+> There is a case to be made for color maps that have more than one or two hues, but that do not produce the sort of issues seen in this example. One approach is to use a color map where the luminance is constant or monotonically increasing (meaning, it never changes direction). Constant luminance leads to very dull colors, but a well-designed color map with increasing luminance can look quite attractive. ColorBrewer has a few of those, at least for two colors.
+
+>When mapping a continuous value, a ramp with a single color is always a safe choice. It may not look exciting, but at least it does the data justice. Anything beyond a single hue needs to be done deliberately, and not just to liven up a boring-looking image.
+
