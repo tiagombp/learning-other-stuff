@@ -114,5 +114,153 @@ This is another quantity map mapped in the UK with three different uniform color
 
 ### Categorical Color Scales Part 1
 
+Now let's take a look at how to create color scales that are made to represent categorical information. So, what are desired properties of categorical color scales? In a way, they are similar, but also different from the properties that we wanted for quantitative color scales. 
+
+So, the first one is **uniformity**. It's similar to what we said with the quantitative color scale, but also different. What do we mean by uniformity here? Well, we have to pick colors that represent different categories. As we will see in a moment, the best way to do that is to use different color use, color names. But when we use these colors, we don't want some of these colors to be brighter or lighter than other colors or more saturated and less saturated than other colors. Why? Well, _the main idea is that if some colors are lighter or brighter or more saturated than others, they attract the attention more than the others. So, they create an imbalance between the classes_. Unless this is desired, unless this is a desired property of your visualization, this shouldn't happen. 
+
+The second one is **discriminability**. Think about it. What we are trying to do is to map categories in the data to different colors. So, we want to have as many colors as possible that can be distinguished perceptually, so that we can map as many categories as possible. But as we will see in a moment, there are not so many colors that we can actually very easily distinguish. But in general, what we want to achieve here is as much discriminability as possible because when we see colors in visualization, it has to be as easy as possible for the reader to distinguish between objects of a given color to objects of a different color. In other ways, if some objects have colors that are too similar, it's much, much easier to mix them up. 
+
+![](week4_22.PNG)
+
+So, now let me show you an example of a color scale that is meant to represent categorical information, but it's not uniform. There is one color that stands out more than the others. So, this is a map that is being created with the color palette that you see at the bottom right. 
+
+![](week4_23.PNG)
+
+As you can see, we can distinguish a number of different categories here, but there is one that is much brighter than the rest. Because of that, it _stands out_. So, once again, _it is possible that in certain situations, you want to use this property. You do want some objects to stand out. But in general, if this is not desired, when you design or use a categorical color scale, you want to make sure that no color really stands out_. 
+
+![](week4_24.PNG)
+
+So, this is an example with a different color scale, where all the colors have the same intensity lightness and the same saturation. In fact, you can see that no color really stands out, and we can perceive a lot of different categories. 
+
+So, here there is another version of the map that is meant to convey the problem of _discriminability_. 
+
+![](week4_25.PNG)
+
+So, here we are using actually a color scale, a color palette where the color intensity and color saturation is uniform, is constant, but the number of available colors is reduced. Because of that, you can't really distinguish as many colors as in the previous image. So, look at the previous one and the next one. In this one, we can perceive a lot of different categories, whereas in this one, we can perceive only a few. 
+
+So, **how do we create categorical color scales**. Once again, using the HCL space, the best way to do that is to **choose a constant value of chroma and luminance and then sample uniformly across the hue value**. 
+
+![](week4_26.PNG)
+
+So, let me show you once again through a demo with a color picker how these can be done.
+
+So, here we have the same color picker that we used and before. What I'm using here, I'm using a version where on the x-axis, we have hue, and on the y-axis, we have chroma. So, as you can see, colors up here are less vivid than colors down here. So, now, what do I do? Well, I want to span the use space as much as possible. So, I create a line that is as wide as possible here, and I want to _draw it parallel to the chroma axis_, so that I know that _all these colors have exactly the same chroma_. Since lightness can only be changed through the slider, I also know that the lightness, the color intensity is constant.
+
+![](week4_27.PNG)
+
+So, now as you can see, I created a very nice color palette, which you can see here on the right side. I am spanning a number of different colors. _They all have the same lightness value, and they also have the same chroma value_. Let me reduce this here because otherwise it's too similar. So, let me show you how this color palette looks like when we visualize it on a map similar to what I've shown you before. So, this is a nice property of this color picker. So, here you can see that there are a number of different categories, and no one really stands out too much because all the colors have the same intensity, lightness, and the same chroma, which is the vividness, also called saturation.
+
+### Categorical Color Scales Part 2
+
+One important question to consider when using color to represent categorical information is, _how many distinct values can we actually perceive_? _How many values that vary across different use_? 
+
+![](week4_28.PNG)
+
+Because we just saw that using different color use is a very important principle when you are using color for categorical information. So, how many distinct values can you use? 
+
+![](week4_29.PNG)
+
+Well, it depends a lot on context as we will see in a moment, but in general, the estimate is between five and 10 different distinct codes. You can't really go past beyond this value. So, in general, I think the answer is very few, and it's very important to keep these in mind. **When you are using color to label data, don't try to over do it. It's going to work really well if you have four, five, six categories, maybe a little more, but as you go past this threshold, it starts getting really, really hard for the person reading to distinguish these colors**. They start blending together. So, that's a very important principle in visualization design. 
+
+_An interesting element here is that some of the colors that we can distinguish best are those that are suggested by the opponent-process theory_ that we introduced before. **So, red, green, blue, yellow, white, and black are very special colors. Since they are at the spectrum of this perceptual scales, they tend to be distinguished very, very, very well**.
+
+![](week4_30.PNG)
+
+We can, of course, also distinguish more than that if we want. A very interesting piece of research is presented here. So, these image comes from a research paper published in the 80s by Post and Greene. What these researchers try to do is to show a whole spectrum of colors and see _how people would name this colors_, and then figure out which regions in this diagram would be named consistently. As you see, it goes a little bit beyond four or five colors, but it's not much more. So, people can readily label green, yellow, orange, red, pink, purple, white, aqua, and blue. 
+
+![](week4_31.PNG)
+
+So, that's also a very good research results that can be used to inform a visualization design. 
+
+Colin Ware, who is a visualization and vision scientist researcher, who actually wrote one of the best data visualization books out there, I would say the best visualization book in terms of connecting vision science with visualization, proposes in his book a color palette of 12 colors. They are mostly based on the study that I have just shown you and some other pieces of information. 
+
+![](week4_32.PNG)
+
+So, this is a useful resource. But again, as you can see, you can't really go past beyond a few different colors. _These colors are also been selected because they are the colors that are consistently named across different cultures_. So, it doesn't matter the culture you're in or the culture in which these colors are tested. People are able to assign unique names to all of these colors, which of course makes this palette particularly strong and robust. 
+
+So, let's talk about **color conventions and semantics**. When using color, you may be tempted to use some specific shades because they have semantic association. 
+
+![](week4_33.PNG)
+
+So, typically, one of the most common is red communicates danger, or bad, or alert, be careful, and green tends to be okay, good, and so on. But you have to be careful because these conventions are not necessarily universal. So, when you design visualizations that rest upon some semantic associations, you always have to be careful and think about who the readers are going to be, whether this can be confused or not. So, there are some positive and negative aspects of trying to use color in a way that there is some sort of semantic hook associated to them. So, I would say that the positive side of using semantic associations is that they would be very intuitive. So, a person reading the visualization that uses this semantic encoding would probably not need to read a legend, for instance, in order to understand what is going on. On the other hand, they can also very easily confusing, especially across cultures. So, it's a balancing act, and you have to be really, really careful there. Sometimes, if used appropriately, they can be extremely powerful. But if not, they can damage the comprehension and intuition of the chart. 
+
+![](week4_34.PNG)
+
+One special color that we have, that has a very interesting semantic association is **gray**. So, shades of gray tends to be perceived as being colors that have no shade, no color in some sense. Because of that, typically, the semantic association that we give to any element in a visualization that is gray is that it belongs to an unspecified class or category, and sometimes this is as useful tool.
+
+![](week4_35.PNG)
 
 
+So, let me show you an example. So, this is a chart created by visualization designer Moritz Stefaner, and it shows the evolution of child mortality over time for a number of different countries. 
+
+![](week4_36.PNG)
+
+But as you can see, in this chart, there are only two countries that are actually colored with some color, and the rest is gray. So, the idea here is that since most of the countries are colored as gray, they are perceived in this particular chart as not important and not classified with anything. As I said, sometimes is useful to use gray with this purpose. Say, if you have a given dataset with four or five classes, but one of these classes actually does mean uncategorized, you may want to associate the gray color to the class uncategorized. So, it's a very powerful tool.
+
+### Diverging Color Scales
+
+Another very important type of color scale is what is called a diverging color scale. So, what is a diverging color scale and why do we need it? Well, sometime it's useful to distinguish between values, quantitative values that are above or below a given threshold. 
+
+![](week4_37.PNG)
+
+Let me give you a few examples. 
+
+![](week4_38.PNG)
+
+
+Say that you have in a dataset information about altitude above or below the sea level. So, you still have a quantity how high or how low, but you also have a threshold, and you may want to be able to distinguish between what is above, and what is below. Or say in election data, so if you want to know the percent of votes between two candidates, is it more for a given one candidate or for the other. Again, you may want to distinguish between the two. Or say that you have information about profits in a company, and you have positive and negative profits. Again, it's quantitative data, but you want to distinguish between positive and negative, above or below a threshold, okay? 
+
+![](week4_39.PNG)
+
+So, _when this piece of information is important to communicate, typically, sequential scales don't work_. We need a different method. Let me give you an examples to show you how this works. Here, I'm showing on this choropleth map information about votes, elections, I think this data comes from the 2016 elections in the United States, okay? 
+
+![](week4_40.PNG)
+
+It shows the proportion, or in this particular map, what a map is the proportion for the Democratic candidate. So, the more intense is the color, the darker the color, the more votes went to the Democratic candidate or party, and the lighter it is, the more it went to the Republican candidate, okay? So, now, if you want to distinguish between regions that gave votes more to the democratic candidate is not that easy because you don't really have a threshold visually that distinguishes between the two segments above 50 percent and below 50 percent. 
+
+![](week4_41.PNG)
+
+So, now, if I redesign this map, and I use what is called a diverging color scale, what you obtain is something like this. 
+
+![](week4_42.PNG)
+
+So, now what did I do? I still use a color scale that is able to show the intensity, the proportion, but now the color scale is segmented in two parts, above 50 percent and below 50 percent, okay? Because of that, now you can very easily distinguish the blue counties from the red counties. But note, that within blue and within red, you still perceive different shades, okay? So, **we have the best of the two color scales that we analyzed so far. So, we can segment using hue, but we can also communicate information about magnitude using color intensity. This is exactly what a diverging color scale is**, okay? So, a color scale _encodes two properties at the same time. Whether, a value is above or below a given threshold, and within these two classes, the magnitude, the range_. 
+
+![](week4_43.PNG)
+
+So, what are the desired properties of diverging color scales? 
+
+![](week4_44.PNG)
+
+Well, generally speaking, the same properties that we discussed for categorical scales and for quantitative scales still hold, okay? For instance, we want the _two hues to be different enough so that we can very readily distinguish between the two categories_. But we also want the _color intensities to change in a way that these differences are perceived as linear,_ as the same amount of change from one color to the other. 
+
+![](week4_45.PNG)
+
+You also have an additional property that you want to satisfy in a diverging color scale. So, since we have two classes, and since the intensity is increasing from the center to the edges, you want to make sure that the change in intensity from the center to one direction and from the center to the other direction is actually the same, okay? You don't want the two scales to be unbalanced. 
+
+So, let me show you how a diverging color scale is built, and probably what I just said is going to be a little bit clearer in a moment. So, **how do you actually build a diverging color scale**? It's not that hard. So, _we can start from building independently two quantitative color scales_ with the same principles that we've seen before. 
+
+![](week4_46.PNG)
+
+In this case, I just selected one that is based on red, on a red hue, and one that is based on a blue hue, okay? As you can see, _both are quantitative and both are changing with the same step in terms of intensities. The only difference between the two is the hue._ So now, what I can do is to _flip_ one of them, and join them by the color in the middle that they have in common, that in this case is white. 
+
+![](week4_47.PNG)
+![](week4_48.PNG)
+
+Note once again that in both sides of the scale, we go from very dark, sorry, from very dark, to very high in color intensity. So, very dark, very light. So, they converge in the middle. The same thing can be done in many different ways. 
+
+![](week4_49.PNG)
+
+So, here is an example where again, we have diverging color scales that go from green to brown reddish. Once again, from blue to red and there is one common color in the middle. The main difference between this one and the previous one is that here we don't have discrete steps is actually continues, okay? 
+
+![](week4_50.PNG)
+
+Here is another example, this is a graph that is taken that visualizes information about climate change. So, this is how the temperature changes across many years in different areas of the world, and the temperature is relative to the average across many years. So, what you see is that when it's red, the regions that are red means that the temperature is above this average value, right? And when you see the blue shade it means that it is below this average value. Of course, you can see how this evolves over time and also how it distributes across different geographical regions.
+
+### Using Color to Highlight & Emphasize
+
+The two main uses of color that we covered so far are using color to encode information about quantity, for magnitude representation and sequence. And we also covered the idea of using color as a way to categorize or label data according to a number of categories. And we also saw that there are a number of methods to create effective color maps or color scales to represent color for these purposes. Now I want to introduce one third purpose of color, a third way color can be used effectively in visualization. And this is about using color to highlight or emphasize something in a visualization, which is also very very useful and very important if used appropriately. Let me give you an example, I want to start with this example. So this is a visualization developed by Gregor Aisch for New York Times. And the idea here, there are a number of different countries. And what you see on the x axis of each of these countries is a number of years. And what you see on the y axis, there is a proportion of different types of parties.
+
+But the article that actually comes together with this graphic
+
+is about parties on the far right and their prominence over time, whether they're growing or shrinking across different selected countries. Okay, so now since the article focuses on this topic. What you really want to focus on in the graphics, what you want to see, what the author wants to communicate is actually what is the main proportion of far-right parties. And that's the reason why this segment is the only one that is colored, and it's colored with a very intense red. So the rest is still visible, it doesn't mean that the rest cannot be seen, but it's grey, it's on the background. And the only thing that is colored is the one that the author wants to highlight or emphasize. And as you can see, it works really really well. So the best way to highlight with color, or one of the best ways to highlight with color, if possible, is to use different shades of grey for what is not the main piece of information that you want to communicate, that you want to keep as a background. And then use something that is colored, so that it stands out compared to the rest. Let me give you a few more examples. This is another visual representation, another visualization that has been created by Moritz Stefaner. And in this visual representation, this is a scatter plot, where what is shown is different countries and in terms of fertility rate and life expectancy. And these lines that you see are basically the same country, how the value changes over time. And as the time changes, the bubbles also go from small to big. You can see in the legend on the top right, what is the relationship between size and years. So starting from where it's very thin to where it's very, the border increases, you can basically see how it changes overtime. But that's not the main purpose, the main reason why I'm showing you this visualization. But I'm showing it because it's another example of emphasizing, attracting the reader's attention using color. So here, what the author decided to highlight is two main countries, United States and Vietnam. These are the only two countries that are colored, and the rest is gray and is in the background. Okay, why? Well, because the idea here is to emphasize how much Vietnam has progressed compared to United States over a certain number of years. So that's the main communication intent behind this graphic, and this is why these two elements are highlighted. Here is another example that shows the same principle. So this is abortion rates across a number of years and for different age ranges, going from left to right. And again, so every single line that you see there is one of the range ages that are repeated across all charts, but those that referred to the actual bucket, to the actual range, are much more saturated. So you see the orange one is the one that refers to the age range. And the dark gray one that is repeated across all of them is the average across all of the ranges. So once again, color can be used as a way to highlight some elements of interest and direct the reader's attention to something that is supposed to be noticed. And the use of gray in these cases is also very useful because using gray to give color to the rest, so you don't have to get rid of it. But it also doesn't interfere with the main message, and provides useful context is also very very useful
