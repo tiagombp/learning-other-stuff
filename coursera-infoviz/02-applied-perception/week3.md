@@ -380,6 +380,8 @@ Now, we are ready to move on to the new module, where we are going to talk about
 
 ## Readings
 
+### The subleties of color -- Part 1 of 6
+
 https://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/
 
 >In spatial datasets [datasets with at least two dimensions specifying position, and at least one additional dimension of quantity (a category that includes not only maps, but everything else ranging from individual atoms to cosmic background radiation)] color is probably the most effective means of accurately conveying quantity, and certainly the most widespread. Careful use of color enhances clarity, aids storytelling, and draws a viewer into your dataset. Poor use of color can obscure data, or even mislead.
@@ -404,6 +406,9 @@ https://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-
 ![](Lch_HSV_618.png)
 
 > In short, people aren’t computers. Computer colors are linear and symmetrical, human color perception is non-linear and uneven. Yet many of the tools commonly used to create color schemes are designed more for computers than people. These include tools that calculate or specify colors in the red, green, blue (RGB) or hue, saturation, value (HSV) color spaces. A constant increase in brightness is not perceived as linear, and this response is different for red, green, and blue. Look for tools and color palettes that describe colors in a perceptual color space, like CIE L* C*h or Munsell.
+
+
+### How The Rainbow Color Map Misleads
 
 https://eagereyes.org/basics/rainbow-color-map
 
