@@ -259,8 +259,107 @@ Here is another example, this is a graph that is taken that visualizes informati
 
 ### Using Color to Highlight & Emphasize
 
-The two main uses of color that we covered so far are using color to encode information about quantity, for magnitude representation and sequence. And we also covered the idea of using color as a way to categorize or label data according to a number of categories. And we also saw that there are a number of methods to create effective color maps or color scales to represent color for these purposes. Now I want to introduce one third purpose of color, a third way color can be used effectively in visualization. And this is about using color to highlight or emphasize something in a visualization, which is also very very useful and very important if used appropriately. Let me give you an example, I want to start with this example. So this is a visualization developed by Gregor Aisch for New York Times. And the idea here, there are a number of different countries. And what you see on the x axis of each of these countries is a number of years. And what you see on the y axis, there is a proportion of different types of parties.
+The two main uses of color that we covered so far are:
 
-But the article that actually comes together with this graphic
+* using color to **encode information about quantity**, for magnitude representation and sequence. 
+* And we also covered the idea of using color as a way to **categorize or label data according to a number of categories**. 
 
-is about parties on the far right and their prominence over time, whether they're growing or shrinking across different selected countries. Okay, so now since the article focuses on this topic. What you really want to focus on in the graphics, what you want to see, what the author wants to communicate is actually what is the main proportion of far-right parties. And that's the reason why this segment is the only one that is colored, and it's colored with a very intense red. So the rest is still visible, it doesn't mean that the rest cannot be seen, but it's grey, it's on the background. And the only thing that is colored is the one that the author wants to highlight or emphasize. And as you can see, it works really really well. So the best way to highlight with color, or one of the best ways to highlight with color, if possible, is to use different shades of grey for what is not the main piece of information that you want to communicate, that you want to keep as a background. And then use something that is colored, so that it stands out compared to the rest. Let me give you a few more examples. This is another visual representation, another visualization that has been created by Moritz Stefaner. And in this visual representation, this is a scatter plot, where what is shown is different countries and in terms of fertility rate and life expectancy. And these lines that you see are basically the same country, how the value changes over time. And as the time changes, the bubbles also go from small to big. You can see in the legend on the top right, what is the relationship between size and years. So starting from where it's very thin to where it's very, the border increases, you can basically see how it changes overtime. But that's not the main purpose, the main reason why I'm showing you this visualization. But I'm showing it because it's another example of emphasizing, attracting the reader's attention using color. So here, what the author decided to highlight is two main countries, United States and Vietnam. These are the only two countries that are colored, and the rest is gray and is in the background. Okay, why? Well, because the idea here is to emphasize how much Vietnam has progressed compared to United States over a certain number of years. So that's the main communication intent behind this graphic, and this is why these two elements are highlighted. Here is another example that shows the same principle. So this is abortion rates across a number of years and for different age ranges, going from left to right. And again, so every single line that you see there is one of the range ages that are repeated across all charts, but those that referred to the actual bucket, to the actual range, are much more saturated. So you see the orange one is the one that refers to the age range. And the dark gray one that is repeated across all of them is the average across all of the ranges. So once again, color can be used as a way to highlight some elements of interest and direct the reader's attention to something that is supposed to be noticed. And the use of gray in these cases is also very useful because using gray to give color to the rest, so you don't have to get rid of it. But it also doesn't interfere with the main message, and provides useful context is also very very useful
+And we also saw that there are a number of methods to create effective color maps or color scales to represent color for these purposes. 
+
+Now I want to introduce one third purpose of color, a third way color can be used effectively in visualization. And this is about using color to highlight or emphasize something in a visualization, which is also very very useful and very important if used appropriately. 
+
+![](week4_51.PNG)
+
+Let me give you an example, I want to start with this example. So this is a visualization developed by Gregor Aisch for New York Times. And the idea here, there are a number of different countries. And what you see on the x axis of each of these countries is a number of years. And what you see on the y axis, there is a proportion of different types of parties.
+
+But the article that actually comes together with this graphic is about parties on the far right and their prominence over time, whether they're growing or shrinking across different selected countries. Okay, so now since the article focuses on this topic. What you really want to focus on in the graphics, what you want to see, what the author wants to communicate is actually what is the main proportion of far-right parties. And that's the reason why this segment is the only one that is colored, and it's colored with a very intense red. So the rest is still visible, it doesn't mean that the rest cannot be seen, but it's grey, it's on the background. And the only thing that is colored is the one that the author wants to highlight or emphasize. And as you can see, it works really really well. 
+
+So the best way to highlight with color, or one of the best ways to highlight with color, if possible, is to use different shades of grey for what is not the main piece of information that you want to communicate, that you want to keep as a background. 
+
+![](week4_52.PNG)
+
+And then use something that is colored, so that it stands out compared to the rest. Let me give you a few more examples. 
+
+![](week4_53.PNG)
+
+This is another visual representation, another visualization that has been created by Moritz Stefaner. And in this visual representation, this is a scatter plot, where what is shown is different countries and in terms of fertility rate and life expectancy. And these lines that you see are basically the same country, how the value changes over time. And as the time changes, the bubbles also go from small to big. You can see in the legend on the top right, what is the relationship between size and years. So starting from where it's very thin to where it's very, the border increases, you can basically see how it changes overtime. But that's not the main purpose, the main reason why I'm showing you this visualization. But I'm showing it because it's another example of emphasizing, attracting the reader's attention using color. So here, what the author decided to highlight is two main countries, United States and Vietnam. These are the only two countries that are colored, and the rest is gray and is in the background. Okay, why? Well, because the idea here is to emphasize how much Vietnam has progressed compared to United States over a certain number of years. So that's the main communication intent behind this graphic, and this is why these two elements are highlighted. 
+
+Here is another example that shows the same principle. 
+
+![](week4_54.PNG)
+
+So this is abortion rates across a number of years and for different age ranges, going from left to right. And again, so every single line that you see there is one of the range ages that are repeated across all charts, but those that referred to the actual bucket, to the actual range, are much more saturated. So you see the orange one is the one that refers to the age range. And the dark gray one that is repeated across all of them is the average across all of the ranges. 
+
+So once again, **color can be used as a way to highlight some elements of interest and direct the reader's attention to something that is supposed to be noticed**. And the use of gray in these cases is also very useful because **using gray to give color to the rest, so you don't have to get rid of it. But it also doesn't interfere with the main message, and provides useful context is also very very useful.**
+
+### Perceptual Issues With Color
+
+Okay, so far, we have seen how color can be used for different purposes. The main three purposes that we covered are visualizing quantity or magnitude or order with color, visualizing categories for labeling purposes, and also using color to highlight and emphasize something. Now for the rest of this lesson, I want to focus on a number of additional perceptual issues with color that have important consequences on the design of visualizations that are based on a color. 
+
+The first one, and probably the biggest one, is the problem of **color blindness**. So you may already be aware of that or maybe not. So there is quite a large proportion of people who actually have problems with distinguishing some colors. And this is called color blindness. Okay, so, color blindness affects quite large proportion of people and there are different types of color blindnesses, okay? So, in all these types of color blindness mostly depend on problems with the photoreceptors that are in the eye. So, we have seen before that in the back of our eye, there are rods and cones and there are three different types of cones. We have cones that are sensitive to three different bands of color, right? So, to short wavelengths, to medium wavelengths, and to long wavelengths. Okay, so, what happens is that, color blindness takes place in subjects where one or more of these photoreceptors are either absent, completely absent, or somewhat defective. And the lack of different receptors lead to different types of color blindness, okay? 
+
+![](week4_55.PNG)
+
+So what you see here is four images and also the four spectra that we get from the sensors. So the spectra are on the left, and the images as seen by people with normal vision or are color blind, you see on the right. So the first one is normal vision. So, the response of the receptors is normal, and these normal subjects have old set of receptors. So this is the first row that you see there. So the second one is the case where the _receptors that correspond to the medium wavelengths_ is absent, and this is called **deuteranopia**. And the image that you see on the right is basically, a person who is affected by these type of color blindness would see the image that you see on top, okay? 
+
+The second one in the third row is when _the receptor corresponding to the long wavelengths is missing_, and this is called the **protanopia**. And again, on the right, you see that the way they image is perceived is very different, but it's very similar to the previous type of color blindness, okay? 
+
+And the last one is the case _when the receptors corresponding to the short wavelengths are missing_, and this is called **tritanopia**. And as you can see, the way the same image is perceived is very, very different. 
+
+This is a very similar example where we see an image, how this is perceived by people with normal color vision on the top left, and this is how the same image is perceived by people who have different types of color blindness. 
+
+![](week4_56.PNG)
+
+And here, I also included in the top right, people who actually can't perceive any color, and these actually unfortunately exist. 
+
+This is an image that shows what happens in the back of our eyes in the retina. 
+
+![](week4_57.PNG)
+
+So as you can see here, every single dot corresponds to a photoreceptor. And the difference between the image on the left and the image on the right is that, in the image on the right, the red photoreceptors are completely missing. And this is the origin of the problem of color blindness. 
+
+![](week4_58.PNG)
+
+So, in general, the estimate is that 10 percent of male subjects, and one percent of female subjects are affected by some type of color deficiency. So this is a pretty high number, high enough that it actually means that we, as visualization designers, have to be careful on how we use color when we are creating some new graphic designs.
+
+![](week4_59.PNG)
+
+By far, the most common type of color blindness is the one that is due to the lack of medium and long wavelengths. This is by far the most common. And in turn, this means that the most common type of color blindness is the one in which it's hard for color blind people affected by this type of color blindness to distinguish between red and green. **So distinguishing between red and green is by far the most common problem in visualization and in general graphic design when you are using color**. 
+
+![](week4_60.PNG)
+
+So now, I'm going to show you a few examples that I've taken from a blog post in the website of Tableau Software, and it's titled Five Tips on Designing Colorblind-friendly Visualization. And here, there are examples of how some color pallets that are used and have been designed to be used in Tableau appear when two people who are normally sighted, and to people who have some form of color blindness. 
+
+![](week4_61.PNG)
+
+So, a very common problem here is the one that happens when you are using green and red, and a common type of color palette that people use is what is called the Traffic Light Palette. And this is often desired because people think that it's intuitive, and because of that, it's easy to interpret. But as you can see, on the right-hand side, all these colors are very, very hard to distinguish for a color blind person. 
+
+This is another one, it's a color palette that is called Tableau 10 Medium, that is one of the standard color palettes available in Tableau. 
+
+![](week4_62.PNG)
+
+But again, if you see the same palette, when it's transformed in a way to see how a person with color blindness would perceive it, you can see that there are many colors that can't really be distinguished. So for instance, it's very hard to distinguish red from green and brown. It's very hard to distinguish between blue and purple, and it's very hard to distinguish between pink and green. So, this is clearly a problem if you want to create a visualization that can be perceived by a person who is affected by color blindness. 
+
+![](week4_63.PNG)
+
+So, now, the next question obviously is, how do you design visualizations that are safe for color blind people? That color blind people can read safely? So, there are a number of things you can do. Here is another color palette, again, that is available in Tableau software and it's been explicitly designed to be effective also for people affected by color blindness. 
+
+![](week4_64.PNG)
+
+So there are a couple of things here. First of all, if the difference between the colors is due to the difference between blue and red shades, in most cases, these can be distinguished. 
+
+Another thing that can be done is, you have to remember that **color is a three-dimensional object**, okay? _So, not only we can vary color hue in colors, but we can also vary the color intensity or lightness and the saturation_. So in general, if you want to create a color palette with different colors that can be used with color blind people, you can also play with the color intensity, and this is exactly what is done in this color palette, okay? Of course, these clashes with another constrain or need that you may have, when you're using categorical color palettes that you don't want one color to stand out compared to another one. And this is a trade off. You can't really solve both problems at the same time. 
+
+Another thing that you can do when you design a new visualization is to _check out how this visualization is going to look like to people who are color blind_. And to do that, there are a number of available tools on the web. 
+
+![](week4_65.PNG)
+
+Here, I'm showing you one of the many who are available. This is called Vischeck. And in Vischeck, you can upload an image that you saved on your computer, and see how it looks like to different types of color blind people. So, here is an example. 
+
+![](week4_66.PNG)
+
+On the left-hand side, you have the original image, and then you have on the right, two images created by Vischeck to show you how they look like to color blind people. So, this concludes this part about color blindness. 
+
+I just want to briefly summarize what you can do. So, the first thing you can do and probably the safest one is to _use palettes that have been explicitly designed by someone who is an expert to be used for color blind people_. Another idea is to _use the range between blue and orange or blue and red because_ this one is normally safe, at least for a large percentage of color blind people. The next one is to _consider color variations on the axis of color intensity and/or saturation_. And the last one, by the way, I think you should always go to this step when you are designing for color blind people, is to _test your design with one of the many available tools_ that transform an image into a mini-image, _simulate how the image would be perceived by a person who is color blind_.
+
+![](week4_67.PNG)
