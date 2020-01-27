@@ -363,3 +363,104 @@ On the left-hand side, you have the original image, and then you have on the rig
 I just want to briefly summarize what you can do. So, the first thing you can do and probably the safest one is to _use palettes that have been explicitly designed by someone who is an expert to be used for color blind people_. Another idea is to _use the range between blue and orange or blue and red because_ this one is normally safe, at least for a large percentage of color blind people. The next one is to _consider color variations on the axis of color intensity and/or saturation_. And the last one, by the way, I think you should always go to this step when you are designing for color blind people, is to _test your design with one of the many available tools_ that transform an image into a mini-image, _simulate how the image would be perceived by a person who is color blind_.
 
 ![](week4_67.PNG)
+
+
+### Effect of Size
+
+Another important aspect to consider when designing for effective visualizations with color is the effect of size. _The size of an object on the screen affects the way the color is perceived_. Let me show you an example. 
+
+![](week4_68.PNG)
+
+
+So, here in this scatter plot, I have lots of dots and these dots are colored according to a number of categories, these categories that you see on the right. Now, _since these dots are very small, it's very hard for you to distinguish between all the different colors_. You can maybe perceive the difference for some shades, but you definitely can't distinguish all these categories that you see on the right. Now, if I make these dots bigger, you can see that now, you can distinguish a lot more colors. 
+
+![](week4_69.PNG)
+
+So, this example gives you a sense of the fact that **size interacts very heavily with color perception**. And this is something you have always to keep in mind. Very, very important. 
+
+![](week4_70.PNG)
+
+Let me give you another example, I've taken this example from a very nice tool called Just-Noticeable Differences, which is a library developed by Connor Gramazio, who was a visualization researcher and he's been developing methods to automatically decide how much of a difference is needed in a color dimension so that a difference is perceived, taking into consideration how large the area of this object is.
+
+![](week4_71.PNG)
+
+And here, you see that a certain level of difference, for different sizes, it's easier or harder to perceive the difference. So, the elements in the first row, the difference can be perceived very easily. The one in the middle is a little harder, and the one at the bottom is very, very hard. So, here is another example that clearly shows you how size affects color perception. 
+
+<mark>**So the general rule for visualization design is that when you have small areas, you should try to have colors that have high saturation. And when you have large areas, you should try to have callers who have low saturation**</mark>. 
+
+![](week4_72.PNG)
+
+I think another rule that you should consider is that _if you want people to be able to distinguish between a certain number of colors, the objects can't be too small_, okay? 
+
+![](week4_73.PNG)
+
+So let me show you what happens when you have large and small areas. I created these examples using a tool that is called ColorBrewer, that I'm going to introduce in a moment. And as you can see here, **when we have large areas, if we have colors that are too saturated and too bright, they tend to create clutter and too strong visualization**. We have what is called vibrant colors that _stimulate our vision too harshly_. On the right, I have exactly the same representation but with colors that have a much, much lower saturation, and because of that they are not as aggressive as those ones that you see on the left. So, as a general rule, _it's important when you have large shades of color, large areas, not to use colors that are too saturated_. The opposite is true for small areas with colors that need to be perceived across very small objects. This is what you see on the bottom left of the same image. **It's much better to have highly saturated colors when you have small objects**.
+
+### Contrast Effects
+
+Another very important concept to consider, is the concept of contrast. So, what is contrast? _We can define contrast, as the difference in colors, that make objects distinguishable_. 
+
+![](week4_74.PNG)
+
+So, let me give you an example. That's the best way to introduce the concept. Look at this. 
+
+![](week4_75.PNG)
+
+So, we have two different texts, that are colored with different color, but the same background color. And as you can see, I think it's not hard to see, in one of the images text, is very easy to read the one at the bottom, and the other one is much harder to read, the one on the top. So, that's a very good example of contrast. The one on top is very little contrast between the background and the color, that he's used for texts. Whereas the one at the bottom, exactly the opposite. There is a lot of contrast between the background color, and the foreground color used in the text. 
+
+![](week4_76.PNG)
+
+So, you may ask yourself, _why is contrast important in visualization_? There are a number of reasons. But I would say that the main reason why you should be aware of contrast effects in visualization, is because _visualization are often organized in layers_. There are multiple layers, and the way you play with contrast, to show these layers, and to find good relationships within these layers, is very important. 
+
+![](week4_77.PNG)
+
+So, what are examples of layers? Like the difference between background colors, and foreground color? So, background color and foreground objects? Or even grids, that are used in charts? Or the difference between labels and text and the rest? Or in maps, when a map is used as the background, and then there are visual marks depicted on top? So, there are lots of examples out there, where a given visualization is organized in multiple layers. And _contrast, is the main tool, that you can use to separate these layers_. Let me give you a few examples. 
+
+![](week4_78.PNG)
+
+So, here we have a scatter plot, and the background color is fully white, and the color used for the marks, is yellow. But unfortunately, yellow is a very bright color, and the white background is also very white, so there's not a lot of contrast between these two. 
+
+![](week4_79.PNG)
+
+But if I switch the background color, and they keep the foreground color of the visual marks the same, now I have a lot of contrasts, because the background color is very dark, and the foreground color used for the marks, is very bright. So you have a lot more contrast between these two. 
+
+Let me give you another example. 
+
+![](week4_80.PNG)
+
+So here, there is a grid, and this is visualization that shows, train stations and a timetable of trains between Paris and Leon, is actually very popular visualization published in a book from Edward Tufte. And here are two versions. That's the original version, and this is the version redesigned by Tufte. 
+
+![](week4_81.PNG)
+
+It's exactly the same information, but the grid that is in the background, has been toned down, by using a gray shade. So look at the difference. This is, you have the lines of the trains are very dark, but the grid is also very dark. Whereas in this one, the lines that represent the trains, are very dark and the grid is not dark at all, it's just low saturation shades of grey. And because of that, there is a lot more contrast between these two, and you can see the lines much better. The grid and the lines are not competing against each other. So, these kind of effects are so often present in visualizations of all kind. If you start looking for these kind of effects, you'll find a lot of them, in all sorts of visualizations, and charts, and maps, and so on. So, thinking about contrast, is a very important concept for visitation.
+
+### Luminance for Contrast
+
+Okay. So, when we talk about contrast, the most important concept is that luminance is the more powerful channel to create contrast between objects. 
+
+![](week4_82.PNG)
+
+So as we saw previously, color can be defined by a number of channels, right? So we have luminance and the chromatic channels. Now, <mark>**luminance is by far the most important channel to create contrasts between different colors**</mark>. It is possible in principle to create contrast with the other channels, but it's much less powerful than luminance. So I think the general rule you have to keep in mind is that luminance is by far the most important element in color to create contrast between colors. 
+
+So, let me show you an example. 
+
+![](week4_83.PNG)
+
+This is a little demo from a tool that is called Colorable, you can find online, and it's the same tool that I used to create one of the examples early on at the beginning with the different background colors and different text colors, okay? So now, what you see here at the bottom is that I can change the hue saturation and lightness of the foreground and the background. So, let's see what happens when they change the lightness. As you can see, the lightness of the background is pretty low. 
+
+![](week4_84.PNG)
+
+And as you can see, as I change the lightness of the font of the text part, the contrast changes dramatically. Look at this. So, as it gets darker and darker, and closer to the lightness of the background, it gets much, much harder to see, okay? Now, even more interesting. So if I move the lightness of the background, say, towards the middle, now you'll see that when the lightness of the text is much higher, I still have enough contrast. 
+
+![](week4_85.PNG)
+
+When I go to the middle, you have very, very little contrast. But when I go back to very low lightness, now, you have kind of like the opposite kind of contrast, right? 
+
+![](week4_86.PNG)
+
+So this means that you can create contrast by having one element more luminant than the other, but the order doesn't really matter, okay? So now, I want to show you that if I keep lightness between background and foreground the same, and also saturation around the same, so you will see that now we have contrast, only according to differences in hue. And as you can see, sometimes, there is a little bit more contrast, sometimes, there is a little less, but there is never a lot of contrast between them. 
+
+![](week4_87.PNG)
+
+So, this is contrast that is generated only by a change in hue. And as you can see, it's not particularly helpful or strong. Sometimes, some bodies are better than others but it's never as strong as contrast obtained through differences in lightness. _So, this gives you a sense that lightness is by far the most important element when you have to think about how to create contrast between different colors_.
+
