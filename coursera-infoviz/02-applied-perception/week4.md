@@ -498,9 +498,25 @@ So in turn, how do you use these knowledge when you are designing new visualizat
 
 Okay, I want to conclude this lesson by talking about some existing color tools.
 
-Why do I talk about that? Well, I think it's important for you to know that in the large majority of cases when you are creating new visualizations, not necessarily you have to design a new color scheme. That would be a daunting cause, fortunately, there are lots of existing tools out there that if pre-existing color schemes or color pallets. And you can just use them, and as long as you know how to use these color scales appropriately, you will be creating effective visualizations. Of course, all the guidelines that I provided to you so far will be very, very useful in choosing the right color scheme. And also in where available also tuning the parameters, if there are parameters that are available in these tools. So as a general rule, I would say don't design new color schemes or color scale if you do not have to. Because there are very knowledgeable people out there who've been designing these color schemes for you once for all. And unless you have a very specific need, you shouldn't try to create new color scales.
+Why do I talk about that? Well, I think it's important for you to know that in the large majority of cases when you are creating new visualizations, not necessarily you have to design a new color scheme. 
 
-So keep in mind, you still have to make sure that you use these color tools in the right way, okay? And again, all the guidelines that I provided so far are very, very important. Now I want to introduce probably the most famous and also probably useful, color tool available for visualization. This tool is called ColorBrewer, and it's been created originally by Cynthia Brewer who is a professor at Penn State. And the idea of this tool is to help people understand how color works and how to use it in specifically in cartography, but more in general in data visualization. So what I'm going to do next is to show you how ColorBrewer works. And how you can use it to better understand how color works and also what color pallets to use. Before I do that, let me tell you that a very interesting aspect of ColorBrewer is that since it's so famous and so effective. The color palettes that have been regionally created for ColorBrewer, have been reimplemented and use in many other tools and libraries. So this means for instance that if you are designing a new visualization and you are using library like in an API like D3JS. Which is particularly popular, you will find in the libraries methods to use the color palettes that have been designed in ColorBrewer. And this is true for many other tools. Okay, let's switch to the demo.
+![](week4_94.PNG)
+
+That would be a daunting cause, fortunately, there are lots of existing tools out there that if pre-existing color schemes or color pallets. And you can just use them, and as long as you know how to use these color scales appropriately, you will be creating effective visualizations. 
+
+![](week4_95.PNG)
+
+Of course, all the guidelines that I provided to you so far will be very, very useful in choosing the right color scheme. And also in where available also tuning the parameters, if there are parameters that are available in these tools. So as a general rule, I would say don't design new color schemes or color scale if you do not have to. Because there are very knowledgeable people out there who've been designing these color schemes for you once for all. And unless you have a very specific need, you shouldn't try to create new color scales.
+
+So keep in mind, you still have to make sure that you use these color tools in the right way, okay? And again, all the guidelines that I provided so far are very, very important. Now I want to introduce probably the most famous and also probably useful, color tool available for visualization. 
+
+![](week4_96.PNG)
+
+This tool is called ColorBrewer, and it's been created originally by Cynthia Brewer who is a professor at Penn State. And the idea of this tool is to help people understand how color works and how to use it in specifically in cartography, but more in general in data visualization. So what I'm going to do next is to show you how ColorBrewer works. 
+
+![](week4_97.PNG)
+
+And how you can use it to better understand how color works and also what color pallets to use. Before I do that, let me tell you that a very interesting aspect of ColorBrewer is that since it's so famous and so effective. The color palettes that have been regionally created for ColorBrewer, have been reimplemented and use in many other tools and libraries. So this means for instance that if you are designing a new visualization and you are using library like in an API like D3JS. Which is particularly popular, you will find in the libraries methods to use the color palettes that have been designed in ColorBrewer. And this is true for many other tools. Okay, let's switch to the demo.
 
 What you see here is what our ColorBrewer looks like when you open it for the first time. What do you see? So there are a number of options in the control panel on the left.
 
@@ -508,17 +524,42 @@ And what you see on the right is a sort of simulation of how the currently selec
 
 Now for each of these cases, ColorBrewer presents a number of different color schemes at the bottom. So for sequential, we have multi-hue color schemes, multi-hue means that there are two hues that are interpolated between the end of the scale and single hue color scales. And by now, you should know what this means, okay?
 
-Note that these color schemes have been designed to be perceptually uniform, okay? So if we increase this to say 8, we have more colors available. And these colors, again, have been designed to be perceived uniformly, linearly. Let's take a look at the diverging color scale. In the diverging color scale, again, we have the same method that I presented earlier in this lesson and there are different options. So say from blue to red, and then we are from green to purple and we are from green to brown, okay? And the last one is qualitative. And here, again, we have different options. One interesting aspect of the qualitative color scales is that there are different options in terms of color saturation. So here, we have highly saturated colors, and here, we have colors with very low saturation, okay?
+Note that _these color schemes have been designed to be perceptually uniform_, okay? So if we increase this to say 8, we have more colors available. And these colors, again, have been designed to be perceived uniformly, linearly. Let's take a look at the diverging color scale. In the diverging color scale, again, we have the same method that I presented earlier in this lesson and there are different options. So say from blue to red, and then we are from green to purple and we are from green to brown, okay? And the last one is qualitative. And here, again, we have different options. One interesting aspect of the qualitative color scales is that there are different options in terms of color saturation. So here, we have highly saturated colors, and here, we have colors with very low saturation, okay?
 
 What else can you do in ColorBrewer? Well, you can ask ColorBrewer to show you only color schemes that are color blind safe. So if I click here, you can see that ColorBrewer shows you. So in this case is actually none of them. Let me change this, so you have to reduce the number of colors back to 4. So color blind safe, so ColorBrewer with four classes. It shows you that only one color scheme can be used and to be color blind safe, okay? Finally, you can also add on the map some context to see how much contrast there is between these elements in the background of the map. For instance, you can add roads and if you want you can also change the color of these roads, you can add city names and so on. You can remove or add borders, so you can do a number of things to understand how color affects the perception of different layers.
 
 Finally, you can also play with the background. You can have a solid color, or you can have some terrain, and you can also change the level of transparency between the map and the background.
 
-Last but not least, for a given color scheme, you can also choose to export the current color scheme to different tools which is also practically very, very useful. Okay, this concludes the lesson on color usage. To recap, we covered quite a number of different aspects related to how to use color. So first of all, we discussed the idea that there are three main color uses. The first one is using color to
+Last but not least, for a given color scheme, you can also choose to export the current color scheme to different tools which is also practically very, very useful. 
 
-communicate information about quantity or magnitude and sequence. The second one is using color to label data according to a number of different categories. The third one is using color to highlight some elements that are important. And to basically direct the reader's attention to something that should be highlighted and should attract the reader's attention.
+Okay, this concludes the lesson on color usage. To recap, we covered quite a number of different aspects related to how to use color. 
 
-Then we went through a number of specific issues that need to be taken into account when using the color in visualization. So for instance, we talked about the problem of color blindness which is very important. We talked about the effect of size and how size inteacts with color. We talked about the effect of contrast and how to take care of contrast.
+So first of all, we discussed the idea that there are **three main color uses**. The first one is _using color to communicate information about quantity or magnitude and sequence_. The _second one is using color to label data according to a number of different categories_. The third one is _using color to highlight some elements that are important_. And to basically direct the reader's attention to something that should be highlighted and should attract the reader's attention.
+
+Then we went through a number of **specific issues** that need to be taken into account when using the color in visualization. So for instance, we talked about the problem of _color blindness_ which is very important. We talked about the _effect of size_ and _how size inteacts with color_. We talked about the e_ffect of contrast_ and how to take care of contrast.
 
 So this concludes this part of the course, and it's very important for you to keep in mind what the guidelines are. And also to keep in mind that these guidelines can be used both to create new color schemes, which is particularly hard. But more practically, to decide among all the available color schemes that someone has created for you. Which one is appropriate for the need that you have when you are designing a new visualization.
+
+## Readings
+
+### Subtleties of Color (Part 2 of 6) 
+https://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/06/subtleties-of-color-part-2-of-6/
+
+> According to much of this research, a color scale should vary consistently across the entire range of values, so that each step is equivalent, regardless of its position on the scale. In other words, the difference between 1 and 2 should be perceived the same as the difference between 11 and 12, or 101 and 102, preserving patterns and relationships in the data. (For data with a wide range that is better displayed logarithmically, relative proportions should be maintained: the perceived difference between 1 and 10 should be the same as 1,000 and 10,000.) Consistent relationships between numbers—like in a grayscale palette—preserves the form of the data. Palettes with abrupt or uneven shifts can exaggerate contrast in some areas, and hide it others.
+
+> A palette should also minimize errors from the color shifts introduced by nearby areas of differing color or lightness, a phenomenon known as simultaneous contrast.
+
+![](week4_reading01.PNG)
+
+> How to take advantage of the strengths of both the grayscale palette (preservation of form) and rainbow palette (preservation of quantity), while minimizing their weaknesses? Combine a linear, proportional change in lightness with a simultaneous change in hue and saturation. Colin Ware describes this type of palette as “a kind of spiral in color space that cycles through a variety of hues while continuously increasing in lightness” (Information Visualization: Perception for Design, Second Edition). The continuous, smooth increase in lightness preserves patterns, the shift in hue aids reading of exact quantities, and the change in saturation enhances contrast.
+
+![](week4_reading02.PNG)
+
+> Of the three components of color—hue, saturation, and lightness—lightness is the strongest. As a result, accurate, one-way changes in lightness are more important than those in hue or saturation. For example, a color scale that goes from black to color to white can still be read accurately, even though the saturation is lower at both ends of the scale than in the middle. This allows a bit of flexibility in designing palettes, especially for datasets that benefit from high-contrast color ramps. You also don’t need to worry too much about color scales that drift a little bit out of gamut (the complete range of colors displayed on a particular device) for a portion of the ramp. Just make sure lightness is still changing smoothly.
+
+![](week4_reading03.PNG)
+
+> All of these palettes are appropriate for sequential data. Data that varies continuously from a high to low value; such as temperature, elevation, or income. Different palettes are suited to other types of data, such as divergent and qualitative, which I’ll discuss next week.
+
+### Subtleties of Color (Part 3 of 6)
 
