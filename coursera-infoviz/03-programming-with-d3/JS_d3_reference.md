@@ -36,6 +36,18 @@ while (true) {
 }
 ```
 
+Essa construção não conhecia, para iterar com `for` sobre os elementos de um array:
+
+```js
+let a = [1,2,3,4];
+
+for (let elemento of a) {
+    console.log(elemento)
+}
+
+```
+
+
 ### Manipulating the DOM
 
 ```javascript
