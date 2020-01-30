@@ -68,6 +68,10 @@ Outras coisas:
 
 mostrar como vc vai precisando de outras funções e métodos pra fazer coisas simples. tipo, detectar o nome de um arquivo antes da extensão, a partir do nome completo com extensão.
 
+mostrar que esses `d` que usamos como argumentos, parâmetros, pode ter qualquer nome.
+
+na verdade, tentar explicar de onde vêm esses argumentos "fantasma" que são usados nas funções anônimas dos métodos. tipo, dentro de um promise, lá no `.then(function(data){...})` quem danado é esse `data`? como eu sei quem são os argumentos que posso usar nessa função anônima?
+
 # D3
 
 ### Selections
