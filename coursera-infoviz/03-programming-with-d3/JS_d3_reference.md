@@ -161,5 +161,5 @@ When use it ("inline events"), instead of adding an event listener?
 
 ## scaleBand
 
-`d3.scaleBand.padding(value)`
+`d3.scaleBand().padding(value)`
 
