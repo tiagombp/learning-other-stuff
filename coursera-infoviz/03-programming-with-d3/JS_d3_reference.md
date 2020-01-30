@@ -159,5 +159,7 @@ When using `selection.html()`, the content passed in as argument will actually b
 
 When use it ("inline events"), instead of adding an event listener?
 
+## scaleBand
 
+`d3.scaleBand.padding(value)`
 
