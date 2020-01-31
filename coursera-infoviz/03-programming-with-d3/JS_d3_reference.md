@@ -181,3 +181,6 @@ When use it ("inline events"), instead of adding an event listener?
 
 `d3.scaleBand().padding(value)`
 
+### dúvidas
+
+como funciona direito d3.csv

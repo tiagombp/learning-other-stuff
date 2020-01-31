@@ -40,7 +40,24 @@
     </div>
 </body>
 <script> 
-    let store = {}
+    let store = {};
+
+    console.log("comecei");
+
+    function loadData() {
+        let promise =d3.csv("routes.csv");
+        return promise.then(function(routes) {
+            console.log("loading...")
+            store.routes = routes;
+            return store;
+    });
+    console.log("will load data...")
+
+    loadData()
+
+    console.log("data loaded.")
+
+}
 </script>
 
 </html>
