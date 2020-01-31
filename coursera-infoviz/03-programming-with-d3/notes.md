@@ -449,5 +449,73 @@ So, now each bar, the height is occupying the whole band that we have for each c
 
 So, 0.3 is the proportion of the size that you have, so this just means that now we have the padding between them based on the proportion that I provided. So, if I want them to be closer, I can provide a smaller number, if I want them to be farther, I can provide a bigger number and I can choose whatever number better suites what I'm looking for to create my visualization. You don't want them to be too separated, so people cannot relate them, but you also don't want them to be too close so people cannot really distinguish between each bar. So, remember that if you have to transform numbers to numbers, you can use the linear scale or any other numeric scales, but if you want to transform numbers or categorical data to numbers, then you can use the ordinary scale like the band one that helps you to transform categorical values like the names of the clients to positions of bands on the screen.
 
+#### Adding Axes Annotations
 
+Once you create your validation, once you finally map your data from the data space to the visualization space, there are some things that you still need to do. So for example here, imagine that I just mapped my data from the data space to the design space and then I got this visualization.
 
+![](week2_90.PNG)
+
+So right now the visualization is not used for all, because we have no idea what those bars mean, what each size means, and so on. So what we need is to add annotations. And one of the most important annotations that we add often too short is the axis. 
+
+![](week2_91.PNG)
+![](week2_92.PNG)
+
+And one thing that is important as well is that sometimes you want to use grids. And grids are basically from the d3 perspective, they're basically the same axes, we just change how they are drawn. So for example here, if I take those two ticks here, these two lines that we draw for the axis, we can extend it up. And then what we get is basically a line that is going to help people to map the size of each bar back to the values. And this is what we call grids. And I could do the same thing with the horizontal version. So from the d3 perspective, grids are basically axes that are drawn overcoming the base of your axes. So just go up each line that you have.
+
+![](week2_93.PNG)
+
+![](week2_94.PNG)
+
+once you call this function to create this axis, you're going to have to _provide a scale_. So you can be a numeric or it can be an ordinal scale. You just provide a scale so now d3 knows which type of information you're trying to draw. And it's going to use that to create the elements of your axis. 
+
+![](week2_95.PNG)
+
+So for example here, we are creating scaleLinear, so we are basically calling scaleLinear, we are creating our scale that is a function. Then in the middle we basically said the domain in the range here is not really important for the axis. As we finish that, we're going to call our axis. _And what's important here is that I'm not drawing anything on the screen yet. I am basically creating the object. I am creating a kind of axis constructor that's going to be able to draw those axes later. And then I can set properties of these constructors_. And then after that, comes the part where we actually draw on the screen (the `call(axis)` statement).
+
+for example, imagine that I want to add a label to tell which information from the data space is this key about. So in this case, I can call d3.select and select my group, where I created my axis. 
+
+![](week2_96.PNG)
+
+And then I can add the text for example and set the text of this text element to age. So now we're going to have also a label saying that this axis that you are looking at is a age, is related to the age in the data space. 
+
+#### Practice
+
+![](week2_97.PNG)
+
+In this video, I want to show you how you can add annotations to your chart, in order to it make clear which information you are visualizing and especially, I want to show you how you can create axis that's going to say which name each bar here represents, and also the value that the width represents. To create that, D3 provides us with axis functions that can help us to create some axis object that D3 can use to draw the axis for us and what we have here right now, is basically a SVG on the top, where we have a group for our body that now contains our bars and we moved G's whole group 50 pixel to the right. 
+
+![](week2_98.PNG)
+
+So, we can create space here to add our our axis later, and we also created a group for each of the axis that we want to create. The Y-axis and the X-axis, then we load D3, we load our data, and we create both the linear scale for the width of the bars, and the position scale that's going to tell where we want to put each bars, basically creating the bands for each of the bars that we have in our data
+
+![](week2_99.PNG)
+
+and finally, we join our data with all the "rect" that we have in our SVG, and we assign the clients to them and finally, we create the "rect" for each new client with a color blue and also, we use the scales to decide the width and the position of each bar. 
+
+![](week2_100.PNG)
+
+So, that's what we use to generate the visualization that we have right now. But it doesn't have an annotation, we don't really know what the width means or what each of those bar means, and we want to fix them. So, we're going to start by the X scale. So, we can just create an object that we're going to call it X-axis. We want to create an axis that goes on the button. So, we're going to say axisButton and then for this axis, we're going to provide which scale this axis can use to create the visualization. So in this case, it's just a scale because this is the width scale that tell the width of the bar. So, this is not drawing anything on the screen yet, the next step is actually draw something on the screen using this information. So what we can do is, we can select. Remember that I have a group X-axis on my SVG, so I can use that to create my axis. So, I'm basically selecting the group here that we have on the top. I'll say "Select" is group, I can use a function called "call" and provide this object. So when I do that, D3 is going to call this axis that is a function, that's going to actually draw the whole axis for me, and it did that here on the top. 
+
+[](week2_101.PNG)
+
+So, the axis is correct, the problem is it's just in the wrong position. So, we have to move it to the right position, and we can do that by translating the axis. So, we can set an attribute called "transform" that basically transforms an element, and we're going to move this whole group using "translate" and remember that I said that I moved 50 pixels to the right. So, this also has to move 50 pixels to the right, and the height of the space where we have bars, is 200 pixels. So, I have to move these 200 pixels so it matched the button 200, and then we're going to get our axis in the right position, on the bottom of our visualization. 
+
+[](week2_102.PNG)
+
+So the X-axis looks cool. So the next step is how we can add the Y-axis, and we can follow more or less the same approach. We can just say, "I want a Y-axis" and this is going to be if G is this axis button and is on the bottom, this one is on the left, we're going to use axis left. So, axis left. So, G is going to create the axis, but I have to give the position scale so it knows which scale it's supposed to use to create the axis. So, G has already created the object, the next step is draw something on the screen. So, we can do d3.select. Remember that I also have a group on the top for my Y-axis. So, we can use that, and we're going to call our object. 
+
+[](week2_103.PNG)
+
+So, although we cannot see the axis here, it is here, the only problem is that is actually to the left of our SVG. So, we have to bring it to the right, so we can actually see it. So, we have to do the same thing we did with the X-axis, we have to translate this guy to the right position. So, I want to move it 50, but I don't want to move the Y because I want it to start from the top. So now we get the axis for the left side of our chart, where now we know which person is related to each of the bars. 
+
+[](week2_104.PNG)
+
+So, this is one way that you can create your axis and you can also personalize your axis. So, that's the good thing about using those objects, is that they have functions that allow you to personalize. So for example, here I can think for example that I have too many numbers here, and will be easier to read if actually I had less numbers. So, the name of each of those elements that I have here is called "ticks" So, I can change the number of ticks, by using the function "ticks" and providing a number, and now you see that I only get five numbers. 
+
+[](week2_105.PNG)
+
+So, I don't have numbers that hit each other or hard to read, it's clear what is the value of each tick and you can even format those ticks if you want. So what you can do is, you say "tickFormat" and then D is the value of the ticks. So for example, it's going to be 0,50,100,150, and I can just do anything I want with it. So what I'm going to do, I'm going bend lb to the value that I'm receiving. So here for example, now I have 0lb, 50lb, and so on. 
+
+[](week2_106.PNG)
+
+So I can tell for example, which unit I'm using if I were using percentages or maybe money, I can use the format tick to format this information, and D3 also provides a library or an API called d3.format, but you can also provide parameters on how you want to format your data, you want to round them, remove decimal points if you don't want them, and these kind of things. So, you can use this function to make your ticks or your values of your tick look like you want. So, axes are really important for your chart, you always have to provide them so people can easily read the information that you are trying to present, otherwise it's really hard to interpret, and D3 provide those functions that allows you to create those axes, you also have tops and right axes, if you need to move your axes to other positions, or have other types of axes in your visualization. But they are very useful in order to make sure that your visualization is easier, readable by someone that's looking at them.
