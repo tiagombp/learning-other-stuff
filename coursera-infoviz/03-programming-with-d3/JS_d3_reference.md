@@ -75,7 +75,7 @@ A negative index can be used, indicating an offset from the end of the sequence.
 `arr.pop()` remove o último elemento,
 `arr.slice(0, -1)` faz uma cópia da array, removendo o último elemento (mas não altera a array original).
 
-#### Map, Reduce, Filter
+#### Map, Reduce, Filter, Sort
 
 Reduce
 
