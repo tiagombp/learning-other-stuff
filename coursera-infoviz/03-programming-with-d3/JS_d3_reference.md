@@ -61,16 +61,34 @@ for (let elemento of a) {
 
 ### Manipulating Arrays
 
-Slice
+#### Slice
 
 ```js
 arr.slice([begin[, end]])
 ```
+
+#### Including and removing elements
+
 A negative index can be used, indicating an offset from the end of the sequence. `slice(-2)` extracts the last two elements in the sequence.
 
 `arr.push()` acrescenta ao final, 
 `arr.pop()` remove o último elemento,
 `arr.slice(0, -1)` faz uma cópia da array, removendo o último elemento (mas não altera a array original).
+
+#### Map, Reduce, Filter
+
+Reduce
+
+```js
+let employees = [ {name:"Ali", salary: 50000},
+                  {name:"Zoe", salary:75000},
+                  {name:"Jack", salary: 60000},
+                  {name:"Felix", salary: 35000}];
+
+d3.sum(employees, d => d.salary) // 220000
+employees.reduce( (acumulado, valor_da_vez) => acumulado + valor_da_vez.salary, 0)
+
+```
 
 
 ### Manipulating the DOM
