@@ -57,6 +57,30 @@
 
     console.log("data loaded.")
 
+    function groupByAirline(data) {
+        //Iterate over each route, producing a dictionary where the keys is are the ailines ids and the values are the information of the airline.
+        let result = data.reduce((result, d) => {
+            let currentData = result[d.AirlineID] || {
+                "AirlineID": d.AirlineID,
+                "AirlineName": d.AirlineName,
+                "Count": 0
+            }
+            
+            currentData.Count += 1
+            
+            result[d.AirlineID] = currentData;
+
+            return result;
+        }, {})
+
+        console.log("result como dicionário", result)
+
+        //We use this to convert the dictionary produced by the code above, into a list, that will make it easier to create the visualization. 
+        result = Object.keys(result).map(key => result[key])
+        result = result.sort( (a,b) => d3.descending(a.Count, b.Count));
+    return result
+}
+
 }
 </script>
 
