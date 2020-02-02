@@ -117,7 +117,7 @@ na verdade, tentar explicar de onde vêm esses argumentos "fantasma" que são us
 
 # D3
 
-### Selections
+## Selections
 
 Get the actual node from a selection:
 
@@ -169,6 +169,8 @@ ou ainda a
 
 When using `selection.html()`, the content passed in as argument will actually be parsed as html.
 
+## outros
+
 ### obtendo vs definindo valores
 
 ![](JS_d3_reference_03.PNG)
@@ -177,10 +179,21 @@ When using `selection.html()`, the content passed in as argument will actually b
 
 When use it ("inline events"), instead of adding an event listener?
 
-## scaleBand
+## scales
+
+### scaleBand
 
 `d3.scaleBand().padding(value)`
 
-### dúvidas
+### scaleTime
+
+## line generator
+
+`.defined(d => !!d.price)`
+
+
+# dúvidas
 
 como funciona direito d3.csv
+promises
+New Date(d.date)
