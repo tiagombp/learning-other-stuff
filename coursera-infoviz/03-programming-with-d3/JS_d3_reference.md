@@ -117,6 +117,10 @@ na verdade, tentar explicar de onde vêm esses argumentos "fantasma" que são us
 
 # D3
 
+## joins
+
+quando você faz `.data(dados)`,  e depois usa um accessor com `d => ...`, vc basicamente está dizendo, pegue cada elemento de `dados` e faça uma determinada ação.
+
 ## Selections
 
 Get the actual node from a selection:
