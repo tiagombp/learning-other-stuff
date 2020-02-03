@@ -158,3 +158,114 @@ Donut chart:
 
 ![](week3_46.PNG)
 
+## Maps
+
+One of the problems when we want to visualize things that represents the Earth is the fact that the Earth is round and our paper and our screen and the monitor are flat. So, there is need that we need a way to transform the coordinates from a sphere to a plane so we can visualize the information that is there. To do that, what we're going to use is what we call Geo projections. Geo projections are basically ways to translate the points from latitude and longitude on Geo's fed space to a 2D space in our case using pixels for both x and y axis. 
+
+You will have projections that satisfies different metrics that you are looking for. Each projection has one advantage or disadvantage.
+
+![](week3_47.PNG)
+
+How we use projections? So D3 has an API to create projections and these basically you're going to use d3. and the name of the projection that you want to create. 
+
+![](week3_48.PNG)
+
+![](week3_49.PNG)
+
+![](week3_50.PNG)
+
+![](week3_51.PNG)
+
+So projections are the base that we're going to be using to create map visualizations that's going to help us to translate whatever information we have in latitude and longitude space to a pixel version but keep in mind that you're going to have some trade-off to decide because the fact of the sphere projection that we have the origin of the data comes from a sphere and we are trying to project that in a 2D plane.
+
+### Drawing maps
+
+if you're going to have to create visualization using geographic information or more specifically using a map, the first thing that you have to decide is how you're going to draw the background of your visualization.
+
+![](week3_52.PNG)
+
+But in order to create that (a map with borders), the first thing that you're going to need is actually data that inform us about those shapes and how the country looks like, and where they are positioned in the globe.
+
+So to do that, we're going to use a format that's called GeoJSON.
+
+A GeoJSON is a standard format. We're still using JSON that is how we have seen with loading data in the past, and it just follow some rules on how things should look like. More specifically, each element that we have in our page, so for example, now you can think each element as being a country is going to be represented by a **feature**. So, we're going to have thing on the top that says, "Okay what I'm building is a feature." Then, this feature, it may have some **geometry**. We need more information to know "Okay, now I know the border but I have no idea which element is it. Is it a country or whatever." So, you have the properties. The **properties** are free to use, you can add any information that you want. Later, use that to create visualization. 
+
+![](week3_53.PNG)
+
+So, what we're reading is not the data that I want to plot yet, it's just the data about how the countries look like. 
+
+![](week3_54.PNG)
+
+We're going to use the Geo Path that is a feature from D3, to translate those coordinates that are in geoJSON, to a version that is basically a path, a drawing on our screen, that we're going to use as base for our visualization. How we do that? We use the API GeoPath. 
+
+![](week3_55.PNG)
+
+One important thing about the GeoPath feature, is that you're going to have to provide A projection, and this projection can be any projection that we have in the three, that basically is going to tell you how to do the mapping from the sphere to your screen. Because remember, the data that we get in geoJSON is on latitude and longitude space in geographic information, and we want to translate that to pixel. So, to map the geoJSON to your visualization, you first going to need the projection. 
+
+![](week3_56.PNG)
+
+So, to map the geoJSON to your visualization, you first going to need the projection. So here for example, I'm creating a geoMercator. Once I have my projection, I'm going to create my path generator. So you can think of GeoPath, exactly the same way you think about line generators or arc generators that we have in the three. They're going to receive data and they're going to return some path information that we can add to a path element on my SVG. So, since that's the case, what we can do is we can select our path. So remember, we are going to create a path for each element that I have in my GeoJSON. So, if it's country, we're going to create one for each country, and we're going to select all those path, we're going to use data to bind as if it was a normal data. Since geoJSON often comes with a key called features, where all the features are, we're going to map these features as data, we're going to use this feature as data. Then finally, we're going to go through the same process we would go with any other data that we are visualizing. We're going to use.enter to check if things are new, we're going to append this new path, and then to generate the "d" feature of the path. 
+
+![](week3_57.PNG)
+
+That's basically that language that path uses to draw, we're going to use our geoPath function. That's going to receive a feature, and it's going to return a path that is able to draw that feature. As I said, the three knows how a GeoJSON work. So, this means that you don't have to say which key is the geometry, which key or other information, d3 knows how to read that and come up with the information that allows you to draw your path. 
+
+So remember, to draw the base for map, you're going to need two things: 
+
+the **projection**, that is basically how things are going to look, how are you going to map from io/sphere to a plane. 
+
+Then finally, the **geoPath** that's going to take this new data that is mapped, and transform the actually path information that you can pass to a path element, and get the shape that you are looking for in your visualization.
+
+### Practice
+
+In this video, I want to show you a practical example on how we can draw the basis of our map. So remember that if we are creating a map visualization, one thing that we may need is actually the background, what tells people how the shapes look like or what's the map that we are looking at and then we can draw the data on top of that. So here our goal, we should draw this base first is basically drawing the borders of the regions that we are interested on and specifically for this example, what we want to do, we should draw the borders of a world map. So we want to have a world map with the countries and then the borders of each country. So to do that, one thing that we're going to need is the GeoJSON file that contains information for each country. This GeoJSON is going to have some data about this country but also the polygon or the shape of this country and that's what we're going to use to draw. So here, we have loaded this file already.
+
+![](week3_59.PNG)
+
+So we're using the same technique we would use to lower any other type of data and we are looking a JSON so we're still using d3.json. Then once this data is available, we're going to call showData. Here specifically, we are looking for the map info. _So this is not the data that I'm looking to getting insights of_, it is basically a map of the world, but it's based on this JSON file. So, if you want to take a look on how this JSON file looks like, we can do console.log(mapInfo). 
+
+![](week3_60.PNG)
+
+Then we can look what's the shape that we have in this specific type of file. So, here if you look on this file, what you see is basically that you have an object and inside this object, you have a thing called features, and then you have the type of this object. If I open features, what I'm going to get inside is basically my list of countries. So for each feature, you have a type that is basically a feature. You have the ID that is identifying my country here, and then finally, you're going to have properties and geometry. 
+
+![](week3_61.PNG)
+
+If you open one of these countries, you're going to see that in properties, we basically have the name of the country and then on the geometry is where comes the shape. So you have all the coordinates that define the shape of this country. So you don't really have to understand this file completely, but what you need to know is that the features are the thing that you want to visualize. 
+
+![](week3_62.PNG)
+
+Each feature is one country and those are the ones that I'm looking to draw. The details on how these file works and how we can transform this data to the actual graph thing, D3 is going to take care of it. So, as we notify when we know what we are looking to visualize, we can start to create our visualization. So the first thing you're going to need is the projection. So the projection is the one that's going to translate whatever information you have in latitudes and longitudes to your graphics space. But remember that there is a trade-off between each type of projection that you use. Some projections is going to have better representation of area but not really convenient representation in terms of space they're taking, or they may have a good distance measure but not measured the area correctly and that comes from the fact that the Earth is round and not just a plane. So, we are trying to show something that is actually a sphere but opened, and that's the reason why we have to make those decisions between different projections. Here we're going to start with a very simple one that is the Mercator projection. So, you're going to call projection and you're going to say that is equal. We're going to do d3.geoMercator().
+
+![](week3_63.PNG)
+
+So, this is going to create the projection. It's basically telling D3, **you can think of protection the same way we think about scales**. It's how we're going to transform the numbers from the data space to the graphical space, in this specification case to the map space. 
+
+Once we have a projection, the next thing is to create the path. So, you can think of the path as aligned generator for a line chart. So, what we want to do is to create something that is able to take the projection and generate a path out of it. So we're going to do d3.geoPath. So, this is the one that we use when we are dealing with geographic information. Now what I can do is provide my projection.
+
+![](week3_64.PNG)
+
+So now the geoPath know which projection it's going to be using to draw the data. 
+
+After that, now our next step is to draw the chart. So we already have our projection, we already have our path generator. So now we're going to visualize this data. So on the top here, I have my body that is already selected. So we're going to use this guy. We just do body.selectAll(), and since every time I find a country, I'm going to add a path that is basically a complex shape, I'm going to select all the path. So our journey is going to work correctly. We can associate the data now. So remember that when we looked on the GeoJSON file, all the countries were inside the features. So we have to use that here. We have to do mapInfo.features. 
+
+![](week3_65.PNG)
+
+So, this is basically telling D3 that what we want to visualize are the features inside that file. So up to now in this section, D3 doesn't really know that we are dealing with geographic information. It only think that we are trying to join some data and visualize some data. Our next step is to do enter. So, we can work with each new country that we have and every time we get a country, we're going to append a new path. So after that, we already have one path for each country. But the problem is that this path doesn't have real shape, it doesn't show anything. 
+
+![](week3_66.PNG)
+
+So our next step we should to tell what's the shape of this path. So we're going to do d is equal d. So, path is the element that we created here on the top. So, we're going to use it and we're going to say path(d).
+
+![](week3_67.PNG)
+
+So you see that now we start to get something that looks like a world map. So we get a few countries here like looks like the America, but sure we are missing the rest of the world, and also it's hard to distinguish between different countries. So, let's fix the distinguished part first. So what we want to do here is to change the properties of those parts. We want to make them white with just the border black. So if you want to do that, you can do "stroke" to make your border black and then you can say that the fill is going to be none. 
+
+![](week3_68.PNG)
+
+So now we just inverted. So now we have our borders in black and we have our countries in white. But now how do I deal with this problem that actually the map is much bigger than the region that I have? That's why we cannot see it here. So the first thing that we have to do is to change the size of the map. We can do that back in our projections. So we can tell our projection that we want to scale things down, and you can say for example that you want to scale to half of it, to 50. So you see that now it is smaller, but it's on the right here, is not really in the position that I want because the projection is to scale everything, but it doesn't translate it back to the original space. So we want to do that. We want to translate the center. So when you are translating a projection what you're doing is translating the center of your map. For that reason, I'm going to do translate,
+
+and here I'm going to translate to the middle. So on the top here we have our body height and body width, so we're going to use that. We're going to say bodywidth divided by two is half in the horizontal axis, and bodyheight divided by two is height on the y-axis. So now we get the whole chart in just one place. So now we can see how the countries in the world, but one thing that you may see here is that this projection, in particular the top of the world here actually takes a big space. So the poles of the world is taking a large space and if your visualization is focused for example on the countries on the middle here, you are actually losing this space. So one way to fix that is to change your projection. So we can use a different one for example. You can use the geoNaturalEarth1.
+
+So this is a different projection that has basically squashed the top. So now we are no longer having all these space taken by these ones on the top, same thing on the bottom. So you can increase the scale for example to get a bigger map. You can increase to 80 for example. So now you get a bigger map and you don't have all of this space that you weren't using for your visualization being used on the top. But remember to keep in mind that different projections are going to have different drawbacks and it's up to you to choose which option you want to use. D3 has many other types of projections and it depends on your goal, on what you want to visualize and what information you want to convey because here the rule is always, the interpretation has to be correct of what you are visualizing.
+
+
