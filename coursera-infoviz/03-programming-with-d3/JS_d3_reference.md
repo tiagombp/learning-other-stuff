@@ -199,5 +199,5 @@ When use it ("inline events"), instead of adding an event listener?
 # dúvidas
 
 como funciona direito d3.csv
-promises
+promises, Promisse All
 New Date(d.date)
