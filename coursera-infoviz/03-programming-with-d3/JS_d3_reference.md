@@ -117,6 +117,14 @@ na verdade, tentar explicar de onde vêm esses argumentos "fantasma" que são us
 
 # D3
 
+## "glue"
+
+Por exemplo,
+
+```js
+.attr("transform", d => 'translate((${d.x0}, ${d.y0}))')
+```
+
 ## joins
 
 quando você faz `.data(dados)`,  e depois usa um accessor com `d => ...`, vc basicamente está dizendo, pegue cada elemento de `dados` e faça uma determinada ação.
@@ -185,6 +193,16 @@ When use it ("inline events"), instead of adding an event listener?
 
 ## scales
 
+### quick color scales
+
+Se faço
+
+```js
+let cScale = d3.scaleOrdinal(d3.schemeCategory10)
+```
+
+tenho uma escala rápida sem me preocupar com range ou domain.
+
 ### scaleBand
 
 `d3.scaleBand().padding(value)`
@@ -195,9 +213,19 @@ When use it ("inline events"), instead of adding an event listener?
 
 `.defined(d => !!d.price)`
 
+## Layouts
+
+### treemap
+ 
+```js
+d3.treemap()
+  .size()
+  .paddingInner()
+```
 
 # dúvidas
 
 como funciona direito d3.csv
 promises, Promisse All
 New Date(d.date)
+como d3.hierarchy espera o dado?

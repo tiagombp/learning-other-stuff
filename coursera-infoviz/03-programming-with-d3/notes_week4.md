@@ -262,5 +262,154 @@ So this is one example on how we can use hierarchical data with D3.
 Once again, that is one option that we can use to create. The tree also provide other features to create different visualizations of hierarchical data. But treemap is a really popular one. But _remember that first it's helpful to transform your data using hierarchy and make sure that your data is in the format that I showed where you have the names and you have the children_. If it's not in that format, you may need some preprocessing in order to get to a good shape so tree we will understand your data without you having to provide much information.
 
 
+### Practice: Tree Map Part 1
 
+
+Another type of data that is complex when we try to visualize is sort of hierarchical data. And _hierarchical data basically means that you have a parent, and this parent have some children that may have other children and that can keep going on_. So, in this video I want to show you how we can prepare the code, so we can draw a **treemap**. And a treemap basically, is going to work as a square representing the whole thing and every time I have a children, I'm going to split that based on the children. So for example, I could have two children, so then I would two regions and then I can take these children and then split these children in more three other ones and maybe here, I'm going to have other three children as well.
+
+![](week4_44.PNG)
+
+And that process can be recursive. It keep happen and it's splitting our square in multiple elements. So if we look at our data, our data is going to represent exact legit phenomenon. So here, for example, I have US and US is my root. So the root is always the main node that you have, is the first one, and then, US has children and those children are basically these states. So if we go down here, we have the names. So we have New York as being one of the states. And then here, we have California as being a second state, and then further, we take New York and split the new children. So remember, New York state is children of USA. And then we have the cities of Albany, New York, and Buffalo being children of New York. 
+ 
+```js
+{ 
+    "name" : "USA",
+    "children" : [
+        {
+            "name" : "New York",
+            "children" : [
+                {
+                    "name" : "Albany",
+                    "sales" : 5000
+                },
+                {
+                    "name" : "New York City",
+                    "sales" : 15000
+                },
+                {
+                    "name" : "Buffalo",
+                    "sales" : 10000
+                }
+            ]
+        },
+        {
+            "name" : "California",
+            "children" : [
+                {
+                    "name" : "Los Angeles",
+                    "sales" : 2000
+                },
+                {
+                    "name" : "San Francisco",
+                    "sales" : 5000
+                }
+            ]
+        }
+    ]
+}
+```
+
+Something like:
+
+```
+USA -+
+     |
+     +-- New York ----+-- Albany
+     |                |
+     |                +-- New York City
+     |                |
+     |                +-- Buffalo
+     |
+     +-- California --+-- Los Angeles
+                      |
+                      +-- San Francisco
+```      
+
+So if I want, for example, to visualize my sales among different states and cities, but at the same time I want to get a look of which states have higher sales than the other ones. That is one strategy that we can use. And use this information to draw our **treemap**. So remember, we're going to have a root, and then each root is going to have children where we're going to split this square based on the children. And then, if we have children's of the children, we keep going and splitting this work. And the _algorithm is going to trying to find good splitting points_. You going to try to split such that you may have some properties, for example, do you want your squares? Rectangles should be as square as possible when you are splitting. At the same time, you want the size of the area of the rectangle to be proportional to the values. So we have the sales and the size of the rectangle should be proportional to the sales of each city. 
+
+So how can we do that with D3? So D3 is going to provide us with some help to create this visualization. And similar to what we have done with the arcs and similar to what we have done with the networks, we can use this function to compute positions of elements. And it's going to return us the position of the squares that we want to draw on the screen.
+
+So we're going to need to create first an element that is our treemap. And a **treemap** is our first _layout_ or _generator_ that's going to _transform our data in the treemap layout_ that I'm looking for. So you're going to call `d3.treemap` and then you're going to set the `.size`. Is important because since they're going to be splitting squares, I need to know what is the size that I can use for this layout. So you're going to set the size to be equal to our `bodyWidth` and `bodyHeight`.
+
+![](week4_46.PNG)
+
+Our next step is to transform our data, because the problem now is we have our data with the children, but we don't have aggregation for each state, or we don't have an easy way for our children to get the parent. So the tree also provides a helper that's going to modify our data, and add these informations, and transform our data from a single json into a more complex network of data. Where, if I have children, I can actually get to the parent. Or if I have a parent, I can get to the children. When I have aggregations between the children, and so on.
+
+So to do that, we're going to use the `d3.hierarchy`. So you're going to do `root`, that's our main node, and that's going to be based, on the `d3.hierarchy` and we're going to provide our data to this function. So this function is going to just take our data and add additional information that's going to facilitate the treemap to work and one of his information is the sum or the aggregation by each parent. So for example, I had cities inside state, so now this function is going to `.sum` the `sales` of the city and add that to the state. And do the same thing, sum the the sales in your states and add it to the parent. So we're going to provide a function here that returns what we want to sum. And we want to sum the sales.
+
+![](week4_47.PNG)
+
+Okay, so that's going to produce the data that we want to use. So let's take a look on this data.
+
+![](week4_48.PNG)
+
+And you're going to see that it starts with a node, but we get one information here that is `value` for example that we did not have in our data [for the parents]. It also has information, for example, `depth`, in which level of our hierarchy we are. And also the `height`, that means how far [down] we can go. And if you open, for example, the children.
+
+* `height` : how many more levels there are down from here 
+* `depth`  : how many more levels there are up from here (how many levels we are from the root).
+
+We're going to see the same information, but now you see that the `depth` and `height` change, because we are one level down, and we only have one more level to go. But, also we have this sum here. But we also have a way to go back to the parent, if I need this information being here. So that's what hierarchy is doing. It's adding all this information to our data so treemap can come and produce the data that we are looking for. So finally, if I run `treemap` on top of this data.
+
+![](week4_49.PNG)
+
+What I get is the same data but now with `x0` and `x1` and `y0` and `y1`. This is basically the positions [top left corner, bottom right corner] of the squares that I want to draw for treemap, and having that is all the data that we need to create our visualization and to show this information in a treemap layout.`
+
+### Practice: Tree Map Part 2
+
+In a previous video, we took a data that was hierarchical in nature where we had the United States and then, we have the states, and the cities inside, and the sales for each city, and we transform this data using the D3 hierarchy that basically was able to connect this as a tree rather than just a simple set of arrays inside other objects, and allowing us for example, to from a children be able to get the parent, on how also to get the sums for each city and we had a children. That would make it easier for us to use the next function that is Treemap that we run in the data in order to get the positions of the squares that we want to draw on the screen to represent a Treemap. So, our goal is to build a treemap where each square is going to be a city and the squares is going to be proportional to the sales that we had in each city and by doing that, we're going to also be able to get an idea of the sales in each state and in the whole US. So, we already have the treemap running here, where we are processing our data and adding the positions of the squares. 
+
+![](week4_50.PNG)
+
+Our next step is just draw the squares on the screen. So to do that, we first going to create the groups that we need.
+
+We're going to call those `cell`s. So, cells is each square where we're going to draw our data and you're going to do that in group using the group element of SVG. So, we're going to `selectAll` `g` and then, for each `g` -- our goal is to create one `g` for each city that we have in the data. So as I said, you may want to draw the squares representing the states, but depending on how you draw things, it turns out that the positions of the square of each city together is going to represent the squares of the states. So, if you have a high number of children, you may have a problem with that. But if you don't, you can represent that using colors or other features, you may not need to draw the parent, that is in this case would be the states. So, our goal is to draw only the cities. So, for that reason in data we're going to use our `leaves()`. The leaves are basically the end of our tree that in this case is going to be the cities, those were the last level that we had in our data. After that, we're going to select `.enter`, so we can create a `g` for every new leaves or every new city that we find in the data, and you are going to `.append` a `g`. 
+
+![](week4_51.PNG)
+
+Our last step is to position this `g` in the right position. So, we're going to set an attribute, that is the `transform` attribute, and we are going to `translate` this element based on the positions that the treemap algorithm gave us. So, we're going to translate and it's going to be `d.x0`, that is the top position of our square that we want to draw in the x coordinate, and then `d.y0`, that's the position of the top of the square in the y coordinate. So, we just want to move our group there to start to drawing. So, once I have those groups, in each group -- So remember, if I'm doing `cell` here, _anything that I do here is going to happen for each of the groups that I created in my data_ [because that is the reference the captured the data binding]. 
+
+![](week4_52.PNG)
+
+So for each of those, we're going to add a rectangle and we're going to set its `width` to ten, and I'm going to set the `height` to ten, and you'll see that now we get some squares here. 
+
+![](week4_53.PNG)
+
+So, they don't have the right size yet, but they are in the right position. So, the system will read position those square where we want them, but now we have to set the `width` and `height` to be equivalent to fill the whitespace that we are looking here. So to do that, we're going to change and instead of using width equal to ten. Remember that **the algorithm is going to give me the position of the top corner of the square and the position of the bottom right corner of the square**. So, if I want to know the width, I can subtract the end from the beginning and I'm going to get the width of the square. So, that's the reason why we do `d.x1` minus `d.x0` to define the `width` of each square. So you see that now, the width are filling my space. 
+
+![](week4_54.PNG)
+
+Our next step is the same thing with the `height`, `y1` minus `d.y0`.
+
+![](week4_55.PNG)
+
+Okay. So, now I filled everything, but now it's hard to see the space between them. Like, where is the separation between those elements. 
+
+Turns out that you can actually tweak the treemap algorithm to say I want to have some space between those elements. So, you can say, `paddingInner`, and add some pixels here to say, I want you to separate then a little bit.
+
+![](week4_56.PNG)
+
+So, you can decide the size of the separation that you want. But, now we basically draw the squares, but there are some lines between them that is basically whitespace because those square are not really filling 100%, it creates a padding between them. But still, it's hard for me to distinguish states here. So, maybe you want to use the color to distinguish the state. 
+
+So, let's create a color scale here that's going to be a `scaleOrdinal` and you're going to use the `d3.schemeCategory10` that contains a predefined palette of colors that we can use. 
+
+![](week4_57.PNG)
+
+So, now we can use `g` is to decide how are we going to `fill` the `rect`, what's going to be the color of the `rect`. So, you can just say, attribute `fill`, is going to be based on my color scale. So, the original data that I received is going to be- first, _I'm looking at the children. So, if I want the name of the state, the first thing that I have to go it should go to the parent to get the name of the state because these squares represent cities_. So, we're gonna do that by doing `d.parent` and that's going to take me to the parent of the element. So, now I want to get the data. So, if I want to get the original data that we had before running our algorithms, we have to `d.parent.data` because that's my original data and I want the name of the state. So, we're going to do `d.parent.data.name`. So, now you see that based on the name we get the colors. 
+
+![](week4_58.PNG)
+
+So, we have one state that is blue, one state that is orange and as I said, based on the positions of the squares of the cities, you are able to tell that the blue state is actually larger than the orange state. And if I want to get the names of things, so I can actually know which state is which, I can actually add just a text. So, <mark>_that's the reason why we use a group because by using a group we can just add the text to the group and the text we're going to be close to the right position_</mark>. So, we're just going to append a new text and in this text we're going to set the text to be the city name. So, remember if I want to get the original data, I have to do `.data.name`, that's my original data. So, you see that some cities are starting to pop up here. 
+
+![](week4_59.PNG)
+
+Our next step is to fix the position of those texts. So, the first thing that we want to move them down. So, we want to change the `alignment-baseline` to `hanging`. So, this means that whatever position that I give to them is going to be on the top. So, you see that now the words are inside. 
+
+![](week4_60.PNG)
+
+We're going to also change their color a little bit to white to make it easier to read inside our colorful squares. 
+
+![](week4_61
+.PNG)
+
+So, if I look here I got to be able to see that we have Albany here and New York, and Buffalo. So, those are basically the state of New York and if I go here, I have Los Angeles, San Francisco, San Diego, this is California. So, I could say that we are selling more in the State of New York than in the State of California by using this visualization. Even though I just visualized the cities, I end up also getting squares for the states. I could have multiple hierarchies and that's the idea of the treemap, is kind of a tree, but it's as if you've seen them from top down and you were able to get information from the leaves, but also from each level that you also have in your data.
 
