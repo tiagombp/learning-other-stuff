@@ -269,3 +269,4 @@ and here I'm going to translate to the middle. So on the top here we have our bo
 So this is a different projection that has basically squashed the top. So now we are no longer having all these space taken by these ones on the top, same thing on the bottom. So you can increase the scale for example to get a bigger map. You can increase to 80 for example. So now you get a bigger map and you don't have all of this space that you weren't using for your visualization being used on the top. But remember to keep in mind that different projections are going to have different drawbacks and it's up to you to choose which option you want to use. D3 has many other types of projections and it depends on your goal, on what you want to visualize and what information you want to convey because here the rule is always, the interpretation has to be correct of what you are visualizing.
 
 
+
