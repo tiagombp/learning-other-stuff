@@ -134,22 +134,133 @@ and here we're going to add our nodes. Those are going to be the circles, so _in
 
 ![](week4_21.PNG)
 
-So those are my nodes. My next step is to actually bind the data. So you're going to select all, similar to what we have done before so we're going to select all the circles, so now I'm selecting out the circles that are inside my group, and then to those circles, I'm going to bind my data. And remember that my data-set has two keys; one is nodes that contains the people that I'm drawing, and the other one is links that contain the connection between these people. As I bind my data, I can say, enter basically every new element, we're going to append a circle.
+So those are my nodes. My next step is to actually bind the data. So you're going to `selectAll`, similar to what we have done before so we're going to select all the circles, so now I'm selecting out the circles that are inside my group, and then to those circles, I'm going to **bind my data**. And remember that my data-set has two keys; one is `nodes` that contains the people that I'm drawing, and the other one is `links` that contain the connection between these people. As I bind my data, I can say, `enter` basically every new element, we're going to `append` a circle.
 
-Nothing very new here, we're just going to define also the radius of the circle,
+Nothing very new here, we're just going to define also the radius of the circle, and we're going to fill it up with black.
 
-and we're going to fill it up with black.
+![](week4_22.PNG)
 
-So this is going to create the circles on the screen but right now it doesn't really matter where we are going to position those circles, the only thing that we want to make sure is that those circles are there available later so I can position them. The next step is to create my links.
+So this is going to create the circles on the screen but _right now it doesn't really matter where we are going to position those circles, the only thing that we want to make sure is that those circles are there available later so I can position them_. 
 
-So I'm going to go to the same process, buddy.append. We're going to append the G. Then inside this G, we're going to also set it's class attribute and it's going to be link. Then we are going to select all lines, so links are basically straight lines for this specific case,so we can just use, straight lines. We don't really need with a path or a more complex solution. Then we are going to bind our data, and that's going to come from my links. Then finally, for each new one we enter, we append a new line.
+The next step is to create my **links**.
 
-That's it. Once again we are not concerned on how this line look, where it is, where it looks like. We just create, once you create the elements and then we're going to update them later. So now, we're going to use the update elements functions to update this data, and how we do that, we have our tick here and we want to say, every time we have real data we want to update the elements. So we're just going to call update elements here, and this means that every time a new data comes we're going to call this function the first thing that we have to do is to select our nodes, that contain the nodes, contain the circles. The next step is selecting out the circles.
+So I'm going to go to the same process, `body.append`. We're going to append the G. Then inside this G, we're going to also set it's class attribute and it's going to be `link`. Then we are going to select all lines, _so links are basically straight lines for this specific case,so we can just use, straight lines. We don't really need with a path or a more complex solution_. Then we are going to bind our data, and that's going to come from my links. Then finally, for each new one we `enter`, we `append` a new `line`.
 
-After that, the next step is to actually position those circles based on the data. So when we run the force dialect layout, therefore each node, the algorithm is going to add X and Y, that is the position of the circle. So we are going to use that, we're going to say that CX of the circle, that is the X position of the circle, is going to be d.x, and we are going to say that CY of the circle, that is the Y position of the circle, is going to be d.y. So you see that now we already get the nodes here, and you'll see that they started from the center and spread because this is the force working.
+![](week4_23.PNG)
 
-The next step is to add the links. So let's update the links, we're going to say d3.select.links.
+That's it. Once again we are not concerned on how this line look, where it is, where it looks like. We've just created, once you create the elements and then we're going to update them later. So now, we're going to use the `updateElements` functions to update this data, and how we do that, we have our `tick` here and we want to say, every time we have real data we want to update the elements. 
 
-We're going to select all link, and then we're going to set their attribute. You're going to select all line, and you're going to set their attributes. So a line needs a start and an end. So we're going to set first X1, that is where the line starts, it's going to start from our D, then we're going to start from our source. So source.x. So remember that a link has source and target, so you're gonna start from the X of the source, and then we're going to do the same thing, for the Y position where the line starts. We're going to start from the Y of our source. If now we want to do the end where this line is going to end is basically the same thing, but now we're going to use instead of X1, X2 and instead of Y1, Y2 and instead of source, we have target.
+![](week4_24.PNG)
 
-Now we get our link. You see that we get our nodes that are basically the circle that we are updating here, and then we get the lines connecting them based on the links that we have, and you see that the forces are acting trying to get the best disposition of the elements. You can play by turning on and off forces for example, if you turn off the charge, you see that it's a little bit tilted, it's not really like where we spaced between then. If you turn off the center force, you're going to see that it is basically going to move away from the screen because it's outside right now. So those forces work together with the link force that makes sure that things that are related are close, you see that I've removed the link force, it starts to spread from each other. The combination of those three forces is what produces this result, and that's the force link, the force layout that we use in order to create a node link diagram. It is not specific only for network, if you have things that you want to dispose on the screen, and you have some distance between them as a measure, you can use forces to try to come up with a good layout or organic layout, that's going to help you to display this information on the screen.
+
+So we're just going to call `updateElements` here, and this means that every time a new data comes we're going to call this function the first thing that we have to do is to select our nodes, that contain the nodes, contain the circles. The next step is selecting out the circles.
+
+![](week4_25.PNG)
+
+After that, the _next step is to actually position those circles based on the data. So when we run the force directed layout, for each node, the algorithm is going to add X and Y, that is the position of the circle_. So we are going to use that, we're going to say that `cx` of the circle, that is the x position of the circle, is going to be `d.x`, and we are going to say that `cy` of the circle, that is the Y position of the circle, is going to be `d.y`. So you see that now we already get the nodes here, and you'll see that they started from the center and spread because this is the force working.
+
+![](week4_26.PNG)
+
+The next step is to add the links. So let's update the links, we're going to say `d3.select(".links")`.
+
+We're going to select all links, and then we're going to set their attribute. You're going to select all `line`, and you're going to set their attributes. So _a line needs a start and an end_. So we're going to set first `x1`, that is where the _line starts_, it's going to start from our D, then we're going to start from our source. So `source.x`. So remember that a link has source and target, so you're gonna start from the X of the source, and then we're going to do the same thing, for the Y position where the line starts. 
+
+![](week4_27.PNG)
+
+We're going to start from the Y of our source. If now we want to do the end where this line is going to end is basically the same thing, but now we're going to use instead of `x1`, `x2` and instead of `y1`, `y2` and instead of `.source`, we have `.target`.
+
+Now we get our link. You see that we get our nodes that are basically the circle that we are updating here, and then we get the lines connecting them based on the links that we have, and you see that the _forces are acting trying to get the best disposition of the elements_. 
+
+![](week4_28.PNG)
+
+You can play by turning on and off forces for example, if you turn off the **charge**, you see that it's a little bit tilted, it's not really like where we spaced between then.
+
+![](week4_29.PNG)
+
+If you turn off the **center** force, you're going to see that it is basically going to move away from the screen because it's outside right now. 
+
+![](week4_30.PNG)
+
+So those forces work together with the link force that makes sure that things that are related are close, you see that I've removed the **link** force, it starts to spread from each other.
+
+![](week4_31.PNG)
+
+The combination of those three forces is what produces this result, and that's the force link, the force layout that we use in order to create a node link diagram. It is not specific only for network, if you have things that you want to dispose on the screen, and you have some distance between them as a measure, you can use forces to try to come up with a good layout or organic layout, that's going to help you to display this information on the screen.
+
+## Hierarquical Data
+
+In this video, I want to talk with you how we can use hierarchical data and visualize this data using D3. So by hierarchical data I mean the situation where we have _degrees or levels of information_. 
+
+![](week4_32.PNG)
+
+So for example here, I may have information about United States, and then I may have the same information about New York and California, and then I may have the same information about the cities Albany, Los Angeles and San Francisco. So now I want to visualize this data in a way that I can see the cities Los Angeles and San Francisco but I also can get a sense of how California happens to have the specific value that I'm trying to visualize and then how New York and California you will combine in the United States information. 
+
+So, this is the type of data that we're trying to visualize. Usually, you can think of this as a _tree_. So basically you have one level, then you have branches, then you have one node and this node again branches and so on. So, you always think here, for example, by moving from left to right. **It's not really a graph, so you don't circle back**, you always have just in one direction. 
+
+But the beginning, the first one that you have is what they call **roots**. So, if the root of our tree, that is where it starts. And as we move down, we will move to the **children**. So, New York and California are children from USA and Albany is children from New York, and Los Angeles and San Francisco are children from California. If I move back, we have the **parent**. 
+
+![](week4_33.PNG)
+
+So, this means that New York is a parent of Albany and California is parent of Los Angeles and San Francisco. 
+
+So, now, how can we visualize this data? We have different methods to visualize hierarchy. One way is actually visualizing the way I'm showing here with that tree where you have this tree growing and you can see each nodes and how it happens. But sometimes if you're visualizing some quantitative information, you may want a more compact visualization or a more easy to grasp the value if that's the focus. 
+
+So, one option is what we call treemap. 
+
+![](week4_34.PNG)
+
+A treemap is basically a visualization where we have a rectangle. You're going to show each of the level of your tree in some regions. So, for example, here you see that we have multiple colors. You can think of blue as being in one level and then each square inside blue is another level. So, in my example, you could think blue as being a state and then you have the small ones inside being the cities. Then how does this visualization is generated? If you think the data that I just showed, for example, imagine that the whole square represents USA. 
+
+![](week4_35.PNG)
+
+So now I can split this square among my states. So I have New York and California and what I do is the size of those two will be proportional to the size of the value that I'm trying to show.
+
+![](week4_36.PNG)
+
+So, for example, if I'm trying to represent sales, the size of each square, the one that we have in New York and the one we have California, the area will be proportional to the sales of those two states. 
+
+Then later, we can split again. For example, here I split California in two versions, one for Los Angeles, one for San Francisco. 
+
+![](week4_37.PNG)
+
+And also again, the size of each of those will represent the values for that cities. So if it is sales, we will represent the sales of that city. 
+
+_So notice that by adding San Francisco, Los Angeles together, we get the size of California since the result of California is the sum of those two. And by adding that with New York, we get the sum that represents the US. That's the whole idea of the treemap_. 
+
+And how can we create it? So, before starting to generate the squares that we want to visualize, we first have to tell D3 that this is a hierarchical data. 
+
+![](week4_38.PNG)
+
+When we do that, D3 will be going to do some additional job to make easier the next process to understand the data. So for example if I am looking in a city in a children, D3 is going to make it easier for me from that children to access the parent, and also information on which level of the tree we are and how deep is the tree and so on. So in order to add those information, you can call `d3.hierarchy` with the data that you want to visualize. And the data that you are going to provide will have a shape that looks like this. 
+
+![](week4_39.PNG)
+
+So, you basically have for each node, you're going to have a name. So, here, for example my top node, there is my root node, I have USA and then my children are going to be the children of USA. So, for example here I have New York and then New York follows the same pattern, we have a name and then we have a key called children where we have the children of New York that's Albany, and then inside Albany for example I can have my value that is sales. So, when we use hierarchy, one thing that we can do is use d3 to sum the values of the children to produce the values for the parents as well. _That's what the hierarchy function will do. It's just going to transform your data to make easier to the next step to use it to produce these squares that we want to draw for the treemap_. 
+
+Once we have my data process, the next step is to actually produce the treemap. So the treemap layout will do the job of looking to our data and computing the squares that we have to create in order to generate the treemap. 
+
+![](week4_40.PNG)
+
+Once I'm finishing with this computation I create the object and I can call, I going to get in my data the information about the positions of the squares as well as the original information of the hierarchy if I am on the root or if I'm in which level of the tree I am and so on. 
+
+So, here we have an example. So, on the top, I am using hierarchy to process my data and I am asking the function to sum all the sales. So this means that for each level of the tree now, I going to have the sum of the children for that node. So, if I'm looking at the state of California, I going to have the sum of the cities of San Francisco and Los Angeles associated to California. After that, we're going to call the treemap. So, we first build the treemap. We have to specify a `width` and a `height`. So the system knows what is the size of the square that it's trying to build. And then finally, we're going to call treemap with the original data. 
+
+![](week4_41.PNG)
+
+So, on the top, I got my root node computed and now I'm going to pass that to the treemap. And treemap is going to change this data and add the information. 
+
+Once I have this information, now I can just draw it as I would draw any other visualization.
+
+![](week4_42.PNG)
+
+One nice trick here is that, if you don't care really, if you don't really need to draw the borders of the states for example, you can just focus in visualizing the leaves of the tree. So in my example the leaves would be the cities and as I said if I put the square of California and Los Angeles together, the square that creates is actually this square of California. So, by having San Francisco and Los Angeles, I get the square for California around it. So, you don't really have to draw if for use for example different color based on the state. If I want to draw the leaves, you can just use root.leaves to get the leaves of your tree, and you're going to draw only the last level that you have. 
+
+So this is one example on how we can use hierarchical data with D3. 
+
+![](week4_43.PNG)
+
+Once again, that is one option that we can use to create. The tree also provide other features to create different visualizations of hierarchical data. But treemap is a really popular one. But _remember that first it's helpful to transform your data using hierarchy and make sure that your data is in the format that I showed where you have the names and you have the children_. If it's not in that format, you may need some preprocessing in order to get to a good shape so tree we will understand your data without you having to provide much information.
+
+
+
+
