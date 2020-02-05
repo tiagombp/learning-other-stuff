@@ -413,3 +413,7 @@ We're going to also change their color a little bit to white to make it easier t
 
 So, if I look here I got to be able to see that we have Albany here and New York, and Buffalo. So, those are basically the state of New York and if I go here, I have Los Angeles, San Francisco, San Diego, this is California. So, I could say that we are selling more in the State of New York than in the State of California by using this visualization. Even though I just visualized the cities, I end up also getting squares for the states. I could have multiple hierarchies and that's the idea of the treemap, is kind of a tree, but it's as if you've seen them from top down and you were able to get information from the leaves, but also from each level that you also have in your data.
 
+
+## Interactions
+
+### Listening to Events
