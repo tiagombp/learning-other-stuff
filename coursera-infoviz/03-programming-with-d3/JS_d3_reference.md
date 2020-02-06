@@ -99,6 +99,15 @@ document.write("tsa, não sabia dessa.");
 
 ```
 
+Alterando o estilo de um elemento, JS x D3:
+
+```js
+document.querySelector("#AirlinesChart").style.border = "5px solid blue"
+// comparar com
+d3.select("#AirlinesChart").style("border", "3px dashed limegreen")
+```
+
+
 Talvez ressaltar as idiossincrasias: 
 
 * separar propriedades por "," e não ";". Os valores de propriedades são declarados com ":", e não "=". Essas coisas acabam sendo boas, porque te remetem ao contexto em que aqueles dados estão sendo utilizados.

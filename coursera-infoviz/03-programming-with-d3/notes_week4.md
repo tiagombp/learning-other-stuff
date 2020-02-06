@@ -408,8 +408,7 @@ Our next step is to fix the position of those texts. So, the first thing that we
 
 We're going to also change their color a little bit to white to make it easier to read inside our colorful squares. 
 
-![](week4_61
-.PNG)
+![](week4_61.PNG)
 
 So, if I look here I got to be able to see that we have Albany here and New York, and Buffalo. So, those are basically the state of New York and if I go here, I have Los Angeles, San Francisco, San Diego, this is California. So, I could say that we are selling more in the State of New York than in the State of California by using this visualization. Even though I just visualized the cities, I end up also getting squares for the states. I could have multiple hierarchies and that's the idea of the treemap, is kind of a tree, but it's as if you've seen them from top down and you were able to get information from the leaves, but also from each level that you also have in your data.
 
@@ -417,3 +416,34 @@ So, if I look here I got to be able to see that we have Albany here and New York
 ## Interactions
 
 ### Listening to Events
+
+"Listen" for user actions -- click, hover, change.
+
+![](week4_62.PNG)
+
+User action happens on some element, so in D3 we need a selection to bind it to the listener.
+
+![](week4_63.PNG)
+
+When we use functions in D3, they usually accept some parameters. The first one in general is the datapoint, `d`, for example, the second one is the position of the datapoint, `i`, and the third is `this`.
+
+Normally it will point to some instance of some object that called that function. In D3, when used in the functions called by event listeners, it will point to the element that received the action. You can then select this element by using `d3.select(this)`.
+
+![](week4_64.PNG)
+
+CAUTION:  If we use an arrow function, D3 is not able to change the `this` inside the function. So this means that if you need to use `this`, you cannot use the arrow function, you will have to use the version where you write the keyword `function`. So if you catch yourself trying to run something and your `this` is always `undefined` or is `Window`, for example, or something else that is not the object that the user click, the reason is because you're using arrow function instead of the keyword function. So, always remember, if you have to use the "this" not just as an event render, anywhere on your application, you have to use the function with the keyword function and not the error function.
+
+![](week4_65.PNG)
+
+So, another thing that D3 will provide you to help with understanding the event and what happened is the `d3.event`. So for example, if I move my mouse, we will have information of the position of the mouse there. I want to check for example if the user clicked with some key hold. So imagine that for example you want to allow the user to select multiple elements by hold and shift. So, you're going to use `d3.event` to check if "Shift" is pressed and then react different from versions where the user click in the same place but without pressing the "Shift." 
+
+So let's see an example here. So, first I select my data and I created my circles. Imagine that I have any visualization, it could be a scatter plot for example, where we have circles, and now I'm selecting out the circles. So I `selectAll` the circles and I do `.on("click", ...)`. So this means that when I click in any of those circles, the first thing that I am going to receive on the top is my `d`. 
+
+So `d` is going to be the datapoint that is associated to the circle that I clicked. So if I want to get the data that the user clicked to show details for example, I can use this `d` information to decide which datapoint the user clicked. If I want to check for example if the user has the "Shift" key pressed, I can just do `d3.event.shiftKey`, and it going to return `true` if the user pressed the key. Then I can do other information imagine that, I don't know, I want to save the information for this element and I can do all the process and then later, I can for example alert the user and I say okay saved the element that has his name. So, I can ask access information of the name and I can also for example change the color using the "this" here because "this" represents the circle. I can change `.style.fill` as I would do with any HTML node and then change the color to `blue`. 
+
+![](week4_66.PNG)
+
+So now this means that whatever elements the user had already saved, will be blue so the user knows that he or she or it clicked on it. So, this is the basics of how we react to events and how we add interactions to our application. We want to be listening to events and those events can be different one, they can be triggered by mouse, they can be triggered by keyboard and at the end of the day, there are techniques as well to trigger event even programmatically based on something else. So, you're going to have a function that once you receive that event, you're going to do something, you're going to save the data, you're going to filter the data or so on, but that's the whole based on how we create introduction. How our interaction is going to be built on top of those listeners of events that we're going to add to our application.
+
+
+
