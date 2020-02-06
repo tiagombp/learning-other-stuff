@@ -190,15 +190,25 @@ ou ainda a
 
 When using `selection.html()`, the content passed in as argument will actually be parsed as html.
 
+## interaction
+
+Events: `mouseover`, `mouseout`, `click`, `change`
+
+`d3.event.x`, `d3.event.y`
+
+`d3.mouse(this)` -- array com x em `[0]` e y em `[1]`
+
+`onclick` attribute (for buttons elements, e.g.)
+
+When use it ("inline events"), instead of adding an event listener?
+
 ## outros
 
 ### obtendo vs definindo valores
 
 ![](JS_d3_reference_03.PNG)
 
-### `onclick` attribute (for buttons elements, e.g.)
 
-When use it ("inline events"), instead of adding an event listener?
 
 ## scales
 
