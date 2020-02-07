@@ -207,11 +207,11 @@
           .attr("x2", d => projection([+d.DestLongitude, +d.DestLatitude])[0])
           .attr("y2", d => projection([+d.DestLongitude, +d.DestLatitude])[1]) 
           .attr("stroke", "#992a2a")     
-          .attr("opcacity", 0.1);
+          .attr("opacity", "0.1");
         
         bindedData
           .exit()
-          .remove()        
+          .remove();      
         //TODO: use exit function over bindedData to remove any routes that does not satisfy the filter.
     }
 
