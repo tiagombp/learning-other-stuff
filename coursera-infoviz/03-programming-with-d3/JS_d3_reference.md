@@ -90,6 +90,24 @@ employees.reduce( (acumulado, valor_da_vez) => acumulado + valor_da_vez.salary, 
 
 ```
 
+#### Fazendo um gather
+
+```js
+data.map(d => {
+    // vai pegar as colunas cujos títulos são números, ou seja, para elas, +nome_coluna vai dar NaN.
+    let years = Object.keys(d).filter(k => !isNaN(+k))
+
+    let history = years.map(y => ({
+        year : y,
+        value : +d[y]
+    }))
+    d.history = history;
+}
+
+)
+
+```
+
 
 ### Manipulating the DOM
 
@@ -123,6 +141,8 @@ mostrar como vc vai precisando de outras funções e métodos pra fazer coisas s
 mostrar que esses `d` que usamos como argumentos, parâmetros, pode ter qualquer nome.
 
 na verdade, tentar explicar de onde vêm esses argumentos "fantasma" que são usados nas funções anônimas dos métodos. tipo, dentro de um promise, lá no `.then(function(data){...})` quem danado é esse `data`? como eu sei quem são os argumentos que posso usar nessa função anônima?
+
+quando você usa `this`, você esta usando o `node`, e aí você só pode usar as funções nativas do JS. se você encapsula o `this` numa **selection**, `d3.select(this)` aí você tem à disposição todos os métodos de D3.
 
 # D3
 
@@ -192,9 +212,10 @@ When using `selection.html()`, the content passed in as argument will actually b
 
 ## interaction
 
-Events: `mouseover`, `mouseout`, `click`, `change`
+Events: `mouseover`, `mouseout`, `click`, `change`, `mouseenter`, `mouseleave`, `mousemove`
 
 `d3.event.x`, `d3.event.y`
+`d3.event.selection`, `d3.event.clientX`, `d3.event.clientY`
 
 `d3.mouse(this)` -- array com x em `[0]` e y em `[1]`
 
@@ -207,6 +228,7 @@ When use it ("inline events"), instead of adding an event listener?
 ### obtendo vs definindo valores
 
 ![](JS_d3_reference_03.PNG)
+
 
 
 
@@ -248,3 +270,4 @@ como funciona direito d3.csv
 promises, Promisse All
 New Date(d.date)
 como d3.hierarchy espera o dado?
+mouseover x mouseenter?
